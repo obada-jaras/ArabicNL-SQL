@@ -81,7 +81,7 @@
     },
     {
         "English Query": "Could you provide a list of instructors in the faculty X?",
-        "Arabic Query": "هل يمكنك تقديم قائمة بالمدرسين في الكلية X؟",
+        "Arabic Query": "هل يمكنك تقديم قائمة بالدكتورين في الكلية X؟",
         "SQL Query": "SELECT i.name_arabic FROM instructor i JOIN department d ON i.department_id = d.id JOIN faculty f ON d.faculty_id = f.id WHERE f.name_arabic = 'X' OR f.symbol = 'X';",
         "importancy": "9"
     },
@@ -151,10 +151,135 @@
     },
     {
         "English Query": "Could you provide a list of instructors in the department X?",
-        "Arabic Query": "هل يمكنك تقديم قائمة بالمدرسين في الدائرة الأكاديمية X؟",
+        "Arabic Query": "هل يمكنك تقديم قائمة بالدكتورين في الدائرة الأكاديمية X؟",
         "SQL Query": "SELECT i.name_arabic FROM instructor i WHERE i.department_id IN (SELECT id FROM department WHERE name_arabic = 'X' OR symbol = 'X');",
         "importancy": "10"
     },
+
+
+
+
+
+
+
+
+
+
+
+
+
+    {
+        "English Query": "Could you provide the description of the major named X?",
+        "Arabic Query": "هل يمكنك تقديم وصف للتخصص الذي يدعى X؟",
+        "SQL Query": "SELECT description FROM major WHERE name_arabic = 'X' OR symbol = 'X';"
+    },
+    
+    {
+        "English Query": "What is the symbol associated with the major named X?",
+        "Arabic Query": "ما هو الرمز المرتبط بالتخصص الذي يدعى X؟",
+        "SQL Query": "SELECT symbol FROM major WHERE name_arabic = 'X' OR symbol = 'X';"
+    },
+
+    {
+        "English Query": "What is the total number of hours for the major X?",
+        "Arabic Query": "ما هو إجمالي عدد الساعات للتخصص X؟",
+        "SQL Query": "SELECT hours FROM major WHERE name_arabic = 'X' OR symbol = 'X';"
+    },
+    
+    {
+        "English Query": "What department does the major X belong to?",
+        "Arabic Query": "إلى أي دائرة ينتمي التخصص X؟",
+        "SQL Query": "SELECT d.name_arabic FROM major m JOIN department d ON m.department_id = d.id WHERE m.name_arabic = 'X' OR m.symbol = 'X';"
+    },
+
+    {
+        "English Query": "Could you provide a list of courses (name, symbol, description, credits) in the major X, sorted by symbol?",
+        "Arabic Query": "هل يمكنك تقديم قائمة بالمساقات (الاسم, الرمز, الوصف, الساعات المعتمدة) في التخصص X، مرتبة حسب الرمز؟",
+        "SQL Query": "SELECT c.name_arabic, c.symbol, c.description, c.credits FROM course c WHERE c.major_id IN (SELECT id FROM major WHERE name_arabic = 'X' OR symbol = 'X') ORDER BY c.symbol;"
+    },
+
+    {
+        "English Query": "Could you provide a list of courses in the major X that are taught by the instructor Y?",
+        "Arabic Query": "هل يمكنك تقديم قائمة بالمساقات في التخصص X التي يدرسها الدكتور Y؟",
+        "SQL Query": "SELECT c.name_arabic FROM course c JOIN instructor_course ic ON c.id = ic.course_id JOIN instructor i ON ic.instructor_id = i.id WHERE c.major_id IN (SELECT id FROM major WHERE name_arabic = 'X' OR symbol = 'X') AND (i.name_arabic = 'Y' OR i.symbol = 'Y');"
+    },
+    
+    {
+        "English Query": "Could you provide a list of courses in the major X that are taught by the teaching assistant Y?",
+        "Arabic Query": "هل يمكنك تقديم قائمة بالمساقات في التخصص X التي يدرسها المساعد Y؟",
+        "SQL Query": "SELECT c.name_arabic FROM course c JOIN ta_course tac ON c.id = tac.course_id JOIN teaching_assistant ta ON tac.ta_id = ta.id WHERE c.major_id IN (SELECT id FROM major WHERE name_arabic = 'X' OR symbol = 'X') AND (ta.name_arabic = 'Y' OR ta.symbol = 'Y');"
+    },
+    
+    {
+        "English Query": "Could you provide a list of courses in the major X that have the course Y as a prerequisite?",
+        "Arabic Query": "هل يمكنك تقديم قائمة بالمساقات في التخصص X التي تتطلب المساق Y كشرط مسبق؟",
+        "SQL Query": "SELECT c.name_arabic FROM course c JOIN course_prerequisite cp ON c.id = cp.course_id WHERE c.major_id IN (SELECT id FROM major WHERE name_arabic = 'X' OR symbol = 'X') AND cp.prerequisite_id IN (SELECT id FROM course WHERE name_arabic = 'Y' OR symbol = 'Y');"
+    },
+
+    {
+        "English Query": "Could you provide a list of courses in the major X that have the course Y as a prerequisite and are taught by the instructor Z?",
+        "Arabic Query": "هل يمكنك تقديم قائمة بالمساقات في التخصص X التي تتطلب المساق Y كشرط مسبق ويدرسها الدكتور Z؟",
+        "SQL Query": "SELECT c.name_arabic FROM course c JOIN course_prerequisite cp ON c.id = cp.course_id JOIN instructor_course ic ON c.id = ic.course_id JOIN instructor i ON ic.instructor_id = i.id WHERE c.major_id IN (SELECT id FROM major WHERE name_arabic = 'X' OR symbol = 'X') AND cp.prerequisite_id IN (SELECT id FROM course WHERE name_arabic = 'Y' OR symbol = 'Y') AND (i.name_arabic = 'Z' OR i.symbol = 'Z');"
+    },    
+
+    {
+        "English Query": "Could you provide a list of courses in the major X that have the course Y as a prerequisite and are taught by the teaching assistant Z?",
+        "Arabic Query": "هل يمكنك تقديم قائمة بالمساقات في التخصص X التي تتطلب المساق Y كشرط مسبق ويدرسها المساعد Z؟",
+        "SQL Query": "SELECT c.name_arabic FROM course c JOIN course_prerequisite cp ON c.id = cp.course_id JOIN ta_course tac ON c.id = tac.course_id JOIN teaching_assistant ta ON tac.ta_id = ta.id WHERE c.major_id IN (SELECT id FROM major WHERE name_arabic = 'X' OR symbol = 'X') AND cp.prerequisite_id IN (SELECT id FROM course WHERE name_arabic = 'Y' OR symbol = 'Y') AND (ta.name_arabic = 'Z' OR ta.symbol = 'Z');"
+    },
+    
+    {
+        "English Query": "Could you provide a list of courses in the major X that have the course Y as a prerequisite and are taught by both the instructor Z and the teaching assistant W?",
+        "Arabic Query": "هل يمكنك تقديم قائمة بالمساقات في التخصص X التي تتطلب المساق Y كشرط مسبق ويدرسها الدكتور Z والمساعد W؟",
+        "SQL Query": "SELECT c.name_arabic FROM course c JOIN course_prerequisite cp ON c.id = cp.course_id JOIN instructor_course ic ON c.id = ic.course_id JOIN instructor i ON ic.instructor_id = i.id JOIN ta_course tac ON c.id = tac.course_id JOIN teaching_assistant ta ON tac.ta_id = ta.id WHERE c.major_id IN (SELECT id FROM major WHERE name_arabic = 'X' OR symbol = 'X') AND cp.prerequisite_id IN (SELECT id FROM course WHERE name_arabic = 'Y' OR symbol = 'Y') AND (i.name_arabic = 'Z' OR i.symbol = 'Z') AND (ta.name_arabic = 'W' OR ta.symbol = 'W');"
+    },
+    
+    {
+        "English Query": "Could you provide a list of courses in the major X where their credits are greater than or equal to Y?",
+        "Arabic Query": "هل يمكنك تقديم قائمة بالمساقات في التخصص X حيث تكون الساعات المعتمدة لها أكبر من أو تساوي Y؟",
+        "SQL Query": "SELECT name_arabic FROM course WHERE major_id IN (SELECT id FROM major WHERE name_arabic = 'X' OR symbol = 'X') AND credits >= Y;"
+    },
+    
+    {
+        "English Query": "Could you provide a list of courses in the major X where their credits are less than or equal to Y?",
+        "Arabic Query": "هل يمكنك تقديم قائمة بالمساقات في التخصص X حيث تكون الساعات المعتمدة لها أقل من أو تساوي Y؟",
+        "SQL Query": "SELECT name_arabic FROM course WHERE major_id IN (SELECT id FROM major WHERE name_arabic = 'X' OR symbol = 'X') AND credits <= Y;"
+    },
+
+    {
+        "English Query": "Could you provide a list of courses in the major X where their credits are greater than or equal to Y and less than or equal to Z?",
+        "Arabic Query": "هل يمكنك تقديم قائمة بالمساقات في التخصص X حيث تكون الساعات المعتمدة لها أكبر من أو تساوي Y وأقل من أو تساوي Z؟",
+        "SQL Query": "SELECT name_arabic FROM course WHERE major_id IN (SELECT id FROM major WHERE name_arabic = 'X' OR symbol = 'X') AND credits >= Y AND credits <= Z;"
+    },
+
+    {
+        "English Query": "Could you provide a list of courses in the major X where their credits are greater than or equal to Y and less than or equal to Z, and are taught by the instructor W?",
+        "Arabic Query": "هل يمكنك تقديم قائمة بالمساقات في التخصص X حيث تكون الساعات المعتمدة لها أكبر من أو تساوي Y وأقل من أو تساوي Z، ويدرسها الدكتور W؟",
+        "SQL Query": "SELECT c.name_arabic FROM course c JOIN instructor_course ic ON c.id = ic.course_id JOIN instructor i ON ic.instructor_id = i.id WHERE c.major_id IN (SELECT id FROM major WHERE name_arabic = 'X' OR symbol = 'X') AND c.credits >= Y AND c.credits <= Z AND (i.name_arabic = 'W' OR i.symbol = 'W');"
+    },
+
+    {
+        "English Query": "Could you provide a list of courses in the major X where their credits are equal to Y?",
+        "Arabic Query": "هل يمكنك تقديم قائمة بالمساقات في التخصص X حيث تكون الساعات المعتمدة لها تساوي Y؟",
+        "SQL Query": "SELECT name_arabic FROM course WHERE major_id IN (SELECT id FROM major WHERE name_arabic = 'X' OR symbol = 'X') AND credits = Y;"
+    },
+    
+    {
+        "English Query": "Could you provide a list of instructors in the major X?",
+        "Arabic Query": "هل يمكنك تقديم قائمة بالدكاترة في التخصص X؟",
+        "SQL Query": "SELECT i.name_arabic FROM instructor i JOIN department d ON i.department_id = d.id WHERE d.id IN (SELECT department_id FROM major WHERE name_arabic = 'X' OR symbol = 'X');"
+    },
+
+    {
+        "English Query": "Could you provide a list of teaching assistants in the major X?",
+        "Arabic Query": "هل يمكنك تقديم قائمة بالمساعدين في التخصص X؟",
+        "SQL Query": "SELECT ta.name_arabic FROM teaching_assistant ta JOIN department d ON ta.department_id = d.id WHERE d.id IN (SELECT department_id FROM major WHERE name_arabic = 'X' OR symbol = 'X');"
+    },
+    
+    
+
+    
+
     {},
     {},
     {},
