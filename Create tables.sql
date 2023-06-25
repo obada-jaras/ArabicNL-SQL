@@ -158,7 +158,7 @@ major:
     list of the courses in the major X where their credits are greater than or equal to Y and less than or equal to Z
     list of the courses in the major X where their credits are greater than or equal to Y and less than or equal to Z and are taught by the instructor W
     list of the courses in the major X where their credits are equal to Y
-    my name is omar hahaha
+    my name is omar hahahaasdsadsadsa
     list of instructors in the major X
     list of teaching assistants in the major X
     
