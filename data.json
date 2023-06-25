@@ -437,6 +437,58 @@
     
     
 
+
+
+
+
+
+
+    {
+        "English Query": "What is the phone number of the teaching assistant X?",
+        "Arabic Query": "ما هو رقم الهاتف للمساعد X؟",
+        "SQL Query": "SELECT phone_number FROM teaching_assistant WHERE name_arabic = 'X';"
+    },
+    
+    {
+        "English Query": "What is the email address of the teaching assistant X?",
+        "Arabic Query": "ما هو البريد الإلكتروني للمساعد X؟",
+        "SQL Query": "SELECT email FROM teaching_assistant WHERE name_arabic = 'X';"
+    },
+
+    {
+        "English Query": "What is the ritaj id of the teaching assistant X?",
+        "Arabic Query": "ما هو رقم المساعد X في ريتاج؟",
+        "SQL Query": "SELECT ritaj_id FROM teaching_assistant WHERE name_arabic = 'X';"
+    },
+
+    {
+        "English Query": "Which department does the teaching assistant X belong to?",
+        "Arabic Query": "إلى أي دائرة ينتمي المساعد X؟",
+        "SQL Query": "SELECT d.name_arabic FROM department d JOIN teaching_assistant ta ON d.id = ta.department_id WHERE ta.name_arabic = 'X';"
+    },
+
+    {
+        "English Query": "Which courses does the teaching assistant X assist with?",
+        "Arabic Query": "ما هي المساقات التي يساعد فيها المساعد X؟",
+        "SQL Query": "SELECT c.name_arabic FROM course c JOIN ta_course tc ON c.id = tc.course_id JOIN teaching_assistant ta ON tc.ta_id = ta.id WHERE ta.name_arabic = 'X';"
+    },
+
+    {
+        "English Query": "Who are the instructors that the teaching assistant X works with?",
+        "Arabic Query": "من هم الدكاترة الذين يعمل معهم المساعد X؟",
+        "SQL Query": "SELECT i.name_arabic FROM instructor i JOIN teaching_assistant ta ON i.department_id = ta.department_id WHERE ta.name_arabic = 'X';"
+    },
+
+    
+    
+    
+    
+
+
+
+
+
+
     {},
     {},
     {},
