@@ -1,0 +1,6 @@
+- [ ] create the dabase
+- [ ] fill it with dummy data
+- [ ] define the main queries
+- [ ] test the SQL queries
+- [ ] write the corresponing in English and Classical Arabic
+- [ ] create a form and expand the dataset (by adding more to each query)

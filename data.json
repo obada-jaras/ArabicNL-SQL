@@ -1,0 +1,163 @@
+[
+    {
+        "English Query": "Could you provide the description of the faculty named X?",
+        "Arabic Query": "هل يمكنك تقديم وصف للكلية التي تدعى X؟",
+        "SQL Query": "SELECT description FROM faculty WHERE name_arabic = 'X' OR symbol = 'X';",
+        "importancy": "10",
+        "tables": [
+            "faculty"
+        ],
+        "retrived_columns": [
+            "description"
+        ],
+        "values": [
+            {
+                "X": "name_arabic"
+            },
+            {
+                "X": "symbol"
+            }
+        ]
+    },
+    {
+        "English Query": "Could you provide the description of the faculty with symbol X?",
+        "Arabic Query": "هل يمكنك تقديم وصف للكلية التي لها الرمز X؟",
+        "SQL Query": "SELECT description FROM faculty WHERE symbol = 'X';",
+        "importancy": "5"
+    },
+    {
+        "English Query": "What is the symbol associated with the faculty named X?",
+        "Arabic Query": "ما هو الرمز المرتبط بالكلية التي تدعى X؟",
+        "SQL Query": "SELECT symbol FROM faculty WHERE name_arabic = 'X';",
+        "importancy": "1"
+    },
+    {
+        "English Query": "Could you tell me the name of the dean of the faculty X?",
+        "Arabic Query": "هل يمكنك أن تخبرني بإسم عميد الكلية X؟",
+        "SQL Query": "SELECT i.name_arabic FROM faculty f JOIN instructor i ON f.dean_id = i.id WHERE f.name_arabic = 'X' OR f.symbol = 'X';",
+        "importancy": "10"
+    },
+    {
+        "English Query": "Could you provide the email of the dean of faculty X?",
+        "Arabic Query": "هل يمكنك تقديم البريد الإلكتروني لعميد الكلية X؟",
+        "SQL Query": "SELECT i.email FROM faculty f JOIN instructor i ON f.dean_id = i.id WHERE f.name_arabic = 'X' OR f.symbol = 'X';",
+        "importancy": "10"
+    },
+    {
+        "English Query": "Could you provide the phone number of the dean of faculty X?",
+        "Arabic Query": "هل يمكنك تقديم رقم الهاتف لعميد الكلية X؟",
+        "SQL Query": "SELECT i.phone_number FROM faculty f JOIN instructor i ON f.dean_id = i.id WHERE f.name_arabic = 'X' OR f.symbol = 'X';",
+        "importancy": "10"
+    },
+    {
+        "English Query": "Could you provide the office hours of the dean of faculty X?",
+        "Arabic Query": "هل يمكنك تقديم الساعات المكتبية لعميد الكلية X؟",
+        "SQL Query": "SELECT i.office_hours FROM faculty f JOIN instructor i ON f.dean_id = i.id WHERE f.name_arabic = 'X' OR f.symbol = 'X';",
+        "importancy": "10"
+    },
+    {
+        "English Query": "Could you provide the Ritaj ID of the dean of faculty X?",
+        "Arabic Query": "هل يمكنك تقديم ID ريتاج لعميد الكلية X؟",
+        "SQL Query": "SELECT i.ritaj_id FROM faculty f JOIN instructor i ON f.dean_id = i.id WHERE f.name_arabic = 'X' OR f.symbol = 'X';",
+        "importancy": "3"
+    },
+    {
+        "English Query": "Could you tell me the department of the dean of the faculty X?",
+        "Arabic Query": "هل يمكنك أن تخبرني ما هي الدائرة التي يتبع لها عميد الكلية X؟",
+        "SQL Query": "SELECT d.name_arabic FROM faculty f JOIN instructor i ON f.dean_id = i.id JOIN department d ON i.department_id = d.id WHERE f.name_arabic = 'X' OR f.symbol = 'X';",
+        "importancy": "9"
+    },
+    {
+        "English Query": "Could you provide a list of departments in the faculty X?",
+        "Arabic Query": "هل يمكنك تقديم قائمة الدوائر الأكاديمية في الكلية X؟",
+        "SQL Query": "SELECT d.name_arabic FROM department d JOIN faculty f ON d.faculty_id = f.id WHERE f.name_arabic = 'X' OR f.symbol = 'X';",
+        "importancy": "7"
+    },
+    {
+        "English Query": "Could you provide a list of majors in the faculty X?",
+        "Arabic Query": "هل يمكنك تقديم قائمة بالتخصصات في الكلية X؟",
+        "SQL Query": "SELECT m.name_arabic FROM major m JOIN department d ON m.department_id = d.id JOIN faculty f ON d.faculty_id = f.id WHERE f.name_arabic = 'X' OR f.symbol = 'X';",
+        "importancy": "9"
+    },
+    {
+        "English Query": "Could you provide a list of instructors in the faculty X?",
+        "Arabic Query": "هل يمكنك تقديم قائمة بالمدرسين في الكلية X؟",
+        "SQL Query": "SELECT i.name_arabic FROM instructor i JOIN department d ON i.department_id = d.id JOIN faculty f ON d.faculty_id = f.id WHERE f.name_arabic = 'X' OR f.symbol = 'X';",
+        "importancy": "9"
+    },
+    {},
+    {},
+    {},
+    {},
+    {
+        "English Query": "Could you provide the description of the department X?",
+        "Arabic Query": "هل يمكنك تقديم وصف للدائرة الأكاديمية X؟",
+        "SQL Query": "SELECT description FROM department WHERE name_arabic = 'X' OR symbol = 'X';",
+        "importancy": "7"
+    },
+    {
+        "English Query": "Could you provide the description of the department named X?",
+        "Arabic Query": "هل يمكنك تقديم وصف للدائرة التي تدعي (اسمها) X؟",
+        "SQL Query": "SELECT description FROM department WHERE name_arabic = 'X';",
+        "importancy": "7"
+    },
+    {
+        "English Query": "What is the symbol associated with the department named X?",
+        "Arabic Query": "ما هو الرمز المرتبط بالدائرة الأكاديمية X؟",
+        "SQL Query": "SELECT symbol FROM department WHERE name_arabic = 'X' OR symbol = 'X';",
+        "importancy": "5"
+    },
+    {
+        "English Query": "Could you tell me the name of the head of the department X?",
+        "Arabic Query": "هل يمكنك أن تخبرني بإسم رئيس الدائرة الأكاديمية X؟",
+        "SQL Query": "SELECT i.name_arabic FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'X' OR d.symbol = 'X';",
+        "importancy": "10"
+    },
+    {
+        "English Query": "Could you provide the email of the head of department X?",
+        "Arabic Query": "هل يمكنك تقديم البريد الإلكتروني لرئيس الدائرة الأكاديمية X؟",
+        "SQL Query": "SELECT i.email FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'X' OR d.symbol = 'X';",
+        "importancy": "10"
+    },
+    {
+        "English Query": "Could you provide the phone number of the head of department X?",
+        "Arabic Query": "هل يمكنك تقديم رقم الهاتف لرئيس الدائرة الأكاديمية X؟",
+        "SQL Query": "SELECT i.phone_number FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'X' OR d.symbol = 'X';",
+        "importancy": "10"
+    },
+    {
+        "English Query": "Could you provide the office hours of the head of department X?",
+        "Arabic Query": "هل يمكنك تقديم الساعات المكتبية لرئيس الدائرة الأكاديمية X؟",
+        "SQL Query": "SELECT i.office_hours FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'X' OR d.symbol = 'X';",
+        "importancy": "10"
+    },
+    {
+        "English Query": "Could you provide the Ritaj ID of the head of department X?",
+        "Arabic Query": "هل يمكنك تقديم ID ريتاج لرئيس الدائرة الأكاديمية X؟",
+        "SQL Query": "SELECT i.ritaj_id FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'X' OR d.symbol = 'X';",
+        "importancy": "6"
+    },
+    {
+        "English Query": "Could you tell me the faculty of the department X?",
+        "Arabic Query": "هل يمكنك أن تخبرني عن الكلية التي تتبع لها الدائرة الأكاديمية X؟",
+        "SQL Query": "SELECT f.name_arabic FROM department d JOIN faculty f ON d.faculty_id = f.id WHERE d.name_arabic = 'X' OR d.symbol = 'X';",
+        "importancy": "7"
+    },
+    {
+        "English Query": "Could you provide a list of majors in the department X?",
+        "Arabic Query": "هل يمكنك تقديم قائمة بالتخصصات في الدائرة الأكاديمية X؟",
+        "SQL Query": "SELECT m.name_arabic FROM major m JOIN department d ON m.department_id = d.id WHERE d.name_arabic = 'X' OR d.symbol = 'X';",
+        "importancy": "10"
+    },
+    {
+        "English Query": "Could you provide a list of instructors in the department X?",
+        "Arabic Query": "هل يمكنك تقديم قائمة بالمدرسين في الدائرة الأكاديمية X؟",
+        "SQL Query": "SELECT i.name_arabic FROM instructor i WHERE i.department_id IN (SELECT id FROM department WHERE name_arabic = 'X' OR symbol = 'X');",
+        "importancy": "10"
+    },
+    {},
+    {},
+    {},
+    {},
+    {}
+]
