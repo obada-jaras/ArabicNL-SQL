@@ -353,6 +353,86 @@
 
 
     
+
+
+
+
+
+
+
+
+
+
+
+
+
+    {
+        "English Query": "Can you provide me with the phone number of the instructor X?",
+        "Arabic Query": "هل يمكنك تقديم رقم الهاتف للدكتور X؟",
+        "SQL Query": "SELECT phone_number FROM instructor WHERE name_arabic = 'X';"
+    },
+    
+    {
+        "English Query": "What is the email address of the instructor X?",
+        "Arabic Query": "ما هو عنوان البريد الإلكتروني للدكتور X؟",
+        "SQL Query": "SELECT email FROM instructor WHERE name_arabic = 'X';"
+    },
+
+    {
+        "English Query": "What is the ritaj id of the instructor X?",
+        "Arabic Query": "ما هو الرقم الخاص بالدكتور X في ريتاج؟",
+        "SQL Query": "SELECT ritaj_id FROM instructor WHERE name_arabic = 'X';"
+    },
+
+    {
+        "English Query": "What are the office hours for the instructor X?",
+        "Arabic Query": "ما هي الساعات المكتبية للدكتور X؟",
+        "SQL Query": "SELECT office_hours FROM instructor WHERE name_arabic = 'X';"
+    },
+    
+    {
+        "English Query": "Which department does the instructor X belong to?",
+        "Arabic Query": "إلى أي دائرة ينتمي الدكتور X؟",
+        "SQL Query": "SELECT d.name_arabic FROM department d JOIN instructor i ON d.id = i.department_id WHERE i.name_arabic = 'X';"
+    },
+
+    {
+        "English Query": "Which faculty does the instructor X belong to?",
+        "Arabic Query": "إلى أي كلية ينتمي الدكتور X؟",
+        "SQL Query": "SELECT f.name_arabic FROM faculty f JOIN department d ON f.id = d.faculty_id JOIN instructor i ON d.id = i.department_id WHERE i.name_arabic = 'X';"
+    },
+    
+    {
+        "English Query": "Which courses does the instructor X teach?",
+        "Arabic Query": "ما هي المساقات التي يدرسها الدكتور X؟",
+        "SQL Query": "SELECT c.name_arabic FROM course c JOIN instructor_course ic ON c.id = ic.course_id JOIN instructor i ON ic.instructor_id = i.id WHERE i.name_arabic = 'X';"
+    },
+
+    {
+        "English Query": "Who are the teaching assistants under the instruction of instructor X?",
+        "Arabic Query": "من هم المساعدين تحت إشراف الدكتور X؟",
+        "SQL Query": "SELECT ta.name_arabic FROM teaching_assistant ta JOIN instructor i ON ta.department_id = i.department_id WHERE i.name_arabic = 'X';"
+    },
+
+    {
+        "English Query": "Which faculty is the instructor X the dean of?",
+        "Arabic Query": "ما هي الكلية التي يشغل فيها الدكتور X منصب العميد؟",
+        "SQL Query": "SELECT f.name_arabic FROM faculty f JOIN instructor i ON f.dean_id = i.id WHERE i.name_arabic = 'X';"
+    },
+
+    {
+        "English Query": "Which department is the instructor X the head of?",
+        "Arabic Query": "ما هي الدائرة التي يشغل فيها الدكتور X منصب رئيس الدائرة",
+        "SQL Query": "SELECT d.name_arabic FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE i.name_arabic = 'X';"
+    },
+    
+    
+    
+    
+    
+    
+
+    
     
     
     
