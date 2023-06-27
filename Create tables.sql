@@ -204,8 +204,8 @@ instructor:
     instructor & course:
         list of courses of the instructor X
     
-    instructor & teaching assistant:
-        list of teaching assistants of the instructor X
+    -- instructor & teaching assistant:
+    --     list of teaching assistants of the instructor X
 
     instructor & faculty:
         what is the faculty where the instructor X is the dean of
