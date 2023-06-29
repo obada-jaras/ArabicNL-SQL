@@ -2,49 +2,49 @@
     {
         "English Query": "Which faculty has the most departments?",
         "Arabic Query": "أي كلية لديها العدد الأكبر من الدوائر؟",
-        "SQL Query": "SELECT faculty.id, faculty.name_english, COUNT(department.id) as num_departments FROM faculty LEFT JOIN department ON department.faculty_id = faculty.id GROUP BY faculty.id, faculty.name_english ORDER BY num_departments DESC LIMIT 1;",
+        "SQL Query": "SELECT faculty.id, faculty.name_arabic, COUNT(department.id) as num_departments FROM faculty LEFT JOIN department ON department.faculty_id = faculty.id GROUP BY faculty.id, faculty.name_arabic ORDER BY num_departments DESC LIMIT 1;",
         "importancy": "9"
     },
     {
         "English Query": "How many departments are there in each faculty?",
         "Arabic Query": "كم عدد الدوائر في كل كلية؟",
-        "SQL Query": "SELECT faculty.id, faculty.name_english, COUNT(department.id) as num_departments FROM faculty LEFT JOIN department ON department.faculty_id = faculty.id GROUP BY faculty.id, faculty.name_english;",
+        "SQL Query": "SELECT faculty.id, faculty.name_arabic, COUNT(department.id) as num_departments FROM faculty LEFT JOIN department ON department.faculty_id = faculty.id GROUP BY faculty.id, faculty.name_arabic;",
         "importancy": "8"
     },
     {
         "English Query": "How many courses are there in each major?",
         "Arabic Query": "كم عدد المساقات في كل تخصص؟",
-        "SQL Query": "SELECT major.id, major.name_english, COUNT(course.id) as num_courses FROM major LEFT JOIN course ON course.major_id = major.id GROUP BY major.id, major.name_english;",
+        "SQL Query": "SELECT major.id, major.name_arabic, COUNT(course.id) as num_courses FROM major LEFT JOIN course ON course.major_id = major.id GROUP BY major.id, major.name_arabic;",
         "importancy": "8"
     },
     {
         "English Query": "Which faculty has the most number of courses?",
         "Arabic Query": "أي كلية لديها العدد الأكبر من المساقات؟",
-        "SQL Query": "SELECT faculty.id, faculty.name_english, COUNT(course.id) as num_courses FROM faculty JOIN department ON faculty.id = department.faculty_id JOIN major ON department.id = major.department_id JOIN course ON major.id = course.major_id GROUP BY faculty.id, faculty.name_english ORDER BY num_courses DESC LIMIT 1;",
+        "SQL Query": "SELECT faculty.id, faculty.name_arabic, COUNT(course.id) as num_courses FROM faculty JOIN department ON faculty.id = department.faculty_id JOIN major ON department.id = major.department_id JOIN course ON major.id = course.major_id GROUP BY faculty.id, faculty.name_arabic ORDER BY num_courses DESC LIMIT 1;",
         "importancy": "9"
     },
     {
         "English Query": "Which department has the most teaching assistants?",
         "Arabic Query": "أي دائرة لديها العدد الأكبر من المساعدين؟",
-        "SQL Query": "SELECT department.id, department.name_english, COUNT(teaching_assistant.id) as num_tas FROM department LEFT JOIN teaching_assistant ON teaching_assistant.department_id = department.id GROUP BY department.id, department.name_english ORDER BY num_tas DESC LIMIT 1;",
+        "SQL Query": "SELECT department.id, department.name_arabic, COUNT(teaching_assistant.id) as num_tas FROM department LEFT JOIN teaching_assistant ON teaching_assistant.department_id = department.id GROUP BY department.id, department.name_arabic ORDER BY num_tas DESC LIMIT 1;",
         "importancy": "9"
     },
     {
         "English Query": "Which course has the most prerequisites?",
         "Arabic Query": "أي مساق لديها العدد الأكبر من المتطلبات السابقة؟",
-        "SQL Query": "SELECT course.id, course.name_english, COUNT(course_prerequisite.prerequisite_id) as num_prerequisites FROM course LEFT JOIN course_prerequisite ON course_prerequisite.course_id = course.id GROUP BY course.id, course.name_english ORDER BY num_prerequisites DESC LIMIT 1;",
+        "SQL Query": "SELECT course.id, course.name_arabic, COUNT(course_prerequisite.prerequisite_id) as num_prerequisites FROM course LEFT JOIN course_prerequisite ON course_prerequisite.course_id = course.id GROUP BY course.id, course.name_arabic ORDER BY num_prerequisites DESC LIMIT 1;",
         "importancy": "8"
     },
     {
         "English Query": "Who is the instructor that teaches the least number of courses?",
         "Arabic Query": "من هو الدكتور الذي يعلم أقل عدد من المساقات",
-        "SQL Query": "SELECT instructor.id, instructor.name_english, COUNT(instructor_course.course_id) as num_courses FROM instructor LEFT JOIN instructor_course ON instructor.id = instructor_course.instructor_id GROUP BY instructor.id, instructor.name_english ORDER BY num_courses ASC LIMIT 1;",
+        "SQL Query": "SELECT instructor.id, instructor.name_arabic, COUNT(instructor_course.course_id) as num_courses FROM instructor LEFT JOIN instructor_course ON instructor.id = instructor_course.instructor_id GROUP BY instructor.id, instructor.name_arabic ORDER BY num_courses ASC LIMIT 1;",
         "importancy": "8"
     },
     {
         "English Query": "Which faculty has the least number of departments?",
         "Arabic Query": "أي كلية لديها العدد الأقل من الدوائر؟",
-        "SQL Query": "SELECT faculty.id, faculty.name_english, COUNT(department.id) as num_departments FROM faculty LEFT JOIN department ON department.faculty_id = faculty.id GROUP BY faculty.id, faculty.name_english ORDER BY num_departments ASC LIMIT 1;",
+        "SQL Query": "SELECT faculty.id, faculty.name_arabic, COUNT(department.id) as num_departments FROM faculty LEFT JOIN department ON department.faculty_id = faculty.id GROUP BY faculty.id, faculty.name_arabic ORDER BY num_departments ASC LIMIT 1;",
         "importancy": "8"
     },
     {
@@ -56,7 +56,7 @@
     {
         "English Query": "Which instructors have 'Mohamed' in their name?",
         "Arabic Query": "أي الدكاترة لديهم 'محمد' في اسمهم؟",
-        "SQL Query": "SELECT * FROM instructor WHERE name_arabic LIKE '%Mohamed%' OR name_english LIKE '%Mohamed%';",
+        "SQL Query": "SELECT * FROM instructor WHERE name_arabic LIKE '%محمد%';",
         "importancy": "8"
     },
     {
@@ -68,25 +68,25 @@
     {
         "English Query": "Which faculty has the least number of instructors?",
         "Arabic Query": "أي كلية لديها العدد الأقل من الدكاترة؟",
-        "SQL Query": "SELECT faculty.id, faculty.name_english, COUNT(instructor.id) as num_instructors FROM faculty JOIN department ON faculty.id = department.faculty_id JOIN instructor ON department.id = instructor.department_id GROUP BY faculty.id, faculty.name_english ORDER BY num_instructors ASC LIMIT 1;",
+        "SQL Query": "SELECT faculty.id, faculty.name_arabic, COUNT(instructor.id) as num_instructors FROM faculty JOIN department ON faculty.id = department.faculty_id JOIN instructor ON department.id = instructor.department_id GROUP BY faculty.id, faculty.name_arabic ORDER BY num_instructors ASC LIMIT 1;",
         "importancy": "8"
     },
     {
         "English Query": "Which major offers the least number of courses?",
         "Arabic Query": "أي تخصص يقدم العدد الأقل من المساقات",
-        "SQL Query": "SELECT major.id, major.name_english, COUNT(course.id) as num_courses FROM major LEFT JOIN course ON course.major_id = major.id GROUP BY major.id, major.name_english ORDER BY num_courses ASC LIMIT 1;",
+        "SQL Query": "SELECT major.id, major.name_arabic, COUNT(course.id) as num_courses FROM major LEFT JOIN course ON course.major_id = major.id GROUP BY major.id, major.name_arabic ORDER BY num_courses ASC LIMIT 1;",
         "importancy": "9"
     },
     {
         "English Query": "Which department has the most courses with at least one prerequisite?",
         "Arabic Query": "أي دائرة لديها العدد الأكبر من المساقات التي لديها متطلب سابق واحد على الأقل؟",
-        "SQL Query": "SELECT department.id, department.name_english, COUNT(DISTINCT course.id) as num_courses FROM department JOIN major ON department.id = major.department_id JOIN course ON major.id = course.id JOIN course_prerequisite ON course.id = course_prerequisite.course_id GROUP BY department.id, department.name_english ORDER BY num_courses DESC LIMIT 1;",
+        "SQL Query": "SELECT department.id, department.name_arabic, COUNT(DISTINCT course.id) as num_courses FROM department JOIN major ON department.id = major.department_id JOIN course ON major.id = course.id JOIN course_prerequisite ON course.id = course_prerequisite.course_id GROUP BY department.id, department.name_arabic ORDER BY num_courses DESC LIMIT 1;",
         "importancy": "9"
     },
     {
         "English Query": "Which faculty has the most courses with at least 3 credits?",
         "Arabic Query": "أي كلية لديها العدد الأكبر من المساقات التي بها 3 ساعات على الأقل؟",
-        "SQL Query": "SELECT faculty.id, faculty.name_english, COUNT(course.id) as num_courses FROM faculty JOIN department ON faculty.id = department.faculty_id JOIN major ON department.id = major.department_id JOIN course ON major.id = course.id WHERE course.credits >= 3 GROUP BY faculty.id, faculty.name_english ORDER BY num_courses DESC LIMIT 1;",
+        "SQL Query": "SELECT faculty.id, faculty.name_arabic, COUNT(course.id) as num_courses FROM faculty JOIN department ON faculty.id = department.faculty_id JOIN major ON department.id = major.department_id JOIN course ON major.id = course.id WHERE course.credits >= 3 GROUP BY faculty.id, faculty.name_arabic ORDER BY num_courses DESC LIMIT 1;",
         "importancy": "8"
     },
     {
@@ -98,25 +98,25 @@
     {
         "English Query": "Which department offers the most courses?",
         "Arabic Query": "أي دائرة تقدم أكبر عدد من المساقات؟",
-        "SQL Query": "SELECT department.id, department.name_english, COUNT(course.id) AS NumCourses FROM department JOIN major ON department.id = major.department_id JOIN course ON major.id = course.major_id GROUP BY department.id, department.name_english ORDER BY NumCourses DESC LIMIT 1;",
+        "SQL Query": "SELECT department.id, department.name_arabic, COUNT(course.id) AS NumCourses FROM department JOIN major ON department.id = major.department_id JOIN course ON major.id = course.major_id GROUP BY department.id, department.name_arabic ORDER BY NumCourses DESC LIMIT 1;",
         "importancy": "8"
     },
     {
         "English Query": "Which department has the highest average course credits?",
         "Arabic Query": "أي دائرة لديها أعلى متوسط لعدد الساعات المعتمدة للمساقات؟",
-        "SQL Query": "SELECT department.id, department.name_english, AVG(course.credits) AS AvgCredits FROM department JOIN major ON department.id = major.department_id JOIN course ON major.id = course.major_id GROUP BY department.id, department.name_english ORDER BY AvgCredits DESC LIMIT 1;",
+        "SQL Query": "SELECT department.id, department.name_arabic, AVG(course.credits) AS AvgCredits FROM department JOIN major ON department.id = major.department_id JOIN course ON major.id = course.major_id GROUP BY department.id, department.name_arabic ORDER BY AvgCredits DESC LIMIT 1;",
         "importancy": "9"
     },
     {
         "English Query": "Which department has the least hours in their majors?",
         "Arabic Query": "أي دائرة لديها أقل ساعات في تخصصاته؟",
-        "SQL Query": "SELECT department.id, department.name_english, MIN(major.hours) AS MinHours FROM department JOIN major ON department.id = major.department_id GROUP BY department.id, department.name_english;",
+        "SQL Query": "SELECT department.id, department.name_arabic, MIN(major.hours) AS MinHours FROM department JOIN major ON department.id = major.department_id GROUP BY department.id, department.name_arabic;",
         "importancy": "9"
     },
     {
         "English Query": "How many instructors are in each department?",
         "Arabic Query": "كم عدد الدكاترة في كل دائرة؟",
-        "SQL Query": "SELECT department.id, department.name_english, COUNT(instructor.id) AS NumInstructors FROM department LEFT JOIN instructor ON department.id = instructor.department_id GROUP BY department.id, department.name_english;",
+        "SQL Query": "SELECT department.id, department.name_arabic, COUNT(instructor.id) AS NumInstructors FROM department LEFT JOIN instructor ON department.id = instructor.department_id GROUP BY department.id, department.name_arabic;",
         "importancy": "9"
     },
     {
