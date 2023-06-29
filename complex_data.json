@@ -31,7 +31,7 @@
     },
     {
         "English Query": "Which course has the most prerequisites?",
-        "Arabic Query": "أي مساق لديها العدد الأكبر من المتطلبات السابقة؟",
+        "Arabic Query": "ما هو المساق الذي لديه العدد الأكبر من المتطلبات السابقة؟",
         "SQL Query": "SELECT course.id, course.name_arabic, COUNT(course_prerequisite.prerequisite_id) as num_prerequisites FROM course LEFT JOIN course_prerequisite ON course_prerequisite.course_id = course.id GROUP BY course.id, course.name_arabic ORDER BY num_prerequisites DESC LIMIT 1;",
         "importancy": "8"
     },
@@ -55,8 +55,8 @@
     },
     {
         "English Query": "Which instructors have 'Mohamed' in their name?",
-        "Arabic Query": "أي الدكاترة لديهم 'محمد' في اسمهم؟",
-        "SQL Query": "SELECT * FROM instructor WHERE name_arabic LIKE '%محمد%';",
+        "Arabic Query": "أي الدكاترة لديهم '[first-name]' في اسمهم؟",
+        "SQL Query": "SELECT * FROM instructor WHERE name_arabic LIKE '%[first-name]%';",
         "importancy": "8"
     },
     {
@@ -120,21 +120,21 @@
         "importancy": "9"
     },
     {
-        "English Query": "Which instructors have 'edu' in their email?",
-        "Arabic Query": "أي الدكاترة لديهم 'edu' في بريدهم الإلكتروني؟",
-        "SQL Query": "SELECT * FROM instructor WHERE email LIKE '%edu%';",
+        "English Query": "Which instructors have 'gmail' in their email?",
+        "Arabic Query": "أي الدكاترة لديهم 'gmail' في بريدهم الإلكتروني؟",
+        "SQL Query": "SELECT * FROM instructor WHERE email LIKE '%gmail%';",
         "importancy": "9"
     },
     {
         "English Query": "Which courses are taught by instructors from the 'Computer Science' department?",
-        "Arabic Query": "أي المساقات التي يتم تدريسها بواسطة دكاترة من قسم 'علم الحاسوب'؟",
-        "SQL Query": "SELECT course.* FROM course JOIN major ON course.major_id = major.id JOIN department ON major.department_id = department.id WHERE department.name_english IN ('Computer Science');",
+        "Arabic Query": "ما هي المساقات التي يتم تدريسها بواسطة دكاترة من قسم '[department-name]'؟",
+        "SQL Query": "SELECT course.* FROM course JOIN major ON course.major_id = major.id JOIN department ON major.department_id = department.id WHERE department.name_arabic IN ('[department-name]');",
         "importancy": "9"
     },
     {
-        "English Query": "Which courses have either 'CS' or 'Math' in their symbols?",
-        "Arabic Query": "أي المساقات لديها إما 'CS' أو 'Math' في رموزها؟",
-        "SQL Query": "SELECT * FROM course WHERE symbol LIKE '%CS%' OR symbol LIKE '%Math%';",
+        "English Query": "Which courses have either '[course-symbol-1]' or '[course-symbol-2]' in their symbols?",
+        "Arabic Query": "أي المساقات لديها إما '[course-symbol-1]' أو '[course-symbol-2]' في رموزها؟",
+        "SQL Query": "SELECT * FROM course WHERE symbol LIKE '%[course-symbol-1]%' OR symbol LIKE '%[course-symbol-2]%';",
         "importancy": "9"
     },
 

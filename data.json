@@ -1,74 +1,74 @@
 [
     {
-        "English Query": "Could you provide the description of the faculty named X?",
-        "Arabic Query": "هل يمكنك تقديم وصف للكلية التي تدعى X؟",
-        "SQL Query": "SELECT description FROM faculty WHERE name_arabic = 'X' OR symbol = 'X';",
+        "English Query": "Could you provide the description of the faculty named [faculty-name]?",
+        "Arabic Query": "هل يمكنك تقديم وصف للكلية التي تدعى [faculty-name]؟",
+        "SQL Query": "SELECT description FROM faculty WHERE name_arabic = '[faculty-name]' OR symbol = '[faculty-name]';",
         "importancy": "10"
     },
     {
-        "English Query": "Could you provide the description of the faculty with symbol X?",
-        "Arabic Query": "هل يمكنك تقديم وصف للكلية التي لها الرمز X؟",
-        "SQL Query": "SELECT description FROM faculty WHERE symbol = 'X';",
+        "English Query": "Could you provide the description of the faculty with symbol [faculty-symbol]?",
+        "Arabic Query": "هل يمكنك تقديم وصف للكلية التي لها الرمز [faculty-symbol]؟",
+        "SQL Query": "SELECT description FROM faculty WHERE symbol = '[faculty-symbol]';",
         "importancy": "5"
     },
     {
-        "English Query": "What is the symbol associated with the faculty named X?",
-        "Arabic Query": "ما هو الرمز المرتبط بالكلية التي تدعى X؟",
-        "SQL Query": "SELECT symbol FROM faculty WHERE name_arabic = 'X';",
+        "English Query": "What is the symbol associated with the faculty named [faculty-name]?",
+        "Arabic Query": "ما هو الرمز المرتبط بالكلية التي تدعى [faculty-name]؟",
+        "SQL Query": "SELECT symbol FROM faculty WHERE name_arabic = '[faculty-name]';",
         "importancy": "1"
     },
     {
-        "English Query": "Could you tell me the name of the dean of the faculty X?",
-        "Arabic Query": "هل يمكنك أن تخبرني بإسم عميد الكلية X؟",
-        "SQL Query": "SELECT i.name_arabic FROM faculty f JOIN instructor i ON f.dean_id = i.id WHERE f.name_arabic = 'X' OR f.symbol = 'X';",
+        "English Query": "Could you tell me the name of the dean of the faculty [faculty-name]?",
+        "Arabic Query": "هل يمكنك أن تخبرني بإسم عميد الكلية [faculty-name]؟",
+        "SQL Query": "SELECT i.name_arabic FROM faculty f JOIN instructor i ON f.dean_id = i.id WHERE f.name_arabic = '[faculty-name]' OR f.symbol = '[faculty-name]';",
         "importancy": "10"
     },
     {
-        "English Query": "Could you provide the email of the dean of faculty X?",
-        "Arabic Query": "هل يمكنك تقديم البريد الإلكتروني لعميد الكلية X؟",
-        "SQL Query": "SELECT i.email FROM faculty f JOIN instructor i ON f.dean_id = i.id WHERE f.name_arabic = 'X' OR f.symbol = 'X';",
+        "English Query": "Could you provide the email of the dean of faculty [faculty-name]?",
+        "Arabic Query": "هل يمكنك تقديم البريد الإلكتروني لعميد الكلية [faculty-name]؟",
+        "SQL Query": "SELECT i.email FROM faculty f JOIN instructor i ON f.dean_id = i.id WHERE f.name_arabic = '[faculty-name]' OR f.symbol = '[faculty-name]';",
         "importancy": "10"
     },
     {
-        "English Query": "Could you provide the phone number of the dean of faculty X?",
-        "Arabic Query": "هل يمكنك تقديم رقم الهاتف لعميد الكلية X؟",
-        "SQL Query": "SELECT i.phone_number FROM faculty f JOIN instructor i ON f.dean_id = i.id WHERE f.name_arabic = 'X' OR f.symbol = 'X';",
+        "English Query": "Could you provide the phone number of the dean of faculty [faculty-name]?",
+        "Arabic Query": "هل يمكنك تقديم رقم الهاتف لعميد الكلية [faculty-name]؟",
+        "SQL Query": "SELECT i.phone_number FROM faculty f JOIN instructor i ON f.dean_id = i.id WHERE f.name_arabic = '[faculty-name]' OR f.symbol = '[faculty-name]';",
         "importancy": "10"
     },
     {
-        "English Query": "Could you provide the office hours of the dean of faculty X?",
-        "Arabic Query": "هل يمكنك تقديم الساعات المكتبية لعميد الكلية X؟",
-        "SQL Query": "SELECT i.office_hours FROM faculty f JOIN instructor i ON f.dean_id = i.id WHERE f.name_arabic = 'X' OR f.symbol = 'X';",
+        "English Query": "Could you provide the office hours of the dean of faculty [faculty-name]?",
+        "Arabic Query": "هل يمكنك تقديم الساعات المكتبية لعميد الكلية [faculty-name]؟",
+        "SQL Query": "SELECT i.office_hours FROM faculty f JOIN instructor i ON f.dean_id = i.id WHERE f.name_arabic = '[faculty-name]' OR f.symbol = '[faculty-name]';",
         "importancy": "10"
     },
     {
-        "English Query": "Could you provide the Ritaj ID of the dean of faculty X?",
-        "Arabic Query": "هل يمكنك تقديم ID ريتاج لعميد الكلية X؟",
-        "SQL Query": "SELECT i.ritaj_id FROM faculty f JOIN instructor i ON f.dean_id = i.id WHERE f.name_arabic = 'X' OR f.symbol = 'X';",
+        "English Query": "Could you provide the Ritaj ID of the dean of faculty [faculty-name]?",
+        "Arabic Query": "هل يمكنك تقديم ID ريتاج لعميد الكلية [faculty-name]؟",
+        "SQL Query": "SELECT i.ritaj_id FROM faculty f JOIN instructor i ON f.dean_id = i.id WHERE f.name_arabic = '[faculty-name]' OR f.symbol = '[faculty-name]';",
         "importancy": "3"
     },
     {
-        "English Query": "Could you tell me the department of the dean of the faculty X?",
-        "Arabic Query": "هل يمكنك أن تخبرني ما هي الدائرة التي يتبع لها عميد الكلية X؟",
-        "SQL Query": "SELECT d.name_arabic FROM faculty f JOIN instructor i ON f.dean_id = i.id JOIN department d ON i.department_id = d.id WHERE f.name_arabic = 'X' OR f.symbol = 'X';",
+        "English Query": "Could you tell me the department of the dean of the faculty [faculty-name]?",
+        "Arabic Query": "هل يمكنك أن تخبرني ما هي الدائرة التي يتبع لها عميد الكلية [faculty-name]؟",
+        "SQL Query": "SELECT d.name_arabic FROM faculty f JOIN instructor i ON f.dean_id = i.id JOIN department d ON i.department_id = d.id WHERE f.name_arabic = '[faculty-name]' OR f.symbol = '[faculty-name]';",
         "importancy": "9"
     },
     {
-        "English Query": "Could you provide a list of departments in the faculty X?",
-        "Arabic Query": "هل يمكنك تقديم قائمة الدوائر الأكاديمية في الكلية X؟",
-        "SQL Query": "SELECT d.name_arabic FROM department d JOIN faculty f ON d.faculty_id = f.id WHERE f.name_arabic = 'X' OR f.symbol = 'X';",
+        "English Query": "Could you provide a list of departments in the faculty [faculty-name]?",
+        "Arabic Query": "هل يمكنك تقديم قائمة الدوائر الأكاديمية في الكلية [faculty-name]؟",
+        "SQL Query": "SELECT d.name_arabic FROM department d JOIN faculty f ON d.faculty_id = f.id WHERE f.name_arabic = '[faculty-name]' OR f.symbol = '[faculty-name]';",
         "importancy": "7"
     },
     {
-        "English Query": "Could you provide a list of majors in the faculty X?",
-        "Arabic Query": "هل يمكنك تقديم قائمة بالمساقات في الكلية X؟",
-        "SQL Query": "SELECT m.name_arabic FROM major m JOIN department d ON m.department_id = d.id JOIN faculty f ON d.faculty_id = f.id WHERE f.name_arabic = 'X' OR f.symbol = 'X';",
+        "English Query": "Could you provide a list of majors in the faculty [faculty-name]?",
+        "Arabic Query": "هل يمكنك تقديم قائمة بالمساقات في الكلية [faculty-name]؟",
+        "SQL Query": "SELECT m.name_arabic FROM major m JOIN department d ON m.department_id = d.id JOIN faculty f ON d.faculty_id = f.id WHERE f.name_arabic = '[faculty-name]' OR f.symbol = '[faculty-name]';",
         "importancy": "9"
     },
     {
-        "English Query": "Could you provide a list of instructors in the faculty X?",
-        "Arabic Query": "هل يمكنك تقديم قائمة بالدكتورين في الكلية X؟",
-        "SQL Query": "SELECT i.name_arabic FROM instructor i JOIN department d ON i.department_id = d.id JOIN faculty f ON d.faculty_id = f.id WHERE f.name_arabic = 'X' OR f.symbol = 'X';",
+        "English Query": "Could you provide a list of instructors in the faculty [faculty-name]?",
+        "Arabic Query": "هل يمكنك تقديم قائمة بالمدرسين في الكلية [faculty-name]؟",
+        "SQL Query": "SELECT i.name_arabic FROM instructor i JOIN department d ON i.department_id = d.id JOIN faculty f ON d.faculty_id = f.id WHERE f.name_arabic = '[faculty-name]' OR f.symbol = '[faculty-name]';",
         "importancy": "9"
     },
     {},
@@ -76,428 +76,351 @@
     {},
     {},
     {
-        "English Query": "Could you provide the description of the department X?",
-        "Arabic Query": "هل يمكنك تقديم وصف للدائرة الأكاديمية X؟",
-        "SQL Query": "SELECT description FROM department WHERE name_arabic = 'X' OR symbol = 'X';",
+        "English Query": "Could you provide the description of the department [department-name]?",
+        "Arabic Query": "هل يمكنك تقديم وصف للدائرة الأكاديمية [department-name]؟",
+        "SQL Query": "SELECT description FROM department WHERE name_arabic = '[department-name]' OR symbol = '[department-name]';",
         "importancy": "7"
     },
     {
-        "English Query": "Could you provide the description of the department named X?",
-        "Arabic Query": "هل يمكنك تقديم وصف للدائرة التي تدعي (اسمها) X؟",
-        "SQL Query": "SELECT description FROM department WHERE name_arabic = 'X';",
+        "English Query": "Could you provide the description of the department named [department-name]?",
+        "Arabic Query": "هل يمكنك تقديم وصف للدائرة التي تدعى (اسمها) [department-name]؟",
+        "SQL Query": "SELECT description FROM department WHERE name_arabic = '[department-name]';",
         "importancy": "7"
     },
     {
-        "English Query": "What is the symbol associated with the department named X?",
-        "Arabic Query": "ما هو الرمز المرتبط بالدائرة الأكاديمية X؟",
-        "SQL Query": "SELECT symbol FROM department WHERE name_arabic = 'X' OR symbol = 'X';",
+        "English Query": "What is the symbol associated with the department named [department-name]?",
+        "Arabic Query": "ما هو الرمز المرتبط بالدائرة الأكاديمية [department-name]؟",
+        "SQL Query": "SELECT symbol FROM department WHERE name_arabic = '[department-name]' OR symbol = '[department-name]';",
         "importancy": "5"
     },
     {
-        "English Query": "Could you tell me the name of the head of the department X?",
-        "Arabic Query": "هل يمكنك أن تخبرني بإسم رئيس الدائرة الأكاديمية X؟",
-        "SQL Query": "SELECT i.name_arabic FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'X' OR d.symbol = 'X';",
+        "English Query": "Could you tell me the name of the head of the department [department-name]?",
+        "Arabic Query": "هل يمكنك أن تخبرني بإسم رئيس الدائرة الأكاديمية [department-name]؟",
+        "SQL Query": "SELECT i.name_arabic FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = '[department-name]' OR d.symbol = '[department-name]';",
         "importancy": "10"
     },
     {
-        "English Query": "Could you provide the email of the head of department X?",
-        "Arabic Query": "هل يمكنك تقديم البريد الإلكتروني لرئيس الدائرة الأكاديمية X؟",
-        "SQL Query": "SELECT i.email FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'X' OR d.symbol = 'X';",
+        "English Query": "Could you provide the email of the head of department [department-name]?",
+        "Arabic Query": "هل يمكنك تقديم البريد الإلكتروني لرئيس الدائرة الأكاديمية [department-name]؟",
+        "SQL Query": "SELECT i.email FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = '[department-name]' OR d.symbol = '[department-name]';",
         "importancy": "10"
     },
     {
-        "English Query": "Could you provide the phone number of the head of department X?",
-        "Arabic Query": "هل يمكنك تقديم رقم الهاتف لرئيس الدائرة الأكاديمية X؟",
-        "SQL Query": "SELECT i.phone_number FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'X' OR d.symbol = 'X';",
+        "English Query": "Could you provide the phone number of the head of department [department-name]?",
+        "Arabic Query": "هل يمكنك تقديم رقم الهاتف لرئيس الدائرة الأكاديمية [department-name]؟",
+        "SQL Query": "SELECT i.phone_number FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = '[department-name]' OR d.symbol = '[department-name]';",
         "importancy": "10"
     },
     {
-        "English Query": "Could you provide the office hours of the head of department X?",
-        "Arabic Query": "هل يمكنك تقديم الساعات المكتبية لرئيس الدائرة الأكاديمية X؟",
-        "SQL Query": "SELECT i.office_hours FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'X' OR d.symbol = 'X';",
+        "English Query": "Could you provide the office hours of the head of department [department-name]?",
+        "Arabic Query": "هل يمكنك تقديم الساعات المكتبية لرئيس الدائرة الأكاديمية [department-name]؟",
+        "SQL Query": "SELECT i.office_hours FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = '[department-name]' OR d.symbol = '[department-name]';",
         "importancy": "10"
     },
     {
-        "English Query": "Could you provide the Ritaj ID of the head of department X?",
-        "Arabic Query": "هل يمكنك تقديم ID ريتاج لرئيس الدائرة الأكاديمية X؟",
-        "SQL Query": "SELECT i.ritaj_id FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'X' OR d.symbol = 'X';",
+        "English Query": "Could you provide the Ritaj ID of the head of department [department-name]?",
+        "Arabic Query": "هل يمكنك تقديم ID ريتاج لرئيس الدائرة الأكاديمية [department-name]؟",
+        "SQL Query": "SELECT i.ritaj_id FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = '[department-name]' OR d.symbol = '[department-name]';",
         "importancy": "6"
     },
     {
-        "English Query": "Could you tell me the faculty of the department X?",
-        "Arabic Query": "هل يمكنك أن تخبرني عن الكلية التي تتبع لها الدائرة الأكاديمية X؟",
-        "SQL Query": "SELECT f.name_arabic FROM department d JOIN faculty f ON d.faculty_id = f.id WHERE d.name_arabic = 'X' OR d.symbol = 'X';",
+        "English Query": "Could you tell me the faculty of the department [department-name]?",
+        "Arabic Query": "هل يمكنك أن تخبرني عن الكلية التي تتبع لها الدائرة الأكاديمية [department-name]؟",
+        "SQL Query": "SELECT f.name_arabic FROM department d JOIN faculty f ON d.faculty_id = f.id WHERE d.name_arabic = '[department-name]' OR d.symbol = '[department-name]';",
         "importancy": "7"
     },
     {
-        "English Query": "Could you provide a list of majors in the department X?",
-        "Arabic Query": "هل يمكنك تقديم قائمة بالمساقات في الدائرة الأكاديمية X؟",
-        "SQL Query": "SELECT m.name_arabic FROM major m JOIN department d ON m.department_id = d.id WHERE d.name_arabic = 'X' OR d.symbol = 'X';",
+        "English Query": "Could you provide a list of majors in the department [department-name]?",
+        "Arabic Query": "هل يمكنك تقديم قائمة بالمساقات في الدائرة الأكاديمية [department-name]؟",
+        "SQL Query": "SELECT m.name_arabic FROM major m JOIN department d ON m.department_id = d.id WHERE d.name_arabic = '[department-name]' OR d.symbol = '[department-name]';",
         "importancy": "10"
     },
     {
-        "English Query": "Could you provide a list of instructors in the department X?",
-        "Arabic Query": "هل يمكنك تقديم قائمة بالدكتورين في الدائرة الأكاديمية X؟",
-        "SQL Query": "SELECT i.name_arabic FROM instructor i WHERE i.department_id IN (SELECT id FROM department WHERE name_arabic = 'X' OR symbol = 'X');",
+        "English Query": "Could you provide a list of instructors in the department [department-name]?",
+        "Arabic Query": "هل يمكنك تقديم قائمة بالمدرسين في الدائرة الأكاديمية [department-name]؟",
+        "SQL Query": "SELECT i.name_arabic FROM instructor i WHERE i.department_id IN (SELECT id FROM department WHERE name_arabic = '[department-name]' OR symbol = '[department-name]');",
         "importancy": "10"
     },
-
-
-
-
-
-
-
-
-
-
-
-
-
     {
-        "English Query": "Could you provide the description of the major named X?",
-        "Arabic Query": "هل يمكنك تقديم وصف للتخصص الذي يدعى X؟",
-        "SQL Query": "SELECT description FROM major WHERE name_arabic = 'X' OR symbol = 'X';",
+        "English Query": "Could you provide the description of the major named [major-name]?",
+        "Arabic Query": "هل يمكنك تقديم وصف للتخصص الذي يدعى [major-name]؟",
+        "SQL Query": "SELECT description FROM major WHERE name_arabic = '[major-name]' OR symbol = '[major-name]';",
         "importancy": "7"
     },
-    
     {
-        "English Query": "What is the symbol associated with the major named X?",
-        "Arabic Query": "ما هو الرمز المرتبط بالتخصص الذي يدعى X؟",
-        "SQL Query": "SELECT symbol FROM major WHERE name_arabic = 'X';",
+        "English Query": "What is the symbol associated with the major named [major-name]?",
+        "Arabic Query": "ما هو الرمز المرتبط بالتخصص الذي يدعى [major-name]؟",
+        "SQL Query": "SELECT symbol FROM major WHERE name_arabic = '[major-name]';",
         "importancy": "1"
     },
-
     {
-        "English Query": "What is the total number of hours for the major X?",
-        "Arabic Query": "ما هو إجمالي عدد الساعات للتخصص X؟",
-        "SQL Query": "SELECT hours FROM major WHERE name_arabic = 'X' OR symbol = 'X';",
+        "English Query": "What is the total number of hours for the major [major-name]?",
+        "Arabic Query": "ما هو إجمالي عدد الساعات للتخصص [major-name]؟",
+        "SQL Query": "SELECT hours FROM major WHERE name_arabic = '[major-name]' OR symbol = '[major-name]';",
         "importancy": "10"
     },
-    
     {
-        "English Query": "What department does the major X belong to?",
-        "Arabic Query": "إلى أي دائرة ينتمي التخصص X؟",
-        "SQL Query": "SELECT d.name_arabic FROM major m JOIN department d ON m.department_id = d.id WHERE m.name_arabic = 'X' OR m.symbol = 'X';",
+        "English Query": "What department does the major [major-name] belong to?",
+        "Arabic Query": "إلى أي دائرة ينتمي التخصص [major-name]؟",
+        "SQL Query": "SELECT d.name_arabic FROM major m JOIN department d ON m.department_id = d.id WHERE m.name_arabic = '[major-name]' OR m.symbol = '[major-name]';",
         "importancy": "5"
     },
-
     {
-        "English Query": "Could you provide a list of courses (with thier details) in the major X, sorted by symbol?",
-        "Arabic Query": "هل يمكنك تقديم قائمة بمساقات التخصص X مرتبة حسب الرمز مع التفاصيل الخاصة بكل مساق",
-        "SQL Query": "SELECT c.name_arabic, c.symbol, c.description, c.credits FROM course c WHERE c.major_id IN (SELECT id FROM major WHERE name_arabic = 'X' OR symbol = 'X') ORDER BY c.symbol;",
+        "English Query": "Could you provide a list of courses (with thier details) in the major [major-name], sorted by symbol?",
+        "Arabic Query": "هل يمكنك تقديم قائمة بمساقات التخصص [major-name] مرتبة حسب الرمز مع التفاصيل الخاصة بكل مساق",
+        "SQL Query": "SELECT c.name_arabic, c.symbol, c.description, c.credits FROM course c WHERE c.major_id IN (SELECT id FROM major WHERE name_arabic = '[major-name]' OR symbol = '[major-name]') ORDER BY c.symbol;",
         "importancy": "9"
     },
-
     {
-        "English Query": "Could you provide a list of courses in the major X that are taught by the instructor Y?",
-        "Arabic Query": "هل يمكنك تقديم قائمة بالمساقات في التخصص X التي يدرسها الدكتور Y؟",
-        "SQL Query": "SELECT c.name_arabic FROM course c JOIN instructor_course ic ON c.id = ic.course_id JOIN instructor i ON ic.instructor_id = i.id WHERE c.major_id IN (SELECT id FROM major WHERE name_arabic = 'X' OR symbol = 'X') AND (i.name_arabic = 'Y' OR i.symbol = 'Y');",
+        "English Query": "Could you provide a list of courses in the major [major-name] that are taught by the instructor [instructor-name]?",
+        "Arabic Query": "هل يمكنك تقديم قائمة بالمساقات في التخصص [major-name] التي يدرسها الدكتور [instructor-name]؟",
+        "SQL Query": "SELECT c.name_arabic FROM course c JOIN instructor_course ic ON c.id = ic.course_id JOIN instructor i ON ic.instructor_id = i.id WHERE c.major_id IN (SELECT id FROM major WHERE name_arabic = '[major-name]' OR symbol = '[major-name]') AND (i.name_arabic = '[instructor-name]');",
         "importancy": "8"
     },
-    
     {
-        "English Query": "Could you provide a list of courses in the major X that are taught by the teaching assistant Y?",
-        "Arabic Query": "هل يمكنك تقديم قائمة بالمساقات في التخصص X التي يدرسها المساعد Y؟",
-        "SQL Query": "SELECT c.name_arabic FROM course c JOIN ta_course tac ON c.id = tac.course_id JOIN teaching_assistant ta ON tac.ta_id = ta.id WHERE c.major_id IN (SELECT id FROM major WHERE name_arabic = 'X' OR symbol = 'X') AND (ta.name_arabic = 'Y' OR ta.symbol = 'Y');",
+        "English Query": "Could you provide a list of courses in the major [major-name] that are taught by the teaching assistant [assistant-name]?",
+        "Arabic Query": "هل يمكنك تقديم قائمة بالمساقات في التخصص [major-name] التي يدرسها المساعد [assistant-name]؟",
+        "SQL Query": "SELECT c.name_arabic FROM course c JOIN ta_course tac ON c.id = tac.course_id JOIN teaching_assistant ta ON tac.ta_id = ta.id WHERE c.major_id IN (SELECT id FROM major WHERE name_arabic = '[major-name]' OR symbol = '[major-name]') AND (ta.name_arabic = '[assistant-name]');",
         "importancy": "6"
     },
-    
     {
-        "English Query": "Could you provide a list of courses in the major X that have the course Y as a prerequisite?",
-        "Arabic Query": "هل يمكنك تقديم قائمة بالمساقات في التخصص X التي تتطلب المساق Y كشرط مسبق؟",
-        "SQL Query": "SELECT c.name_arabic FROM course c JOIN course_prerequisite cp ON c.id = cp.course_id WHERE c.major_id IN (SELECT id FROM major WHERE name_arabic = 'X' OR symbol = 'X') AND cp.prerequisite_id IN (SELECT id FROM course WHERE name_arabic = 'Y' OR symbol = 'Y');",
+        "English Query": "Could you provide a list of courses in the major [major-name] that have the course [course-name] as a prerequisite?",
+        "Arabic Query": "هل يمكنك تقديم قائمة بالمساقات في التخصص [major-name] التي تتطلب المساق [course-name] كشرط مسبق؟",
+        "SQL Query": "SELECT c.name_arabic FROM course c JOIN course_prerequisite cp ON c.id = cp.course_id WHERE c.major_id IN (SELECT id FROM major WHERE name_arabic = '[major-name]' OR symbol = '[major-name]') AND cp.prerequisite_id IN (SELECT id FROM course WHERE name_arabic = '[course-name]' OR symbol = '[course-name]');",
         "importancy": "10"
     },
-
     {
-        "English Query": "Could you provide a list of courses in the major X that have the course Y as a prerequisite and are taught by the instructor Z?",
-        "Arabic Query": "هل يمكنك تقديم قائمة بالمساقات في التخصص X التي تتطلب المساق Y كشرط مسبق ويدرسها الدكتور Z؟",
-        "SQL Query": "SELECT c.name_arabic FROM course c JOIN course_prerequisite cp ON c.id = cp.course_id JOIN instructor_course ic ON c.id = ic.course_id JOIN instructor i ON ic.instructor_id = i.id WHERE c.major_id IN (SELECT id FROM major WHERE name_arabic = 'X' OR symbol = 'X') AND cp.prerequisite_id IN (SELECT id FROM course WHERE name_arabic = 'Y' OR symbol = 'Y') AND (i.name_arabic = 'Z' OR i.symbol = 'Z');",
+        "English Query": "Could you provide a list of courses in the major [major-name] that have the course [course-symbol] as a prerequisite?",
+        "Arabic Query": "هل يمكنك تقديم قائمة بالمساقات في التخصص [major-name] التي تتطلب المساق [course-symbol] كشرط مسبق؟",
+        "SQL Query": "SELECT c.name_arabic FROM course c JOIN course_prerequisite cp ON c.id = cp.course_id WHERE c.major_id IN (SELECT id FROM major WHERE name_arabic = '[major-name]' OR symbol = '[major-name]') AND cp.prerequisite_id IN (SELECT id FROM course WHERE name_arabic = '[course-symbol]' OR symbol = '[course-symbol]');",
+        "importancy": "10"
+    },
+    {
+        "English Query": "Could you provide a list of courses in the major [major-name] that have the course [course-name] as a prerequisite and are taught by the instructor [instructor-name]?",
+        "Arabic Query": "هل يمكنك تقديم قائمة بالمساقات في التخصص [major-name] التي تتطلب المساق [course-name] كشرط مسبق ويدرسها الدكتور [instructor-name]؟",
+        "SQL Query": "SELECT c.name_arabic FROM course c JOIN course_prerequisite cp ON c.id = cp.course_id JOIN instructor_course ic ON c.id = ic.course_id JOIN instructor i ON ic.instructor_id = i.id WHERE c.major_id IN (SELECT id FROM major WHERE name_arabic = '[major-name]' OR symbol = '[major-name]') AND cp.prerequisite_id IN (SELECT id FROM course WHERE name_arabic = '[course-name]' OR symbol = '[course-name]') AND (i.name_arabic = '[instructor-name]');",
         "importancy": "7"
-    },    
-
+    },
     {
-        "English Query": "Could you provide a list of courses in the major X that have the course Y as a prerequisite and are taught by the teaching assistant Z?",
-        "Arabic Query": "هل يمكنك تقديم قائمة بالمساقات في التخصص X التي تتطلب المساق Y كشرط مسبق ويدرسها المساعد Z؟",
-        "SQL Query": "SELECT c.name_arabic FROM course c JOIN course_prerequisite cp ON c.id = cp.course_id JOIN ta_course tac ON c.id = tac.course_id JOIN teaching_assistant ta ON tac.ta_id = ta.id WHERE c.major_id IN (SELECT id FROM major WHERE name_arabic = 'X' OR symbol = 'X') AND cp.prerequisite_id IN (SELECT id FROM course WHERE name_arabic = 'Y' OR symbol = 'Y') AND (ta.name_arabic = 'Z' OR ta.symbol = 'Z');",
+        "English Query": "Could you provide a list of courses in the major [major-name] that have the course [course-symbol] as a prerequisite and are taught by the teaching assistant [assistant-name]?",
+        "Arabic Query": "هل يمكنك تقديم قائمة بالمساقات في التخصص [major-name] التي تتطلب المساق [course-symbol] كشرط مسبق ويدرسها المساعد [assistant-name]؟",
+        "SQL Query": "SELECT c.name_arabic FROM course c JOIN course_prerequisite cp ON c.id = cp.course_id JOIN ta_course tac ON c.id = tac.course_id JOIN teaching_assistant ta ON tac.ta_id = ta.id WHERE c.major_id IN (SELECT id FROM major WHERE name_arabic = '[major-name]' OR symbol = '[major-name]') AND cp.prerequisite_id IN (SELECT id FROM course WHERE name_arabic = '[course-symbol]' OR symbol = '[course-symbol]') AND (ta.name_arabic = '[assistant-name]');",
         "importancy": "4"
     },
-    
     {
-        "English Query": "Could you provide a list of courses in the major X that have the course Y as a prerequisite and are taught by both the instructor Z and the teaching assistant W?",
-        "Arabic Query": "هل يمكنك تقديم قائمة بالمساقات في التخصص X التي تتطلب المساق Y كشرط مسبق ويدرسها الدكتور Z والمساعد W؟",
-        "SQL Query": "SELECT c.name_arabic FROM course c JOIN course_prerequisite cp ON c.id = cp.course_id JOIN instructor_course ic ON c.id = ic.course_id JOIN instructor i ON ic.instructor_id = i.id JOIN ta_course tac ON c.id = tac.course_id JOIN teaching_assistant ta ON tac.ta_id = ta.id WHERE c.major_id IN (SELECT id FROM major WHERE name_arabic = 'X' OR symbol = 'X') AND cp.prerequisite_id IN (SELECT id FROM course WHERE name_arabic = 'Y' OR symbol = 'Y') AND (i.name_arabic = 'Z' OR i.symbol = 'Z') AND (ta.name_arabic = 'W' OR ta.symbol = 'W');",
+        "English Query": "Could you provide a list of courses in the major [major-name] that have the course [course-symbol] as a prerequisite and are taught by both the instructor [instructor-name] and the teaching assistant [assistant-name]?",
+        "Arabic Query": "هل يمكنك تقديم قائمة بالمساقات في التخصص [major-name] التي تتطلب المساق [course-symbol] كشرط مسبق ويدرسها الدكتور [instructor-name] والمساعد [assistant-name]؟",
+        "SQL Query": "SELECT c.name_arabic FROM course c JOIN course_prerequisite cp ON c.id = cp.course_id JOIN instructor_course ic ON c.id = ic.course_id JOIN instructor i ON ic.instructor_id = i.id JOIN ta_course tac ON c.id = tac.course_id JOIN teaching_assistant ta ON tac.ta_id = ta.id WHERE c.major_id IN (SELECT id FROM major WHERE name_arabic = '[major-name]' OR symbol = '[major-name]') AND cp.prerequisite_id IN (SELECT id FROM course WHERE name_arabic = '[course-symbol]' OR symbol = '[course-symbol]') AND (i.name_arabic = '[instructor-name]') AND (ta.name_arabic = '[assistant-name]');",
         "importancy": "10"
     },
-    
     {
-        "English Query": "Could you provide a list of courses in the major X where their credits are greater than or equal to Y?",
-        "Arabic Query": "هل يمكنك تقديم قائمة بالمساقات في التخصص X حيث تكون الساعات المعتمدة لها أكبر من أو تساوي Y؟",
-        "SQL Query": "SELECT name_arabic FROM course WHERE major_id IN (SELECT id FROM major WHERE name_arabic = 'X' OR symbol = 'X') AND credits >= Y;",
+        "English Query": "Could you provide a list of courses in the major [major-name] where their credits are greater than or equal to [credits]?",
+        "Arabic Query": "هل يمكنك تقديم قائمة بالمساقات في التخصص [major-name] حيث تكون الساعات المعتمدة لها أكبر من أو تساوي [credits]؟",
+        "SQL Query": "SELECT name_arabic FROM course WHERE major_id IN (SELECT id FROM major WHERE name_arabic = '[major-name]' OR symbol = '[major-name]') AND credits >= [credits];",
         "importancy": "8"
     },
-    
     {
-        "English Query": "Could you provide a list of courses in the major X where their credits are less than or equal to Y?",
-        "Arabic Query": "هل يمكنك تقديم قائمة بالمساقات في التخصص X حيث تكون الساعات المعتمدة لها أقل من أو تساوي Y؟",
-        "SQL Query": "SELECT name_arabic FROM course WHERE major_id IN (SELECT id FROM major WHERE name_arabic = 'X' OR symbol = 'X') AND credits <= Y;",
+        "English Query": "Could you provide a list of courses in the major [major-name] where their credits are less than or equal to [credits]?",
+        "Arabic Query": "هل يمكنك تقديم قائمة بالمساقات في التخصص [major-name] حيث تكون الساعات المعتمدة لها أقل من أو تساوي [credits]؟",
+        "SQL Query": "SELECT name_arabic FROM course WHERE major_id IN (SELECT id FROM major WHERE name_arabic = '[major-name]' OR symbol = '[major-name]') AND credits <= [credits];",
         "importancy": "8"
     },
-
     {
-        "English Query": "Could you provide a list of courses in the major X where their credits are greater than or equal to Y and less than or equal to Z?",
-        "Arabic Query": "هل يمكنك تقديم قائمة بالمساقات في التخصص X حيث تكون الساعات المعتمدة لها أكبر من أو تساوي Y وأقل من أو تساوي Z؟",
-        "SQL Query": "SELECT name_arabic FROM course WHERE major_id IN (SELECT id FROM major WHERE name_arabic = 'X' OR symbol = 'X') AND credits >= Y AND credits <= Z;",
+        "English Query": "Could you provide a list of courses in the major [major-name] where their credits are greater than or equal to [min-credits] and less than or equal to [max-credits]?",
+        "Arabic Query": "هل يمكنك تقديم قائمة بالمساقات في التخصص [major-name] حيث تكون الساعات المعتمدة لها أكبر من أو تساوي [min-credits] وأقل من أو تساوي [max-credits]؟",
+        "SQL Query": "SELECT name_arabic FROM course WHERE major_id IN (SELECT id FROM major WHERE name_arabic = '[major-name]' OR symbol = '[major-name]') AND credits >= [min-credits] AND credits <= [max-credits];",
         "importancy": "8"
     },
-
     {
-        "English Query": "Could you provide a list of courses in the major X where their credits are greater than or equal to Y and less than or equal to Z, and are taught by the instructor W?",
-        "Arabic Query": "هل يمكنك تقديم قائمة بالمساقات في التخصص X حيث تكون الساعات المعتمدة لها أكبر من أو تساوي Y وأقل من أو تساوي Z، ويدرسها الدكتور W؟",
-        "SQL Query": "SELECT c.name_arabic FROM course c JOIN instructor_course ic ON c.id = ic.course_id JOIN instructor i ON ic.instructor_id = i.id WHERE c.major_id IN (SELECT id FROM major WHERE name_arabic = 'X' OR symbol = 'X') AND c.credits >= Y AND c.credits <= Z AND (i.name_arabic = 'W' OR i.symbol = 'W');",
+        "English Query": "Could you provide a list of courses in the major [major-name] where their credits are greater than or equal to [min-credits] and less than or equal to [max-credits], and are taught by the instructor [instructor-name]?",
+        "Arabic Query": "هل يمكنك تقديم قائمة بالمساقات في التخصص [major-name] حيث تكون الساعات المعتمدة لها أكبر من أو تساوي [min-credits] وأقل من أو تساوي [max-credits]، ويدرسها الدكتور [instructor-name]؟",
+        "SQL Query": "SELECT c.name_arabic FROM course c JOIN instructor_course ic ON c.id = ic.course_id JOIN instructor i ON ic.instructor_id = i.id WHERE c.major_id IN (SELECT id FROM major WHERE name_arabic = '[major-name]' OR symbol = '[major-name]') AND c.credits >= [min-credits] AND c.credits <= [max-credits] AND (i.name_arabic = '[instructor-name]');",
         "importancy": "8"
     },
-
     {
-        "English Query": "Could you provide a list of courses in the major X where their credits are equal to Y?",
-        "Arabic Query": "هل يمكنك تقديم قائمة بالمساقات في التخصص X حيث تكون الساعات المعتمدة لها تساوي Y؟",
-        "SQL Query": "SELECT name_arabic FROM course WHERE major_id IN (SELECT id FROM major WHERE name_arabic = 'X' OR symbol = 'X') AND credits = Y;",
+        "English Query": "Could you provide a list of courses in the major [major-name] where their credits are equal to [credits] and are taught by the instructor [instructor-name]?",
+        "Arabic Query": "هل يمكنك تقديم قائمة بالمساقات في التخصص [major-name] حيث تكون الساعات المعتمدة لها تساوي [credits]، ويدرسها الدكتور [instructor-name]؟",
+        "SQL Query": "SELECT name_arabic FROM course WHERE major_id IN (SELECT id FROM major WHERE name_arabic = '[major-name]' OR symbol = '[major-name]') AND credits = [credits] AND instructor_id IN (SELECT id FROM instructor WHERE name_arabic = '[instructor-name]');",
         "importancy": "8"
     },
-    
     {
-        "English Query": "Could you provide a list of instructors in the major X?",
-        "Arabic Query": "هل يمكنك تقديم قائمة بالدكاترة في التخصص X؟",
-        "SQL Query": "SELECT i.name_arabic FROM instructor i JOIN department d ON i.department_id = d.id WHERE d.id IN (SELECT department_id FROM major WHERE name_arabic = 'X' OR symbol = 'X');",
+        "English Query": "Could you provide a list of instructors in the major [major-name]?",
+        "Arabic Query": "هل يمكنك تقديم قائمة بالدكاترة في التخصص [major-name]؟",
+        "SQL Query": "SELECT i.name_arabic FROM instructor i JOIN department d ON i.department_id = d.id WHERE d.id IN (SELECT department_id FROM major WHERE name_arabic = '[major-name]' OR symbol = '[major-name]');",
         "importancy": "10"
     },
-
     {
-        "English Query": "Could you provide a list of teaching assistants in the major X?",
-        "Arabic Query": "هل يمكنك تقديم قائمة بالمساعدين في التخصص X؟",
-        "SQL Query": "SELECT ta.name_arabic FROM teaching_assistant ta JOIN department d ON ta.department_id = d.id WHERE d.id IN (SELECT department_id FROM major WHERE name_arabic = 'X' OR symbol = 'X');",
+        "English Query": "Could you provide a list of teaching assistants in the major [major-name]?",
+        "Arabic Query": "هل يمكنك تقديم قائمة بالمساعدين في التخصص [major-name]؟",
+        "SQL Query": "SELECT ta.name_arabic FROM teaching_assistant ta JOIN department d ON ta.department_id = d.id WHERE d.id IN (SELECT department_id FROM major WHERE name_arabic = '[major-name]' OR symbol = '[major-name]');",
         "importancy": "10"
     },
-    
-    
-
-    
-
-
-
-
-
-
-
-
-
-
-
-
     {
-        "English Query": "Can you provide me with the description of the course X?",
-        "Arabic Query": "هل يمكنك تقديم وصف للمساق X؟",
-        "SQL Query": "SELECT description FROM course WHERE name_arabic = 'X' OR symbol = 'X';",
+        "English Query": "Can you provide me with the description of the course [course-name]?",
+        "Arabic Query": "هل يمكنك تقديم وصف للمساق [course-name]؟",
+        "SQL Query": "SELECT description FROM course WHERE name_arabic = '[course-name]' OR symbol = '[course-name]';",
         "importancy": "10"
     },
-
     {
-        "English Query": "What is the symbol of the course X?",
-        "Arabic Query": "ما هو رمز المساق X؟",
-        "SQL Query": "SELECT symbol FROM course WHERE name_arabic = 'X';",
+        "English Query": "Can you provide me with the description of the course [course-symbol]?",
+        "Arabic Query": "هل يمكنك تقديم وصف للمساق [course-symbol]؟",
+        "SQL Query": "SELECT description FROM course WHERE name_arabic = '[course-symbol]' OR symbol = '[course-symbol]';",
         "importancy": "10"
     },
-
     {
-        "English Query": "What is the name of the course X?",
-        "Arabic Query": "ما هو اسم المساق X؟",
-        "SQL Query": "SELECT name_arabic FROM course WHERE symbol = 'X';",
+        "English Query": "What is the symbol of the course [course-name]?",
+        "Arabic Query": "ما هو رمز المساق [course-name]؟",
+        "SQL Query": "SELECT symbol FROM course WHERE name_arabic = '[course-name]';",
         "importancy": "10"
     },
-
     {
-        "English Query": "How many credits does the course X have?",
-        "Arabic Query": "كم عدد الساعات المعتمدة للمساق X؟",
-        "SQL Query": "SELECT credits FROM course WHERE name_arabic = 'X' OR symbol = 'X';",
+        "English Query": "What is the name of the course [course-symbol]?",
+        "Arabic Query": "ما هو اسم المساق [course-symbol]؟",
+        "SQL Query": "SELECT name_arabic FROM course WHERE symbol = '[course-symbol]';",
         "importancy": "10"
     },
-
     {
-        "English Query": "What are the prerequisites for the course X?",
-        "Arabic Query": "ما هي المتطلبات السابقة للمساق X؟",
-        "SQL Query": "SELECT cp.prerequisite_id FROM course_prerequisite cp JOIN course c ON cp.course_id = c.id WHERE c.name_arabic = 'X' OR c.symbol = 'X';",
+        "English Query": "How many credits does the course [course-name] have?",
+        "Arabic Query": "كم عدد الساعات المعتمدة للمساق [course-name]؟",
+        "SQL Query": "SELECT credits FROM course WHERE name_arabic = '[course-name]' OR symbol = '[course-name]';",
         "importancy": "10"
     },
-
     {
-        "English Query": "What is the major of the course X?",
-        "Arabic Query": "لأي تخصص يتبع المساق X؟",
-        "SQL Query": "SELECT m.name_arabic FROM major m JOIN course c ON m.id = c.major_id WHERE c.name_arabic = 'X' OR c.symbol = 'X';",
+        "English Query": "How many credits does the course [course-symbol] have?",
+        "Arabic Query": "كم عدد الساعات المعتمدة للمساق [course-symbol]؟",
+        "SQL Query": "SELECT credits FROM course WHERE name_arabic = '[course-symbol]' OR symbol = '[course-symbol]';",
+        "importancy": "10"
+    },
+    {
+        "English Query": "What are the prerequisites for the course [course-symbol]?",
+        "Arabic Query": "ما هي المتطلبات السابقة للمساق [course-symbol]؟",
+        "SQL Query": "SELECT cp.prerequisite_id FROM course_prerequisite cp JOIN course c ON cp.course_id = c.id WHERE c.name_arabic = '[course-symbol]' OR c.symbol = '[course-symbol]';",
+        "importancy": "10"
+    },
+    {
+        "English Query": "What are the prerequisites for the course [course-name]?",
+        "Arabic Query": "ما هي المتطلبات السابقة للمساق [course-name]؟",
+        "SQL Query": "SELECT cp.prerequisite_id FROM course_prerequisite cp JOIN course c ON cp.course_id = c.id WHERE c.name_arabic = '[course-name]' OR c.symbol = '[course-name]';",
+        "importancy": "10"
+    },
+    {
+        "English Query": "What is the major of the course [course-symbol]?",
+        "Arabic Query": "لأي تخصص يتبع المساق [course-symbol]؟",
+        "SQL Query": "SELECT m.name_arabic FROM major m JOIN course c ON m.id = c.major_id WHERE c.name_arabic = '[course-symbol]' OR c.symbol = '[course-symbol]';",
         "importancy": "6"
     },
-
     {
-        "English Query": "Which department does the course X belong to?",
-        "Arabic Query": "إلى أي دائرة ينتمي المساق X؟",
-        "SQL Query": "SELECT d.name_arabic FROM department d JOIN major m ON d.id = m.department_id JOIN course c ON m.id = c.major_id WHERE c.name_arabic = 'X' OR c.symbol = 'X';",
+        "English Query": "Which department does the course [course-name] belong to?",
+        "Arabic Query": "إلى أي دائرة ينتمي المساق [course-name]؟",
+        "SQL Query": "SELECT d.name_arabic FROM department d JOIN major m ON d.id = m.department_id JOIN course c ON m.id = c.major_id WHERE c.name_arabic = '[course-name]' OR c.symbol = '[course-name]';",
         "importancy": "6"
     },
-    
     {
-        "English Query": "Who are the instructors for the course X?",
-        "Arabic Query": "من هم المدرسين للمساق X؟",
-        "SQL Query": "SELECT i.name_arabic FROM instructor i JOIN instructor_course ic ON i.id = ic.instructor_id JOIN course c ON ic.course_id = c.id WHERE c.name_arabic = 'X' OR c.symbol = 'X';",
+        "English Query": "Who are the instructors for the course [course-name]?",
+        "Arabic Query": "من هم المدرسين للمساق [course-name]؟",
+        "SQL Query": "SELECT i.name_arabic FROM instructor i JOIN instructor_course ic ON i.id = ic.instructor_id JOIN course c ON ic.course_id = c.id WHERE c.name_arabic = '[course-name]' OR c.symbol = '[course-name]';",
         "importancy": "10"
     },
-
     {
-        "English Query": "Who are the teaching assistants for the course X?",
-        "Arabic Query": "من هم المساعدين للمساق X؟",
-        "SQL Query": "SELECT ta.name_arabic FROM teaching_assistant ta JOIN ta_course tac ON ta.id = tac.ta_id JOIN course c ON tac.course_id = c.id WHERE c.name_arabic = 'X' OR c.symbol = 'X';",
+        "English Query": "Who are the instructors for the course [course-symbol]?",
+        "Arabic Query": "من هم المدرسين لمساق [course-symbol]؟",
+        "SQL Query": "SELECT i.name_arabic FROM instructor i JOIN instructor_course ic ON i.id = ic.instructor_id JOIN course c ON ic.course_id = c.id WHERE c.name_arabic = '[course-symbol]' OR c.symbol = '[course-symbol]';",
         "importancy": "10"
     },
-
     {
-        "English Query": "Which courses have course X as a prerequisite?",
-        "Arabic Query": "ما هي المساقات تتطلب المساق X كمتطلب سابق؟",
-        "SQL Query": "SELECT c2.name_arabic FROM course c1 JOIN course_prerequisite cp ON c1.id = cp.course_id JOIN course c2 ON cp.prerequisite_id = c2.id WHERE c1.name_arabic = 'X' OR c1.symbol = 'X';",
+        "English Query": "Who are the teaching assistants for the course [course-name]?",
+        "Arabic Query": "من هم المساعدين للمساق [course-name]؟",
+        "SQL Query": "SELECT ta.name_arabic FROM teaching_assistant ta JOIN ta_course tac ON ta.id = tac.ta_id JOIN course c ON tac.course_id = c.id WHERE c.name_arabic = '[course-name]' OR c.symbol = '[course-name]';",
         "importancy": "10"
     },
-    
-    
-    
-
-
-    
-
-
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
     {
-        "English Query": "Can you provide me with the phone number of the instructor X?",
-        "Arabic Query": "هل يمكنك تقديم رقم الهاتف للدكتور X؟",
-        "SQL Query": "SELECT phone_number FROM instructor WHERE name_arabic = 'X';",
+        "English Query": "Which courses have course [course-name] as a prerequisite?",
+        "Arabic Query": "ما هي المساقات تتطلب المساق [course-name] كمتطلب سابق؟",
+        "SQL Query": "SELECT c2.name_arabic FROM course c1 JOIN course_prerequisite cp ON c1.id = cp.course_id JOIN course c2 ON cp.prerequisite_id = c2.id WHERE c1.name_arabic = '[course-name]' OR c1.symbol = '[course-name]';",
         "importancy": "10"
     },
-    
     {
-        "English Query": "What is the email address of the instructor X?",
-        "Arabic Query": "ما هو عنوان البريد الإلكتروني للدكتور X؟",
-        "SQL Query": "SELECT email FROM instructor WHERE name_arabic = 'X';",
+        "English Query": "Can you provide me with the phone number of the instructor [instructor-name]?",
+        "Arabic Query": "هل يمكنك تقديم رقم الهاتف للدكتور [instructor-name]؟",
+        "SQL Query": "SELECT phone_number FROM instructor WHERE name_arabic = '[instructor-name]';",
         "importancy": "10"
     },
-
     {
-        "English Query": "What is the ritaj id of the instructor X?",
-        "Arabic Query": "ما هو الرقم الخاص بالدكتور X في ريتاج؟",
-        "SQL Query": "SELECT ritaj_id FROM instructor WHERE name_arabic = 'X';",
+        "English Query": "What is the email address of the instructor [instructor-name]?",
+        "Arabic Query": "ما هو عنوان البريد الإلكتروني للدكتور [instructor-name]؟",
+        "SQL Query": "SELECT email FROM instructor WHERE name_arabic = '[instructor-name]';",
         "importancy": "10"
     },
-
     {
-        "English Query": "What are the office hours for the instructor X?",
-        "Arabic Query": "ما هي الساعات المكتبية للدكتور X؟",
-        "SQL Query": "SELECT office_hours FROM instructor WHERE name_arabic = 'X';",
+        "English Query": "What is the ritaj id of the instructor [instructor-name]?",
+        "Arabic Query": "ما هو الرقم الخاص بالدكتور [instructor-name] في ريتاج؟",
+        "SQL Query": "SELECT ritaj_id FROM instructor WHERE name_arabic = '[instructor-name]';",
         "importancy": "10"
     },
-    
     {
-        "English Query": "Which department does the instructor X belong to?",
-        "Arabic Query": "إلى أي دائرة ينتمي الدكتور X؟",
-        "SQL Query": "SELECT d.name_arabic FROM department d JOIN instructor i ON d.id = i.department_id WHERE i.name_arabic = 'X';",
+        "English Query": "What are the office hours for the instructor [instructor-name]?",
+        "Arabic Query": "ما هي الساعات المكتبية للدكتور [instructor-name]؟",
+        "SQL Query": "SELECT office_hours FROM instructor WHERE name_arabic = '[instructor-name]';",
+        "importancy": "10"
+    },
+    {
+        "English Query": "Which department does the instructor [instructor-name] belong to?",
+        "Arabic Query": "إلى أي دائرة ينتمي الدكتور [instructor-name]؟",
+        "SQL Query": "SELECT d.name_arabic FROM department d JOIN instructor i ON d.id = i.department_id WHERE i.name_arabic = '[instructor-name]';",
         "importancy": "7"
     },
-
     {
-        "English Query": "Which faculty does the instructor X belong to?",
-        "Arabic Query": "إلى أي كلية ينتمي الدكتور X؟",
-        "SQL Query": "SELECT f.name_arabic FROM faculty f JOIN department d ON f.id = d.faculty_id JOIN instructor i ON d.id = i.department_id WHERE i.name_arabic = 'X';",
+        "English Query": "Which faculty does the instructor [instructor-name] belong to?",
+        "Arabic Query": "إلى أي كلية ينتمي الدكتور [instructor-name]؟",
+        "SQL Query": "SELECT f.name_arabic FROM faculty f JOIN department d ON f.id = d.faculty_id JOIN instructor i ON d.id = i.department_id WHERE i.name_arabic = '[instructor-name]';",
         "importancy": "5"
     },
-    
     {
-        "English Query": "Which courses does the instructor X teach?",
-        "Arabic Query": "ما هي المساقات التي يدرسها الدكتور X؟",
-        "SQL Query": "SELECT c.name_arabic FROM course c JOIN instructor_course ic ON c.id = ic.course_id JOIN instructor i ON ic.instructor_id = i.id WHERE i.name_arabic = 'X';",
+        "English Query": "Which courses does the instructor [instructor-name] teach?",
+        "Arabic Query": "ما هي المساقات التي يدرسها الدكتور [instructor-name]؟",
+        "SQL Query": "SELECT c.name_arabic FROM course c JOIN instructor_course ic ON c.id = ic.course_id JOIN instructor i ON ic.instructor_id = i.id WHERE i.name_arabic = '[instructor-name]';",
         "importancy": "10"
     },
-
     {
-        "English Query": "Which faculty is the instructor X the dean of?",
-        "Arabic Query": "ما هي الكلية التي يشغل فيها الدكتور X منصب العميد؟",
-        "SQL Query": "SELECT f.name_arabic FROM faculty f JOIN instructor i ON f.dean_id = i.id WHERE i.name_arabic = 'X';",
+        "English Query": "Which faculty is the instructor [instructor-name] the dean of?",
+        "Arabic Query": "ما هي الكلية التي يشغل فيها الدكتور [instructor-name] منصب العميد؟",
+        "SQL Query": "SELECT f.name_arabic FROM faculty f JOIN instructor i ON f.dean_id = i.id WHERE i.name_arabic = '[instructor-name]';",
         "importancy": "10"
     },
-
     {
-        "English Query": "Which department is the instructor X the head of?",
-        "Arabic Query": "ما هي الدائرة التي يشغل فيها الدكتور X منصب رئيس الدائرة",
-        "SQL Query": "SELECT d.name_arabic FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE i.name_arabic = 'X';",
+        "English Query": "Which department is the instructor [instructor-name] the head of?",
+        "Arabic Query": "ما هي الدائرة التي يشغل فيها الدكتور [instructor-name] منصب رئيس الدائرة",
+        "SQL Query": "SELECT d.name_arabic FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE i.name_arabic = '[instructor-name]';",
         "importancy": "10"
     },
-    
-    
-    
-    
-    
-    
-
-    
-    
-    
-    
-
-
-
-
-
-
-
     {
-        "English Query": "What is the phone number of the teaching assistant X?",
-        "Arabic Query": "ما هو رقم الهاتف للمساعد X؟",
-        "SQL Query": "SELECT phone_number FROM teaching_assistant WHERE name_arabic = 'X';",
+        "English Query": "What is the phone number of the teaching assistant [assistant-name]?",
+        "Arabic Query": "ما هو رقم الهاتف للمساعد [assistant-name]؟",
+        "SQL Query": "SELECT phone_number FROM teaching_assistant WHERE name_arabic = '[assistant-name]';",
         "importancy": "8"
     },
-    
     {
-        "English Query": "What is the email address of the teaching assistant X?",
-        "Arabic Query": "ما هو البريد الإلكتروني للمساعد X؟",
-        "SQL Query": "SELECT email FROM teaching_assistant WHERE name_arabic = 'X';",
+        "English Query": "What is the email address of the teaching assistant [assistant-name]?",
+        "Arabic Query": "ما هو البريد الإلكتروني للمساعد [assistant-name]؟",
+        "SQL Query": "SELECT email FROM teaching_assistant WHERE name_arabic = '[assistant-name]';",
         "importancy": "8"
     },
-
     {
-        "English Query": "What is the ritaj id of the teaching assistant X?",
-        "Arabic Query": "ما هو رقم المساعد X في ريتاج؟",
-        "SQL Query": "SELECT ritaj_id FROM teaching_assistant WHERE name_arabic = 'X';",
+        "English Query": "What is the ritaj id of the teaching assistant [assistant-name]?",
+        "Arabic Query": "ما هو رقم المساعد [assistant-name] في ريتاج؟",
+        "SQL Query": "SELECT ritaj_id FROM teaching_assistant WHERE name_arabic = '[assistant-name]';",
         "importancy": "8"
     },
-
     {
-        "English Query": "Which department does the teaching assistant X belong to?",
-        "Arabic Query": "إلى أي دائرة ينتمي المساعد X؟",
-        "SQL Query": "SELECT d.name_arabic FROM department d JOIN teaching_assistant ta ON d.id = ta.department_id WHERE ta.name_arabic = 'X';",
+        "English Query": "Which department does the teaching assistant [assistant-name] belong to?",
+        "Arabic Query": "إلى أي دائرة ينتمي المساعد [assistant-name]؟",
+        "SQL Query": "SELECT d.name_arabic FROM department d JOIN teaching_assistant ta ON d.id = ta.department_id WHERE ta.name_arabic = '[assistant-name]';",
         "importancy": "8"
     },
-
     {
-        "English Query": "Which courses does the teaching assistant X assist with?",
-        "Arabic Query": "ما هي المساقات التي يساعد فيها المساعد X؟",
-        "SQL Query": "SELECT c.name_arabic FROM course c JOIN ta_course tc ON c.id = tc.course_id JOIN teaching_assistant ta ON tc.ta_id = ta.id WHERE ta.name_arabic = 'X';",
+        "English Query": "Which courses does the teaching assistant [assistant-name] assist with?",
+        "Arabic Query": "ما هي المساقات التي يساعد فيها المساعد [assistant-name]؟",
+        "SQL Query": "SELECT c.name_arabic FROM course c JOIN ta_course tc ON c.id = tc.course_id JOIN teaching_assistant ta ON tc.ta_id = ta.id WHERE ta.name_arabic = '[assistant-name]';",
         "importancy": "8"
-    }    
+    }
 ]
