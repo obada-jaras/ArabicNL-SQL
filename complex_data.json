@@ -136,5 +136,148 @@
         "Arabic Query": "أي المساقات لديها إما 'CS' أو 'Math' في رموزها؟",
         "SQL Query": "SELECT * FROM course WHERE symbol LIKE '%CS%' OR symbol LIKE '%Math%';",
         "importancy": "9"
+    },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    {
+        "English Query": "Give me a list of courses taught by an instructor who is also a dean or department head.",
+        "Arabic Query": "أعطني قائمة بالمساقات التي يدرسها دكتور معين ويكون أيضا عميد أو رئيس دائرة.",
+        "SQL Query": "SELECT course.* FROM course JOIN instructor_course ON course.id = instructor_course.course_id JOIN instructor ON instructor_course.instructor_id = instructor.id WHERE instructor.id IN (SELECT dean_id FROM faculty) OR instructor.id IN (SELECT head_instructor_id FROM department);",
+        "importancy": "9"
+    },
+    {
+        "English Query": "Give me a list of teaching assistants who assist in courses that have more than X prerequisites.",
+        "Arabic Query": "أعطني قائمة بمساعدي التدريس الذين يساعدون في المساقات التي لديها أكثر من X متطلبات سابقة.",
+        "SQL Query": "SELECT teaching_assistant.* FROM teaching_assistant JOIN ta_course ON teaching_assistant.id = ta_course.ta_id WHERE ta_course.course_id IN (SELECT course_id FROM course_prerequisite GROUP BY course_id HAVING COUNT(prerequisite_id) > X);",
+        "importancy": "9"
+    },
+    {
+        "English Query": "Give me a list of instructors who teach in the faculty X.",
+        "Arabic Query": "أعطني قائمة الدكاترة الذين يدرسون في كلية X.",
+        "SQL Query": "SELECT instructor.* FROM instructor JOIN department ON instructor.department_id = department.id WHERE department.faculty_id = X;",
+        "importancy": "9"
+    },
+    {
+        "English Query": "Give me a list of courses that are taught by more than X instructors.",
+        "Arabic Query": "أعطني قائمة بالمساقات التي يدرسها أكثر من X دكتور.",
+        "SQL Query": "SELECT course.* FROM course JOIN instructor_course ON course.id = instructor_course.course_id GROUP BY course.id HAVING COUNT(instructor_course.instructor_id) > X;",
+        "importancy": "9"
+    },
+    {
+        "English Query": "Give me a list of instructors who teach the course X and are also a dean or department head.",
+        "Arabic Query": "أعطني قائمة الدكاترة الذين يدرسون المساق X وهم أيضا عمداء أو رؤساء دوائر.",
+        "SQL Query": "SELECT instructor.* FROM instructor JOIN instructor_course ON instructor.id = instructor_course.instructor_id WHERE instructor_course.course_id = X AND (instructor.id IN (SELECT dean_id FROM faculty) OR instructor.id IN (SELECT head_instructor_id FROM department));",
+        "importancy": "9"
+    },
+    {
+        "English Query": "Which courses have the highest number of prerequisites?",
+        "Arabic Query": "ما هي المساقات التي لديها أكبر عدد من المتطلبات السابقة؟",
+        "SQL Query": "SELECT course.*, COUNT(course_prerequisite.prerequisite_id) as prerequisite_count FROM course LEFT JOIN course_prerequisite ON course.id = course_prerequisite.course_id GROUP BY course.id ORDER BY prerequisite_count DESC LIMIT 5;",
+        "importancy": "9"
+    },
+    {
+        "English Query": "Which courses are not being taught by any instructor?",
+        "Arabic Query": "ما المساقات التي لا يدرسها أي دكتور؟",
+        "SQL Query": "SELECT * FROM course WHERE course.id NOT IN (SELECT course_id FROM instructor_course);",
+        "importancy": "9"
+    },
+    {
+        "English Query": "Which instructors are teaching the most number of courses?",
+        "Arabic Query": "ما هي المساقات التي يدرسها أكبر عدد من الدكاترة؟",
+        "SQL Query": "SELECT instructor.*, COUNT(instructor_course.course_id) as course_count FROM instructor LEFT JOIN instructor_course ON instructor.id = instructor_course.instructor_id GROUP BY instructor.id ORDER BY course_count DESC LIMIT 5;",
+        "importancy": "9"
+    },
+    {
+        "English Query": "Which courses have the most number of teaching assistants?",
+        "Arabic Query": "ما هي المساقات التي لديها أكبر عدد من مساعدي التدريس؟",
+        "SQL Query": "SELECT course.*, COUNT(ta_course.ta_id) as ta_count FROM course LEFT JOIN ta_course ON course.id = ta_course.course_id GROUP BY course.id ORDER BY ta_count DESC LIMIT 5;",
+        "importancy": "9"
+    },
+    {
+        "English Query": "Which teaching assistants are assisting in the most number of courses?",
+        "Arabic Query": "من هم مساعدي التدريس الذين يساعدون في أكبر عدد من المساقات؟",
+        "SQL Query": "SELECT teaching_assistant.*, COUNT(ta_course.course_id) as course_count FROM teaching_assistant LEFT JOIN ta_course ON teaching_assistant.id = ta_course.ta_id GROUP BY teaching_assistant.id ORDER BY course_count DESC LIMIT 5;",
+        "importancy": "9"
+    },
+    {
+        "English Query": "Which courses do not have any prerequisites?",
+        "Arabic Query": "ما هي المساقات التي ليست لديها أي متطلبات سابقة؟",
+        "SQL Query": "SELECT * FROM course WHERE course.id NOT IN (SELECT course_id FROM course_prerequisite);",
+        "importancy": "9"
+    },
+    {
+        "English Query": "Which instructors do not teach any course?",
+        "Arabic Query": "ما هي المساقات التي لا يدرسها أي دكتور؟",
+        "SQL Query": "SELECT * FROM instructor WHERE instructor.id NOT IN (SELECT instructor_id FROM instructor_course);",
+        "importancy": "9"
+    },
+    {
+        "English Query": "Which teaching assistants do not assist in any course?",
+        "Arabic Query": "من هم مساعدي التدريس الذين لا يدرسون في أي مساق؟",
+        "SQL Query": "SELECT * FROM teaching_assistant WHERE teaching_assistant.id NOT IN (SELECT ta_id FROM ta_course);",
+        "importancy": "9"
+    },
+    {
+        "English Query": "Which courses are taught by both an instructor and a TA from the same department?",
+        "Arabic Query": "ما هي المساقات التي يدرسها كل من الدكتور ومساعد التدريس من نفس الدائرة؟",
+        "SQL Query": "SELECT course.* FROM course WHERE course.id IN (SELECT instructor_course.course_id FROM instructor_course JOIN instructor ON instructor.id = instructor_course.instructor_id) AND course.id IN (SELECT ta_course.course_id FROM ta_course JOIN teaching_assistant ON teaching_assistant.id = ta_course.ta_id WHERE teaching_assistant.department_id = instructor.department_id);",
+        "importancy": "9"
+    },
+    {
+        "English Query": "Give me a list of instructors and TAs working in the same department.",
+        "Arabic Query": "أعطني قائمة بالدكاترة ومساعدي التدريس الذين يعملون في نفس الدائرة.",
+        "SQL Query": "SELECT instructor.*, teaching_assistant.* FROM instructor JOIN teaching_assistant ON instructor.department_id = teaching_assistant.department_id;",
+        "importancy": "9"
+    },
+    {
+        "English Query": "Which courses are prerequisites for other courses but don't have any prerequisites of their own?",
+        "Arabic Query": "ما هي المساقات التي تعتبر متطلبات سابقة لمساقات أخرى ولكنها ليست لديها أي متطلبات سابقة؟",
+        "SQL Query": "SELECT * FROM course WHERE course.id IN (SELECT prerequisite_id FROM course_prerequisite) AND course.id NOT IN (SELECT course_id FROM course_prerequisite);",
+        "importancy": "9"
+    },
+    {
+        "English Query": "Which courses aren't prerequisites for other courses but have prerequisites?",
+        "Arabic Query": "ما هي المساقات التي ليست متطلبات سابقة لمساقات أخرى ولكن لديها متطلبات سابقة؟",
+        "SQL Query": "SELECT * FROM course WHERE course.id IN (SELECT course_id FROM course_prerequisite) AND course.id NOT IN (SELECT prerequisite_id FROM course_prerequisite);",
+        "importancy": "9"
+    },
+    {
+        "English Query": "Which courses both have prerequisites and are prerequisites for other courses?",
+        "Arabic Query": "ما هي المساقات التي تحتوي على متطلبات سابقة وتعتبر متطلبات سابقة لمساقات أخرى؟",
+        "SQL Query": "SELECT * FROM course WHERE course.id IN (SELECT course_id FROM course_prerequisite) AND course.id IN (SELECT prerequisite_id FROM course_prerequisite);",
+        "importancy": "9"
+    },
+    {
+        "English Query": "Which courses neither have prerequisites nor are prerequisites for other courses?",
+        "Arabic Query": "ما هي المساقات التي لا تحتوي على متطلبات سابقة ولا تعتبر متطلبات سابقة لمساقات أخرى؟",
+        "SQL Query": "SELECT * FROM course WHERE course.id NOT IN (SELECT course_id FROM course_prerequisite) AND course.id NOT IN (SELECT prerequisite_id FROM course_prerequisite);",
+        "importancy": "9"
+    },
+    {
+        "English Query": "Which courses are taught by instructors who also teach their prerequisites?",
+        "Arabic Query": "ما هي المساقات التي يدرسها الدكاترة الذين يدرسون أيضا متطلباتها السابقة؟",
+        "SQL Query": "SELECT course.* FROM course WHERE course.id IN (SELECT instructor_course.course_id FROM instructor_course WHERE instructor_course.instructor_id IN (SELECT instructor_course.instructor_id FROM instructor_course JOIN course_prerequisite ON instructor_course.course_id = course_prerequisite.prerequisite_id));",
+        "importancy": "9"
     }
+    
+    
 ]
