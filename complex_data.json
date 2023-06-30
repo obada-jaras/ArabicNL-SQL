@@ -137,27 +137,6 @@
         "SQL Query": "SELECT * FROM course WHERE symbol LIKE '%[course-symbol-1]%' OR symbol LIKE '%[course-symbol-2]%';",
         "importancy": "9"
     },
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     {
         "English Query": "Give me a list of courses taught by an instructor who is also a dean or department head.",
         "Arabic Query": "أعطني قائمة بالمساقات التي يدرسها دكتور معين ويكون أيضا عميد أو رئيس دائرة.",
@@ -278,6 +257,4 @@
         "SQL Query": "SELECT course.* FROM course WHERE course.id IN (SELECT instructor_course.course_id FROM instructor_course WHERE instructor_course.instructor_id IN (SELECT instructor_course.instructor_id FROM instructor_course JOIN course_prerequisite ON instructor_course.course_id = course_prerequisite.prerequisite_id));",
         "importancy": "9"
     }
-    
-    
 ]

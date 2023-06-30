@@ -141,6 +141,12 @@
         "SQL Query": "SELECT i.name_arabic FROM instructor i WHERE i.department_id IN (SELECT id FROM department WHERE name_arabic = '[department-name]' OR symbol = '[department-name]');",
         "importancy": "10"
     },
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
     {
         "English Query": "Could you provide the description of the major named [major-name]?",
         "Arabic Query": "هل يمكنك تقديم وصف للتخصص الذي يدعى [major-name]؟",
@@ -255,6 +261,12 @@
         "SQL Query": "SELECT ta.name_arabic FROM teaching_assistant ta JOIN department d ON ta.department_id = d.id WHERE d.id IN (SELECT department_id FROM major WHERE name_arabic = '[major-name]' OR symbol = '[major-name]');",
         "importancy": "10"
     },
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
     {
         "English Query": "Can you provide me with the description of the course [course-name]?",
         "Arabic Query": "هل يمكنك تقديم وصف للمساق [course-name]؟",
@@ -339,6 +351,12 @@
         "SQL Query": "SELECT c2.name_arabic FROM course c1 JOIN course_prerequisite cp ON c1.id = cp.course_id JOIN course c2 ON cp.prerequisite_id = c2.id WHERE c1.name_arabic = '[course-name]' OR c1.symbol = '[course-name]';",
         "importancy": "10"
     },
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
     {
         "English Query": "Can you provide me with the phone number of the instructor [instructor-name]?",
         "Arabic Query": "هل يمكنك تقديم رقم الهاتف للدكتور [instructor-name]؟",
@@ -393,6 +411,12 @@
         "SQL Query": "SELECT d.name_arabic FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE i.name_arabic = '[instructor-name]';",
         "importancy": "10"
     },
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
     {
         "English Query": "What is the phone number of the teaching assistant [assistant-name]?",
         "Arabic Query": "ما هو رقم الهاتف للمساعد [assistant-name]؟",
