@@ -1,0 +1,542 @@
+{
+    "faculty": [
+        {
+            "faculty-name": "الهندسة والتكنولوجيا",
+            "faculty-symbol": "ENG"
+        },
+        {
+            "faculty-name": "الأعمال والاقتصاد",
+            "faculty-symbol": "BAF"
+        },
+        {
+            "faculty-name": "التربية",
+            "faculty-symbol": "EDU"
+        },
+        {
+            "faculty-name": "الحقوق والإدارة العامة",
+            "faculty-symbol": "LAW"
+        },
+        {
+            "faculty-name": "الدراسات العليا والأبحاث",
+            "faculty-symbol": "GRS"
+        },
+        {
+            "faculty-name": "الصيدلة والتمريض والمهن الصحية",
+            "faculty-symbol": "MED"
+        },
+        {
+            "faculty-name": "العلوم",
+            "faculty-symbol": "SCI"
+        },
+        {
+            "faculty-name": "الفنون والموسيقى والتصميم",
+            "faculty-symbol": "ART"
+        },
+        {
+            "faculty-name": "الآداب",
+            "faculty-symbol": "HUM"
+        }
+    ],
+    "department": [
+        {
+            "department-name": "الأحياء والكيمياء الحيوية",
+            "department-symbol": "BIO"
+        },
+        {
+            "department-name": "الإعلام",
+            "department-symbol": "MED"
+        },
+        {
+            "department-name": "الإدارة العامة",
+            "department-symbol": "ADM"
+        },
+        {
+            "department-name": "إدارة الأعمال",
+            "department-symbol": "BUS"
+        },
+        {
+            "department-name": "الإقتصاد",
+            "department-symbol": "ECO"
+        },
+        {
+            "department-name": "التمريض",
+            "department-symbol": "NUR"
+        },
+        {
+            "department-name": "التغذية والحمية",
+            "department-symbol": "NUT"
+        },
+        {
+            "department-name": "التاريخ والآثار",
+            "department-symbol": "HIS"
+        },
+        {
+            "department-name": "التربية",
+            "department-symbol": "EDU"
+        },
+        {
+            "department-name": "الرياضية",
+            "department-symbol": "MAT"
+        },
+        {
+            "department-name": "الجغرافية",
+            "department-symbol": "GEO"
+        },
+        {
+            "department-name": "الرياضيات",
+            "department-symbol": "MAT"
+        },
+        {
+            "department-name": "الصيدلة",
+            "department-symbol": "PHA"
+        },
+        {
+            "department-name": "علاج النطق والسمع",
+            "department-symbol": "SLP"
+        },
+        {
+            "department-name": "العلوم الإجتماعية والسلوكية",
+            "department-symbol": "SOC"
+        },
+        {
+            "department-name": "العلوم المالية والمصرفية",
+            "department-symbol": "FIN"
+        },
+        {
+            "department-name": "علم الحاسوب",
+            "department-symbol": "CSC"
+        },
+        {
+            "department-name": "الفلسفة والدراسات الثقافية",
+            "department-symbol": "PHI"
+        },
+        {
+            "department-name": "الفيزياء",
+            "department-symbol": "PHY"
+        },
+        {
+            "department-name": "القانون",
+            "department-symbol": "LAW"
+        },
+        {
+            "department-name": "الكيمياء",
+            "department-symbol": "CHE"
+        },
+        {
+            "department-name": "اللغة الفرنسية",
+            "department-symbol": "FRE"
+        },
+        {
+            "department-name": "اللغة الإنجليزية وآدابها",
+            "department-symbol": "ENG"
+        },
+        {
+            "department-name": "اللغات والترجمة",
+            "department-symbol": "TRN"
+        },
+        {
+            "department-name": "اللغة العربية وآدابها",
+            "department-symbol": "ARA"
+        },
+        {
+            "department-name": "المناهج والتعليم",
+            "department-symbol": "CUR"
+        },
+        {
+            "department-name": "المحاسبة",
+            "department-symbol": "ACC"
+        },
+        {
+            "department-name": "الهندسة الميكانيكية والميكاترونكس",
+            "department-symbol": "MEC"
+        },
+        {
+            "department-name": "الهندسة المعمارية والتخطيط",
+            "department-symbol": "ARC"
+        },
+        {
+            "department-name": "الهندسة المدنية والبيئية",
+            "department-symbol": "CIV"
+        },
+        {
+            "department-name": "الهندسة الكهربائية وهندسة الحاسوب",
+            "department-symbol": "ECE"
+        }
+    ],
+    "major": [
+        {
+            "major-name": "دكتور صيدلي",
+            "major-symbol": "PHD"
+        },
+        {
+            "major-name": "الهندسة المعمارية",
+            "major-symbol": "ARC"
+        },
+        {
+            "major-name": "التغذية والحمية",
+            "major-symbol": "NUT"
+        },
+        {
+            "major-name": "الهندسة المدنية",
+            "major-symbol": "CIV"
+        },
+        {
+            "major-name": "التمريض",
+            "major-symbol": "NUR"
+        },
+        {
+            "major-name": "هندسة التخطيط والتصميم الحضري",
+            "major-symbol": "URB"
+        },
+        {
+            "major-name": "علاج النطق والسمع",
+            "major-symbol": "SLP"
+        },
+        {
+            "major-name": "الهندسة الكهربائية",
+            "major-symbol": "ECE"
+        },
+        {
+            "major-name": "الهندسة الميكانيكية",
+            "major-symbol": "MEC"
+        },
+        {
+            "major-name": "المحاسبة",
+            "major-symbol": "ACC"
+        },
+        {
+            "major-name": "هندسة الميكاترونيكس",
+            "major-symbol": "MCT"
+        },
+        {
+            "major-name": "إدارة الأعمال",
+            "major-symbol": "BUS"
+        },
+        {
+            "major-name": "هندسة الحاسوب",
+            "major-symbol": "CSC"
+        },
+        {
+            "major-name": "العلوم المالية والمصرفية",
+            "major-symbol": "FIN"
+        },
+        {
+            "major-name": "علم الحاسوب",
+            "major-symbol": "CSC"
+        },
+        {
+            "major-name": "العلوم المالية والاكتوارية",
+            "major-symbol": "FIM"
+        },
+        {
+            "major-name": "أمن المعلومات",
+            "major-symbol": "ISM"
+        },
+        {
+            "major-name": "التسويق",
+            "major-symbol": "MKT"
+        },
+        {
+            "major-name": "الاقتصاد",
+            "major-symbol": "ECO"
+        },
+        {
+            "major-name": "اللغة العربية وآدابها",
+            "major-symbol": "ARA"
+        },
+        {
+            "major-name": "اقتصاد الأعمال",
+            "major-symbol": "BEC"
+        },
+        {
+            "major-name": "اللغة الإنجليزية وآدابها",
+            "major-symbol": "ENG"
+        },
+        {
+            "major-name": "اللغة الإنجليزية وآدابها / فرعي الترجمة",
+            "major-symbol": "ENT"
+        },
+        {
+            "major-name": "القانون",
+            "major-symbol": "LAW"
+        },
+        {
+            "major-name": "الترجمة",
+            "major-symbol": "TRN"
+        },
+        {
+            "major-name": "الإدارة العامة",
+            "major-symbol": "ADM"
+        },
+        {
+            "major-name": "الإعلام",
+            "major-symbol": "MED"
+        },
+        {
+            "major-name": "العلاقات الدولية",
+            "major-symbol": "INT"
+        },
+        {
+            "major-name": "الاتصال الاستراتيجي",
+            "major-symbol": "COM"
+        },
+        {
+            "major-name": "العلوم السياسية",
+            "major-symbol": "POL"
+        },
+        {
+            "major-name": "اللغة الفرنسية",
+            "major-symbol": "FRE"
+        },
+        {
+            "major-name": "اللغة الألمانية",
+            "major-symbol": "GER"
+        },
+        {
+            "major-name": "الأحياء",
+            "major-symbol": "BIO"
+        },
+        {
+            "major-name": "التاريخ والآثار",
+            "major-symbol": "HIS"
+        },
+        {
+            "major-name": "الأحياء / فرعي الكيمياء الحيوية",
+            "major-symbol": "BIC"
+        },
+        {
+            "major-name": "الجيوانفورماتكس",
+            "major-symbol": "GIS"
+        },
+        {
+            "major-name": "الكيمياء",
+            "major-symbol": "CHE"
+        },
+        {
+            "major-name": "رئيسي علم اجتماع / فرعي علم النفس",
+            "major-symbol": "SOC"
+        },
+        {
+            "major-name": "الكيمياء / فرعي الكيمياء الصناعية",
+            "major-symbol": "CHI"
+        },
+        {
+            "major-name": "رئيس علم اجتماع / فرعي الإدارة العامة",
+            "major-symbol": "PUB"
+        },
+        {
+            "major-name": "الرياضيات",
+            "major-symbol": "MAT"
+        },
+        {
+            "major-name": "رئيسي علم النفس / فرعي علم الاجتماع",
+            "major-symbol": "PSY"
+        },
+        {
+            "major-name": "الرياضيات / فرعي علم الحاسوب",
+            "major-symbol": "MCS"
+        },
+        {
+            "major-name": "رئيسي علم النفس / فرعي دراسات المرأة",
+            "major-symbol": "WST"
+        },
+        {
+            "major-name": "الفيزياء",
+            "major-symbol": "PHY"
+        },
+        {
+            "major-name": "الفيزياء / فرعي الرياضيات",
+            "major-symbol": "PHM"
+        },
+        {
+            "major-name": "تعليم الاجتماعيات",
+            "major-symbol": "SST"
+        },
+        {
+            "major-name": "تعليم اللغة الإنجليزية كلغة أجنبية",
+            "major-symbol": "TES"
+        },
+        {
+            "major-name": "التصميم الداخلي",
+            "major-symbol": "INT"
+        },
+        {
+            "major-name": "التعليم الجامع والتربية الخاصة",
+            "major-symbol": "SPED"
+        },
+        {
+            "major-name": "التصميم",
+            "major-symbol": "DES"
+        },
+        {
+            "major-name": "التربية الرياضية",
+            "major-symbol": "PE"
+        },
+        {
+            "major-name": "الفنون البصرية المعاصرة",
+            "major-symbol": "ART"
+        },
+        {
+            "major-name": "الموسيقى",
+            "major-symbol": "MUS"
+        }
+    ],
+    "course": [
+        {
+            "course-name": {
+                "name-ar": "اللغة العربية",
+                "name_en": "Arabic Language"
+            },
+            "course-symbol": "ARB131"
+            "credits": "3"
+        },
+        {
+            "course-name": {
+                "name-ar": "الرياضيات المتقدمة",
+                "name_en": "Advanced Mathematics"
+            },
+            "course-symbol": "MAT231",
+            "credits": "3"
+        },
+        {
+            "course-name": {
+                "name-ar": "أساسيات البرمجة",
+                "name_en": "Programming Fundamentals"
+            },
+            "course-symbol": "CSC121",
+            "credits": "3"
+        },
+        {
+            "course-name": {
+                "name-ar": "الإقتصاد الكلي",
+                "name_en": "Macroeconomics"
+            },
+            "course-symbol": "ECO222",
+            "credits": "2"
+        },
+        {
+            "course-name": {
+                "name-ar": "الفيزياء الكلاسيكية",
+                "name_en": "Classical Physics"
+            },
+            "course-symbol": "PHY1411",
+            "credits": "4"
+        },
+        {
+            "course-name": {
+                "name-ar": "الكيمياء العضوية",
+                "name_en": "Organic Chemistry"
+            },
+            "course-symbol": "CHE1311",
+            "credits": "3"
+        },
+        {
+            "course-name": {
+                "name-ar": "نظرية الأعمال",
+                "name_en": "Business Theory"
+            },
+            "course-symbol": "BUS221",
+            "credits": "2"
+        },
+        {
+            "course-name": {
+                "name-ar": "القانون العام",
+                "name_en": "Public Law"
+            },
+            "course-symbol": "LAW331",
+            "credits": "3"
+        },
+        {
+            "course-name": {
+                "name-ar": "الرعاية الصحية",
+                "name_en": "Healthcare"
+            },
+            "course-symbol": "MED211",
+            "credits": "1"
+        },
+        {
+            "course-name": {
+                "name-ar": "مقدمة في العمارة",
+                "name_en": "Introduction to Architecture"
+            },
+            "course-symbol": "ARC151",
+            "credits": "5"
+        }
+    ]
+    "instructor": [
+        "عدنان يحيى",
+        "راضي جرار",
+        "مصطفى جرار",
+        "عبد العزيز شوابكة",
+        "عبد الله السعدة",
+        "احمد السعدة",
+        "مهران قرعان",
+        "بشار طحاينه",
+        "محمد هلال",
+        "دانا القيمري",
+        "ابراهيم حماد",
+        "أحمد أبو سنينة",
+        "سامر الزين",
+        "عبد الكريم عواد",
+        "فراس بدوي",
+        "رائد العناني",
+        "مراد الشمايلة",
+        "ياسر الحسيني",
+        "رنا الحماد",
+        "نور الهدى عبد الرحمن",
+        "نجوى الحماد",
+        "خالد القدومي",
+        "سليمان النجار",
+        "ليلى السعدي",
+        "حسن البلبيسي",
+        "نادر العطار",
+        "رامي الزعبي",
+        "زياد الشيخ يوسف",
+        "لمى النسور",
+        "صالح الرفاعي",
+        "نادية العوضي"
+    ],
+    "assistant": [
+        "ليلى السعدي",
+        "رباب الحجازي",
+        "نجاح الزهراني",
+        "حسين الأحمد",
+        "نورة السالم",
+        "مريم الخالدي",
+        "رناد العربي",
+        "محمود الرفاعي",
+        "فاطمة الراشد",
+        "أمينة الخريبط",
+        "سارة السهلي",
+        "صالح الحميدي",
+        "هناء العمران",
+        "خديجة الحربي",
+        "أمل العليان",
+        "هشام الحسين",
+        "زينب الحواس",
+        "رحاب العثمان",
+        "منى الشهري",
+        "ياسمين السهيل",
+        "لمياء الغامدي",
+        "ريم الفايز",
+        "ميسون السواط",
+        "علي الراجحي",
+        "سماهر القصيمي",
+        "مها العنزي",
+        "سحر القحطاني",
+        "أحمد الجبرين",
+        "فاطمة الراوي",
+        "سوسن العمير",
+        "سلمى العبدالكريم",
+        "فريدة السديري",
+        "أسماء الشلهوب",
+        "ريما الشعلان",
+        "حسن الدوسري",
+        "لطيفة الفوزان",
+        "سهام الرميح",
+        "سلمى القرشي",
+        "محمد الشعلان",
+        "حواء العتيبي",
+        "هدى الشيباني"
+    ]
+}
