@@ -1,143 +1,69 @@
 import json
 import random
 
+TAGS = [
+    "faculty-name",
+    "faculty-symbol",
+    "department-name",
+    "department-symbol",
+    "major-name",
+    "major-symbol",
+    "course-name",
+    "course-symbol",
+    "instructor-name",
+    "assistant-name",
+    "credits",
+    "min-credits",
+    "max-credits"
+]
 
-# [faculty-name]
-def replace_faculty_name(entry, dummy_data):
-    if '[faculty-name]' in entry['Arabic-Query']:
-        faculty = random.choice(dummy_data['faculty'])
-        entry['examples'] = [
-            {"label": faculty['faculty-name'],
-             "Arabic-Query": entry['Arabic-Query'].replace('[faculty-name]', faculty['faculty-name']),
-             "SQL-Query": entry['SQL-Query'].replace('[faculty-name]', faculty['faculty-name']),
-             "output": ""
-             }]
+def read_json_file(file_path):
+    with open(file_path, 'r', encoding='utf-8') as file:
+        return json.load(file)
 
+def write_json_file(file_path, data):
+    with open(file_path, 'w', encoding='utf-8') as file:
+        json.dump(data, file, ensure_ascii=False, indent=4)
 
-# [faculty-symbol]
-def replace_faculty_symbol(entry, dummy_data):
-    if '[faculty-symbol]' in entry['Arabic-Query']:
-        faculty = random.choice(dummy_data['faculty'])
-        entry['examples'] = [
-            {"label": faculty['faculty-symbol'],
-             "Arabic-Query": entry['Arabic-Query'].replace('[faculty-symbol]', faculty['faculty-symbol']),
-             "SQL-Query": entry['SQL-Query'].replace('[faculty-symbol]', faculty['faculty-symbol']),
-             "output": ""
-             }]
+def get_random_replacement_value(dummy_data, tag):
+    if tag == "course-name":
+        return random.choice(dummy_data["course"])["course-name"]["name-ar"]
+    elif tag == "course-symbol":
+        return random.choice(dummy_data["course"])["course-symbol"]
+    elif tag in ["instructor-name", "assistant-name"]:
+        return random.choice(dummy_data[tag.split('-')[0]])
+    elif tag == "credits":
+        return str(random.randint(1, 5))
+    elif tag == "min-credits":
+        return str(random.randint(1, 2))
+    elif tag == "max-credits":
+        return str(random.randint(3, 5))
+    else:
+        return random.choice(dummy_data[tag.split('-')[0]])[tag]
 
+def replace_tags_in_query(query, replacements):
+    for tag, replacement_value in replacements.items():
+        tag_to_find = f'[{tag}]'
+        while tag_to_find in query:
+            query = query.replace(tag_to_find, replacement_value, 1)
+    return query
 
-# [department-name]
-def replace_department_name(entry, dummy_data):
-    if '[department-name]' in entry['Arabic-Query']:
-        department = random.choice(dummy_data['department'])
-        entry['examples'] = [
-            {"label": department['department-name'],
-             "Arabic-Query": entry['Arabic-Query'].replace('[department-name]', department['department-name']),
-             "SQL-Query": entry['SQL-Query'].replace('[department-name]', department['department-name']),
-             "output": ""
-             }]
-
-
-# [department-symbol]
-def replace_department_symbol(entry, dummy_data):
-    if '[department-symbol]' in entry['Arabic-Query']:
-        department = random.choice(dummy_data['department'])
-        entry['examples'] = [
-            {"label": department['department-symbol'],
-             "Arabic-Query": entry['Arabic-Query'].replace('[department-symbol]', department['department-symbol']),
-             "SQL-Query": entry['SQL-Query'].replace('[department-symbol]', department['department-symbol']),
-             "output": ""
-             }]
-
-
-# [major-name]
-def replace_major_name(entry, dummy_data):
-    if '[major-name]' in entry['Arabic-Query']:
-        major = random.choice(dummy_data['major'])
-        entry['examples'] = [
-            {"label": major['major-name'],
-             "Arabic-Query": entry['Arabic-Query'].replace('[major-name]', major['major-name']),
-             "SQL-Query": entry['SQL-Query'].replace('[major-name]', major['major-name']),
-             "output": ""
-             }]
-
-
-# [major-symbol]
-def replace_major_symbol(entry, dummy_data):
-    if '[major-symbol]' in entry['Arabic-Query']:
-        major = random.choice(dummy_data['major'])
-        entry['examples'] = [
-            {"label": major['major-symbol'],
-             "Arabic-Query": entry['Arabic-Query'].replace('[major-symbol]', major['major-symbol']),
-             "SQL-Query": entry['SQL-Query'].replace('[major-symbol]', major['major-symbol']),
-             "output": ""
-             }]
-
-
-# [course-name]
-def replace_course_name(entry, dummy_data):
-    if '[course-name]' in entry['Arabic-Query']:
-        course = random.choice(dummy_data['course'])
-        entry['examples'] = [
-            {"label": course['course-name']['name-ar'],
-             "Arabic-Query": entry['Arabic-Query'].replace('[course-name]', course['course-name']['name-ar']),
-             "SQL-Query": entry['SQL-Query'].replace('[course-name]', course['course-symbol']),
-             "output": ""
-             }]
-
-
-# [course-symbol]
-def replace_course_symbol(entry, dummy_data):
-    if '[course-symbol]' in entry['Arabic-Query']:
-        course = random.choice(dummy_data['course'])
-        entry['examples'] = [
-            {"label": course['course-symbol'],
-             "Arabic-Query": entry['Arabic-Query'].replace('[course-symbol]', course['course-symbol']),
-             "SQL-Query": entry['SQL-Query'].replace('[course-symbol]', course['course-symbol']),
-             "output": ""
-             }]
-
-
-# [instructor-name]
-def replace_instructor_name(entry, dummy_data):
-    if '[instructor-name]' in entry['Arabic-Query']:
-        instructor = random.choice(dummy_data['instructor'])
-        entry['examples'] = [
-            {"label": instructor,
-             "Arabic-Query": entry['Arabic-Query'].replace('[instructor-name]', instructor),
-             "SQL-Query": entry['SQL-Query'].replace('[instructor-name]', instructor),
-             "output": ""
-             }]
-
-
-# [ta-name]
-def replace_ta_name(entry, dummy_data):
-    if '[ta-name]' in entry['Arabic-Query']:
-        ta = random.choice(dummy_data['assistant'])
-        entry['examples'] = [
-            {"label": ta,
-             "Arabic-Query": entry['Arabic-Query'].replace('[ta-name]', ta),
-             "SQL-Query": entry['SQL-Query'].replace('[ta-name]', ta),
-             "output": ""
-             }]
-
-
-def replace_tags(data_file, dummy_file, output_file):
-    with open(data_file, 'r', encoding='utf-8') as df, open(dummy_file, 'r', encoding='utf-8') as dummyf:
-        data = json.load(df)
-        dummy_data = json.load(dummyf)
-
+def add_examples_field(data, dummy_data):
     for entry in data:
-        replace_faculty_name(entry, dummy_data)
-        replace_faculty_symbol(entry, dummy_data)
-        replace_department_name(entry, dummy_data)
-        replace_major_name(entry, dummy_data)
-        replace_course_name(entry, dummy_data)
-        replace_instructor_name(entry, dummy_data)
-        replace_ta_name(entry, dummy_data)
+        entry["examples"] = []
+        replacements = {tag: get_random_replacement_value(dummy_data, tag) for tag in TAGS if f'[{tag}]' in entry["Arabic-Query"] or f'[{tag}]' in entry["SQL-Query"]}
+        example = {}
+        example["labels"] = replacements
+        example["Arabic-Query"] = replace_tags_in_query(entry["Arabic-Query"], replacements)
+        example["SQL-Query"] = replace_tags_in_query(entry["SQL-Query"], replacements)
+        entry["examples"].append(example)
+    return data
 
-    with open(output_file, 'w', encoding='utf-8') as outf:
-        json.dump(data, outf, ensure_ascii=False, indent=4)
+def main():
+    data = read_json_file('json/data.json')
+    dummy_data = read_json_file('json/dummy.json')
+    updated_data = add_examples_field(data, dummy_data)
+    write_json_file('json/data_examples.json', updated_data)
 
-
-replace_tags('json/data.json', 'json/dummy.json', 'json/data_examples.json')
+if __name__ == "__main__":
+    main()
