@@ -15,7 +15,8 @@ def update_faculty_with_dean(faculty_count, instructor_ids):
     statements = []
     for i in range(1, faculty_count + 1):
         dean_id = instructor_ids.pop()
-        statements.append(f"UPDATE faculty SET dean_id = {dean_id} WHERE id = {i};")
+        statements.append(
+            f"UPDATE faculty SET dean_id = {dean_id} WHERE id = {i};")
     return statements
 
 
@@ -32,7 +33,8 @@ def update_department_with_head(department_count, instructor_ids):
     statements = []
     for i in range(1, department_count + 1):
         head_id = instructor_ids.pop()
-        statements.append(f"UPDATE department SET head_instructor_id = {head_id} WHERE id = {i};")
+        statements.append(
+            f"UPDATE department SET head_instructor_id = {head_id} WHERE id = {i};")
     return statements
 
 def create_insert_for_major(major_data, department_count):
@@ -71,6 +73,46 @@ def create_insert_for_ta(ta_data, department_count):
     return statements
 
 
+def create_insert_for_course_prerequisite(course_count):
+    statements = []
+    for i in range(1, course_count + 1):
+        prerequisite_count = random.randint(0, 2)
+        prerequisites = random.sample(
+            range(1, course_count + 1), prerequisite_count)
+        for prerequisite in prerequisites:
+            if prerequisite != i:  # A course cannot be a prerequisite of itself
+                statements.append(
+                    f"INSERT INTO course_prerequisite(course_id, prerequisite_id) VALUES ({i}, {prerequisite});"
+                )
+    return statements
+
+
+def create_insert_for_instructor_course(instructor_count, course_count):
+    statements = []
+    for i in range(1, instructor_count + 1):
+        course_count_for_instructor = random.randint(1, 3)
+        courses = random.sample(
+            range(1, course_count + 1), course_count_for_instructor)
+        for course in courses:
+            statements.append(
+                f"INSERT INTO instructor_course(instructor_id, course_id) VALUES ({i}, {course});"
+            )
+    return statements
+
+
+def create_insert_for_ta_course(ta_count, course_count):
+    statements = []
+    for i in range(1, ta_count + 1):
+        course_count_for_ta = random.randint(1, 3)
+        courses = random.sample(
+            range(1, course_count + 1), course_count_for_ta)
+        for course in courses:
+            statements.append(
+                f"INSERT INTO ta_course(ta_id, course_id) VALUES ({i}, {course});"
+            )
+    return statements
+
+
 def write_to_file(statements, filename):
     with open(filename, 'w', encoding='utf-8') as f:
         for statement in statements:
@@ -85,6 +127,8 @@ def generate_sql_inserts(json_filename, sql_filename):
     faculty_count = len(data['faculty'])
     department_count = len(data['department'])
     major_count = len(data['major'])
+    course_count = len(data['course'])
+    ta_count = len(data['assistant'])
 
     # Create a set of instructor IDs to ensure each instructor can be a dean or head at most once.
     instructor_ids = set(range(1, instructor_count + 1))
@@ -106,6 +150,11 @@ def generate_sql_inserts(json_filename, sql_filename):
     all_statements.extend(create_insert_for_major(data['major'], department_count))
     all_statements.extend(create_insert_for_course(data['course'], major_count))
     all_statements.extend(create_insert_for_ta(data['assistant'], department_count))
+
+    # Now we can create the inserts for the other tables.
+    all_statements.extend(create_insert_for_course_prerequisite(course_count))
+    all_statements.extend(create_insert_for_instructor_course(instructor_count, course_count))
+    all_statements.extend(create_insert_for_ta_course(ta_count, course_count))
 
     write_to_file(all_statements, sql_filename)
 
