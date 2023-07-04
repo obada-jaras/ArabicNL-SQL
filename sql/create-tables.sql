@@ -1,5 +1,5 @@
 CREATE TABLE faculty (
-    id INT AUTO_INCREMENT PRIMARY KEY,
+    id INT PRIMARY KEY,
     name_arabic VARCHAR(255),
     name_english VARCHAR(255),
     symbol VARCHAR(255),
@@ -8,7 +8,7 @@ CREATE TABLE faculty (
 );
 
 CREATE TABLE department (
-    id INT AUTO_INCREMENT PRIMARY KEY,
+    id INT PRIMARY KEY,
     faculty_id INT,
     name_arabic VARCHAR(255),
     name_english VARCHAR(255),
@@ -19,7 +19,7 @@ CREATE TABLE department (
 );
 
 CREATE TABLE major (
-    id INT AUTO_INCREMENT PRIMARY KEY,
+    id INT PRIMARY KEY,
     department_id INT,
     name_arabic VARCHAR(255),
     name_english VARCHAR(255),
@@ -30,7 +30,7 @@ CREATE TABLE major (
 );
 
 CREATE TABLE course (
-    id INT AUTO_INCREMENT PRIMARY KEY,
+    id INT PRIMARY KEY,
     major_id INT,
     name_arabic VARCHAR(255),
     name_english VARCHAR(255),
@@ -41,7 +41,7 @@ CREATE TABLE course (
 );
 
 CREATE TABLE instructor (
-    id INT AUTO_INCREMENT PRIMARY KEY,
+    id INT PRIMARY KEY,
     name_arabic VARCHAR(255),
     name_english VARCHAR(255),
     phone_number VARCHAR(20),
@@ -53,7 +53,7 @@ CREATE TABLE instructor (
 );
 
 CREATE TABLE teaching_assistant (
-    id INT AUTO_INCREMENT PRIMARY KEY,
+    id INT PRIMARY KEY,
     name_arabic VARCHAR(255),
     name_english VARCHAR(255),
     phone_number VARCHAR(20),
