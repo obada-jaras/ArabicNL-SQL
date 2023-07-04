@@ -22,12 +22,18 @@ def update_faculty_with_dean(faculty_count, instructor_ids):
 def create_insert_for_department(department_data, faculty_count, instructor_ids):
     statements = []
     for i, department in enumerate(department_data, start=1):
-        head_instructor_id = instructor_ids.pop()
+        head_instructor_id = 'NULL' if instructor_ids is None else instructor_ids.pop()
         statements.append(
             f"INSERT INTO department(id, faculty_id, name_arabic, name_english, symbol, description, head_instructor_id) "
             f"VALUES ({i}, {random.randint(1, faculty_count)}, '{department['department-name']}', 'name english - department - {department['department-symbol']}', '{department['department-symbol']}', 'Description for department {i}', {head_instructor_id});")
     return statements
 
+def update_department_with_head(department_count, instructor_ids):
+    statements = []
+    for i in range(1, department_count + 1):
+        head_id = instructor_ids.pop()
+        statements.append(f"UPDATE department SET head_instructor_id = {head_id} WHERE id = {i};")
+    return statements
 
 def create_insert_for_major(major_data, department_count):
     statements = []
@@ -88,21 +94,18 @@ def generate_sql_inserts(json_filename, sql_filename):
     # First, create faculties without assigning deans.
     all_statements.extend(create_insert_for_faculty(data['faculty'], None))
 
-    # Then, create instructors and assign them as deans.
-    all_statements.extend(create_insert_for_instructor(
-        data['instructor'], department_count))
-    all_statements.extend(update_faculty_with_dean(
-        faculty_count, instructor_ids))
+    # Create departments without assigning heads.
+    all_statements.extend(create_insert_for_department(data['department'], faculty_count, None))
+
+    # Then, create instructors and assign them as deans and heads.
+    all_statements.extend(create_insert_for_instructor(data['instructor'], department_count))
+    all_statements.extend(update_faculty_with_dean(faculty_count, instructor_ids))
+    all_statements.extend(update_department_with_head(department_count, instructor_ids))
 
     # Now we can create the remaining entities.
-    all_statements.extend(create_insert_for_department(
-        data['department'], faculty_count, instructor_ids))
-    all_statements.extend(create_insert_for_major(
-        data['major'], department_count))
-    all_statements.extend(create_insert_for_course(
-        data['course'], major_count))
-    all_statements.extend(create_insert_for_ta(
-        data['assistant'], department_count))
+    all_statements.extend(create_insert_for_major(data['major'], department_count))
+    all_statements.extend(create_insert_for_course(data['course'], major_count))
+    all_statements.extend(create_insert_for_ta(data['assistant'], department_count))
 
     write_to_file(all_statements, sql_filename)
 
