@@ -14,7 +14,10 @@ TAGS = [
     "assistant-name",
     "credits",
     "min-credits",
-    "max-credits"
+    "max-credits",
+    "first-name",
+    "course-symbol-1",
+    "course-symbol-2"
 ]
 
 def read_json_file(file_path):
@@ -38,6 +41,12 @@ def get_random_replacement_value(dummy_data, tag):
         return str(random.randint(1, 2))
     elif tag == "max-credits":
         return str(random.randint(3, 5))
+    elif tag == "first-name":
+        return "محمد"
+    elif tag == "course-symbol-1":
+        return "COMP"
+    elif tag == "course-symbol-2":
+        return "ENCS"
     else:
         return random.choice(dummy_data[tag.split('-')[0]])[tag]
 
@@ -61,10 +70,10 @@ def add_examples_field(data, dummy_data):
     return data
 
 def main():
-    data = read_json_file('json/data.json')
+    data = read_json_file('json/complex_data.json')
     dummy_data = read_json_file('json/dummy.json')
     updated_data = add_examples_field(data, dummy_data)
-    write_json_file('json/data_examples.json', updated_data)
+    write_json_file('json/complex_data_examples.json', updated_data)
 
 if __name__ == "__main__":
     main()
