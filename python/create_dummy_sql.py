@@ -1,21 +1,23 @@
 import json
 import random
 
-def create_insert_for_faculty(faculty_data, dean_count):
+def create_insert_for_faculty(faculty_data, instructor_ids):
     statements = []
     for i, faculty in enumerate(faculty_data, start=1):
+        dean_id = instructor_ids.pop()
         statements.append(
             f"INSERT INTO faculty(id, name_arabic, name_english, symbol, description, dean_id) "
-            f"VALUES ({i}, '{faculty['faculty-name']}', 'name english - faculty - {faculty['faculty-symbol']}', '{faculty['faculty-symbol']}', 'Description {i}', {random.randint(1, dean_count)});"
+            f"VALUES ({i}, '{faculty['faculty-name']}', '{faculty['faculty-symbol']}', '{faculty['faculty-symbol']}', 'Description {i}', {dean_id});"
         )
     return statements
 
-def create_insert_for_department(department_data, faculty_count):
+def create_insert_for_department(department_data, faculty_count, instructor_ids):
     statements = []
     for i, department in enumerate(department_data, start=1):
+        head_instructor_id = instructor_ids.pop()
         statements.append(
             f"INSERT INTO department(id, faculty_id, name_arabic, name_english, symbol, description, head_instructor_id) "
-            f"VALUES ({i}, {random.randint(1, faculty_count)}, '{department['department-name']}', 'name english - department - {department['department-symbol']}', '{department['department-symbol']}', 'Description {i}', {random.randint(1, 100)});"
+            f"VALUES ({i}, {random.randint(1, faculty_count)}, '{department['department-name']}', '{department['department-symbol']}', '{department['department-symbol']}', 'Description {i}', {head_instructor_id});"
         )
     return statements
 
@@ -69,9 +71,12 @@ def generate_sql_inserts(json_filename, sql_filename):
     department_count = len(data['department'])
     major_count = len(data['major'])
 
+    # Create a set of instructor IDs to ensure each instructor can be a dean or head at most once.
+    instructor_ids = set(range(1, instructor_count + 1))
+
     all_statements = []
-    all_statements.extend(create_insert_for_faculty(data['faculty'], instructor_count))
-    all_statements.extend(create_insert_for_department(data['department'], faculty_count))
+    all_statements.extend(create_insert_for_faculty(data['faculty'], instructor_ids))
+    all_statements.extend(create_insert_for_department(data['department'], faculty_count, instructor_ids))
     all_statements.extend(create_insert_for_major(data['major'], department_count))
     all_statements.extend(create_insert_for_course(data['course'], major_count))
     all_statements.extend(create_insert_for_instructor(data['instructor'], department_count))
