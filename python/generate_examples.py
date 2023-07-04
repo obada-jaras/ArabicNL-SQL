@@ -9,7 +9,8 @@ def replace_faculty_name(entry, dummy_data):
         entry['examples'] = [
             {"label": faculty['faculty-name'],
              "Arabic-Query": entry['Arabic-Query'].replace('[faculty-name]', faculty['faculty-name']),
-             "SQL-Query": entry['SQL-Query'].replace('[faculty-name]', faculty['faculty-name'])
+             "SQL-Query": entry['SQL-Query'].replace('[faculty-name]', faculty['faculty-name']),
+             "output": ""
              }]
 
 
@@ -20,7 +21,8 @@ def replace_faculty_symbol(entry, dummy_data):
         entry['examples'] = [
             {"label": faculty['faculty-symbol'],
              "Arabic-Query": entry['Arabic-Query'].replace('[faculty-symbol]', faculty['faculty-symbol']),
-             "SQL-Query": entry['SQL-Query'].replace('[faculty-symbol]', faculty['faculty-symbol'])
+             "SQL-Query": entry['SQL-Query'].replace('[faculty-symbol]', faculty['faculty-symbol']),
+             "output": ""
              }]
 
 
@@ -31,7 +33,8 @@ def replace_department_name(entry, dummy_data):
         entry['examples'] = [
             {"label": department['department-name'],
              "Arabic-Query": entry['Arabic-Query'].replace('[department-name]', department['department-name']),
-             "SQL-Query": entry['SQL-Query'].replace('[department-name]', department['department-name'])
+             "SQL-Query": entry['SQL-Query'].replace('[department-name]', department['department-name']),
+             "output": ""
              }]
 
 
@@ -42,7 +45,8 @@ def replace_department_symbol(entry, dummy_data):
         entry['examples'] = [
             {"label": department['department-symbol'],
              "Arabic-Query": entry['Arabic-Query'].replace('[department-symbol]', department['department-symbol']),
-             "SQL-Query": entry['SQL-Query'].replace('[department-symbol]', department['department-symbol'])
+             "SQL-Query": entry['SQL-Query'].replace('[department-symbol]', department['department-symbol']),
+             "output": ""
              }]
 
 
@@ -53,7 +57,8 @@ def replace_major_name(entry, dummy_data):
         entry['examples'] = [
             {"label": major['major-name'],
              "Arabic-Query": entry['Arabic-Query'].replace('[major-name]', major['major-name']),
-             "SQL-Query": entry['SQL-Query'].replace('[major-name]', major['major-name'])
+             "SQL-Query": entry['SQL-Query'].replace('[major-name]', major['major-name']),
+             "output": ""
              }]
 
 
@@ -64,7 +69,8 @@ def replace_major_symbol(entry, dummy_data):
         entry['examples'] = [
             {"label": major['major-symbol'],
              "Arabic-Query": entry['Arabic-Query'].replace('[major-symbol]', major['major-symbol']),
-             "SQL-Query": entry['SQL-Query'].replace('[major-symbol]', major['major-symbol'])
+             "SQL-Query": entry['SQL-Query'].replace('[major-symbol]', major['major-symbol']),
+             "output": ""
              }]
 
 
@@ -75,7 +81,8 @@ def replace_course_name(entry, dummy_data):
         entry['examples'] = [
             {"label": course['course-name']['name-ar'],
              "Arabic-Query": entry['Arabic-Query'].replace('[course-name]', course['course-name']['name-ar']),
-             "SQL-Query": entry['SQL-Query'].replace('[course-name]', course['course-symbol'])
+             "SQL-Query": entry['SQL-Query'].replace('[course-name]', course['course-symbol']),
+             "output": ""
              }]
 
 
@@ -86,7 +93,8 @@ def replace_course_symbol(entry, dummy_data):
         entry['examples'] = [
             {"label": course['course-symbol'],
              "Arabic-Query": entry['Arabic-Query'].replace('[course-symbol]', course['course-symbol']),
-             "SQL-Query": entry['SQL-Query'].replace('[course-symbol]', course['course-symbol'])
+             "SQL-Query": entry['SQL-Query'].replace('[course-symbol]', course['course-symbol']),
+             "output": ""
              }]
 
 
@@ -97,7 +105,8 @@ def replace_instructor_name(entry, dummy_data):
         entry['examples'] = [
             {"label": instructor,
              "Arabic-Query": entry['Arabic-Query'].replace('[instructor-name]', instructor),
-             "SQL-Query": entry['SQL-Query'].replace('[instructor-name]', instructor)
+             "SQL-Query": entry['SQL-Query'].replace('[instructor-name]', instructor),
+             "output": ""
              }]
 
 
@@ -108,7 +117,8 @@ def replace_ta_name(entry, dummy_data):
         entry['examples'] = [
             {"label": ta,
              "Arabic-Query": entry['Arabic-Query'].replace('[ta-name]', ta),
-             "SQL-Query": entry['SQL-Query'].replace('[ta-name]', ta)
+             "SQL-Query": entry['SQL-Query'].replace('[ta-name]', ta),
+             "output": ""
              }]
 
 
