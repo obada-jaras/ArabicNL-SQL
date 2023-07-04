@@ -4,13 +4,14 @@
         "Arabic-Query": "هل يمكنك تقديم وصف للكلية التي تدعى [faculty-name]؟",
         "SQL-Query": "SELECT description FROM faculty WHERE name_arabic = '[faculty-name]' OR symbol = '[faculty-name]';",
         "importancy": "10",
+        "id": 1,
         "examples": [
             {
                 "labels": {
-                    "faculty-name": "الحقوق والإدارة العامة"
+                    "faculty-name": "الهندسة والتكنولوجيا"
                 },
-                "Arabic-Query": "هل يمكنك تقديم وصف للكلية التي تدعى الحقوق والإدارة العامة؟",
-                "SQL-Query": "SELECT description FROM faculty WHERE name_arabic = 'الحقوق والإدارة العامة' OR symbol = 'الحقوق والإدارة العامة';",
+                "Arabic-Query": "هل يمكنك تقديم وصف للكلية التي تدعى الهندسة والتكنولوجيا؟",
+                "SQL-Query": "SELECT description FROM faculty WHERE name_arabic = 'الهندسة والتكنولوجيا' OR symbol = 'الهندسة والتكنولوجيا';",
                 "output": ""
             }
         ]
@@ -20,13 +21,14 @@
         "Arabic-Query": "هل يمكنك تقديم وصف للكلية التي لها الرمز [faculty-symbol]؟",
         "SQL-Query": "SELECT description FROM faculty WHERE symbol = '[faculty-symbol]';",
         "importancy": "5",
+        "id": 2,
         "examples": [
             {
                 "labels": {
-                    "faculty-symbol": "ART"
+                    "faculty-symbol": "SCI"
                 },
-                "Arabic-Query": "هل يمكنك تقديم وصف للكلية التي لها الرمز ART؟",
-                "SQL-Query": "SELECT description FROM faculty WHERE symbol = 'ART';",
+                "Arabic-Query": "هل يمكنك تقديم وصف للكلية التي لها الرمز SCI؟",
+                "SQL-Query": "SELECT description FROM faculty WHERE symbol = 'SCI';",
                 "output": ""
             }
         ]
@@ -36,13 +38,14 @@
         "Arabic-Query": "ما هو الرمز المرتبط بالكلية التي تدعى [faculty-name]؟",
         "SQL-Query": "SELECT symbol FROM faculty WHERE name_arabic = '[faculty-name]';",
         "importancy": "1",
+        "id": 3,
         "examples": [
             {
                 "labels": {
-                    "faculty-name": "الأعمال والاقتصاد"
+                    "faculty-name": "التربية"
                 },
-                "Arabic-Query": "ما هو الرمز المرتبط بالكلية التي تدعى الأعمال والاقتصاد؟",
-                "SQL-Query": "SELECT symbol FROM faculty WHERE name_arabic = 'الأعمال والاقتصاد';",
+                "Arabic-Query": "ما هو الرمز المرتبط بالكلية التي تدعى التربية؟",
+                "SQL-Query": "SELECT symbol FROM faculty WHERE name_arabic = 'التربية';",
                 "output": ""
             }
         ]
@@ -52,13 +55,14 @@
         "Arabic-Query": "هل يمكنك أن تخبرني بإسم عميد كلية [faculty-name]؟",
         "SQL-Query": "SELECT i.name_arabic FROM faculty f JOIN instructor i ON f.dean_id = i.id WHERE f.name_arabic = '[faculty-name]' OR f.symbol = '[faculty-name]';",
         "importancy": "10",
+        "id": 4,
         "examples": [
             {
                 "labels": {
-                    "faculty-name": "التربية"
+                    "faculty-name": "الحقوق والإدارة العامة"
                 },
-                "Arabic-Query": "هل يمكنك أن تخبرني بإسم عميد كلية التربية؟",
-                "SQL-Query": "SELECT i.name_arabic FROM faculty f JOIN instructor i ON f.dean_id = i.id WHERE f.name_arabic = 'التربية' OR f.symbol = 'التربية';",
+                "Arabic-Query": "هل يمكنك أن تخبرني بإسم عميد كلية الحقوق والإدارة العامة؟",
+                "SQL-Query": "SELECT i.name_arabic FROM faculty f JOIN instructor i ON f.dean_id = i.id WHERE f.name_arabic = 'الحقوق والإدارة العامة' OR f.symbol = 'الحقوق والإدارة العامة';",
                 "output": ""
             }
         ]
@@ -68,13 +72,14 @@
         "Arabic-Query": "هل يمكنك تقديم البريد الإلكتروني لعميد كلية [faculty-name]؟",
         "SQL-Query": "SELECT i.email FROM faculty f JOIN instructor i ON f.dean_id = i.id WHERE f.name_arabic = '[faculty-name]' OR f.symbol = '[faculty-name]';",
         "importancy": "10",
+        "id": 5,
         "examples": [
             {
                 "labels": {
-                    "faculty-name": "الدراسات العليا والأبحاث"
+                    "faculty-name": "الفنون والموسيقى والتصميم"
                 },
-                "Arabic-Query": "هل يمكنك تقديم البريد الإلكتروني لعميد كلية الدراسات العليا والأبحاث؟",
-                "SQL-Query": "SELECT i.email FROM faculty f JOIN instructor i ON f.dean_id = i.id WHERE f.name_arabic = 'الدراسات العليا والأبحاث' OR f.symbol = 'الدراسات العليا والأبحاث';",
+                "Arabic-Query": "هل يمكنك تقديم البريد الإلكتروني لعميد كلية الفنون والموسيقى والتصميم؟",
+                "SQL-Query": "SELECT i.email FROM faculty f JOIN instructor i ON f.dean_id = i.id WHERE f.name_arabic = 'الفنون والموسيقى والتصميم' OR f.symbol = 'الفنون والموسيقى والتصميم';",
                 "output": ""
             }
         ]
@@ -84,13 +89,14 @@
         "Arabic-Query": "هل يمكنك تقديم رقم الهاتف لعميد كلية [faculty-name]؟",
         "SQL-Query": "SELECT i.phone_number FROM faculty f JOIN instructor i ON f.dean_id = i.id WHERE f.name_arabic = '[faculty-name]' OR f.symbol = '[faculty-name]';",
         "importancy": "10",
+        "id": 6,
         "examples": [
             {
                 "labels": {
-                    "faculty-name": "الحقوق والإدارة العامة"
+                    "faculty-name": "العلوم"
                 },
-                "Arabic-Query": "هل يمكنك تقديم رقم الهاتف لعميد كلية الحقوق والإدارة العامة؟",
-                "SQL-Query": "SELECT i.phone_number FROM faculty f JOIN instructor i ON f.dean_id = i.id WHERE f.name_arabic = 'الحقوق والإدارة العامة' OR f.symbol = 'الحقوق والإدارة العامة';",
+                "Arabic-Query": "هل يمكنك تقديم رقم الهاتف لعميد كلية العلوم؟",
+                "SQL-Query": "SELECT i.phone_number FROM faculty f JOIN instructor i ON f.dean_id = i.id WHERE f.name_arabic = 'العلوم' OR f.symbol = 'العلوم';",
                 "output": ""
             }
         ]
@@ -100,13 +106,14 @@
         "Arabic-Query": "هل يمكنك تقديم الساعات المكتبية لعميد كلية [faculty-name]؟",
         "SQL-Query": "SELECT i.office_hours FROM faculty f JOIN instructor i ON f.dean_id = i.id WHERE f.name_arabic = '[faculty-name]' OR f.symbol = '[faculty-name]';",
         "importancy": "10",
+        "id": 7,
         "examples": [
             {
                 "labels": {
-                    "faculty-name": "الصيدلة والتمريض والمهن الصحية"
+                    "faculty-name": "الهندسة والتكنولوجيا"
                 },
-                "Arabic-Query": "هل يمكنك تقديم الساعات المكتبية لعميد كلية الصيدلة والتمريض والمهن الصحية؟",
-                "SQL-Query": "SELECT i.office_hours FROM faculty f JOIN instructor i ON f.dean_id = i.id WHERE f.name_arabic = 'الصيدلة والتمريض والمهن الصحية' OR f.symbol = 'الصيدلة والتمريض والمهن الصحية';",
+                "Arabic-Query": "هل يمكنك تقديم الساعات المكتبية لعميد كلية الهندسة والتكنولوجيا؟",
+                "SQL-Query": "SELECT i.office_hours FROM faculty f JOIN instructor i ON f.dean_id = i.id WHERE f.name_arabic = 'الهندسة والتكنولوجيا' OR f.symbol = 'الهندسة والتكنولوجيا';",
                 "output": ""
             }
         ]
@@ -116,13 +123,14 @@
         "Arabic-Query": "هل يمكنك تقديم ID ريتاج لعميد كلية [faculty-name]؟",
         "SQL-Query": "SELECT i.ritaj_id FROM faculty f JOIN instructor i ON f.dean_id = i.id WHERE f.name_arabic = '[faculty-name]' OR f.symbol = '[faculty-name]';",
         "importancy": "3",
+        "id": 8,
         "examples": [
             {
                 "labels": {
-                    "faculty-name": "الدراسات العليا والأبحاث"
+                    "faculty-name": "الصيدلة والتمريض والمهن الصحية"
                 },
-                "Arabic-Query": "هل يمكنك تقديم ID ريتاج لعميد كلية الدراسات العليا والأبحاث؟",
-                "SQL-Query": "SELECT i.ritaj_id FROM faculty f JOIN instructor i ON f.dean_id = i.id WHERE f.name_arabic = 'الدراسات العليا والأبحاث' OR f.symbol = 'الدراسات العليا والأبحاث';",
+                "Arabic-Query": "هل يمكنك تقديم ID ريتاج لعميد كلية الصيدلة والتمريض والمهن الصحية؟",
+                "SQL-Query": "SELECT i.ritaj_id FROM faculty f JOIN instructor i ON f.dean_id = i.id WHERE f.name_arabic = 'الصيدلة والتمريض والمهن الصحية' OR f.symbol = 'الصيدلة والتمريض والمهن الصحية';",
                 "output": ""
             }
         ]
@@ -132,13 +140,14 @@
         "Arabic-Query": "هل يمكنك أن تخبرني ما هي الدائرة التي يتبع لها عميد كلية [faculty-name]؟",
         "SQL-Query": "SELECT d.name_arabic FROM faculty f JOIN instructor i ON f.dean_id = i.id JOIN department d ON i.department_id = d.id WHERE f.name_arabic = '[faculty-name]' OR f.symbol = '[faculty-name]';",
         "importancy": "9",
+        "id": 9,
         "examples": [
             {
                 "labels": {
-                    "faculty-name": "التربية"
+                    "faculty-name": "الحقوق والإدارة العامة"
                 },
-                "Arabic-Query": "هل يمكنك أن تخبرني ما هي الدائرة التي يتبع لها عميد كلية التربية؟",
-                "SQL-Query": "SELECT d.name_arabic FROM faculty f JOIN instructor i ON f.dean_id = i.id JOIN department d ON i.department_id = d.id WHERE f.name_arabic = 'التربية' OR f.symbol = 'التربية';",
+                "Arabic-Query": "هل يمكنك أن تخبرني ما هي الدائرة التي يتبع لها عميد كلية الحقوق والإدارة العامة؟",
+                "SQL-Query": "SELECT d.name_arabic FROM faculty f JOIN instructor i ON f.dean_id = i.id JOIN department d ON i.department_id = d.id WHERE f.name_arabic = 'الحقوق والإدارة العامة' OR f.symbol = 'الحقوق والإدارة العامة';",
                 "output": ""
             }
         ]
@@ -148,13 +157,14 @@
         "Arabic-Query": "هل يمكنك تقديم قائمة الدوائر الأكاديمية في كلية [faculty-name]؟",
         "SQL-Query": "SELECT d.name_arabic FROM department d JOIN faculty f ON d.faculty_id = f.id WHERE f.name_arabic = '[faculty-name]' OR f.symbol = '[faculty-name]';",
         "importancy": "7",
+        "id": 10,
         "examples": [
             {
                 "labels": {
-                    "faculty-name": "الفنون والموسيقى والتصميم"
+                    "faculty-name": "الأعمال والاقتصاد"
                 },
-                "Arabic-Query": "هل يمكنك تقديم قائمة الدوائر الأكاديمية في كلية الفنون والموسيقى والتصميم؟",
-                "SQL-Query": "SELECT d.name_arabic FROM department d JOIN faculty f ON d.faculty_id = f.id WHERE f.name_arabic = 'الفنون والموسيقى والتصميم' OR f.symbol = 'الفنون والموسيقى والتصميم';",
+                "Arabic-Query": "هل يمكنك تقديم قائمة الدوائر الأكاديمية في كلية الأعمال والاقتصاد؟",
+                "SQL-Query": "SELECT d.name_arabic FROM department d JOIN faculty f ON d.faculty_id = f.id WHERE f.name_arabic = 'الأعمال والاقتصاد' OR f.symbol = 'الأعمال والاقتصاد';",
                 "output": ""
             }
         ]
@@ -164,13 +174,14 @@
         "Arabic-Query": "هل يمكنك تقديم قائمة بالمساقات في كلية [faculty-name]؟",
         "SQL-Query": "SELECT m.name_arabic FROM major m JOIN department d ON m.department_id = d.id JOIN faculty f ON d.faculty_id = f.id WHERE f.name_arabic = '[faculty-name]' OR f.symbol = '[faculty-name]';",
         "importancy": "9",
+        "id": 11,
         "examples": [
             {
                 "labels": {
-                    "faculty-name": "الصيدلة والتمريض والمهن الصحية"
+                    "faculty-name": "الهندسة والتكنولوجيا"
                 },
-                "Arabic-Query": "هل يمكنك تقديم قائمة بالمساقات في كلية الصيدلة والتمريض والمهن الصحية؟",
-                "SQL-Query": "SELECT m.name_arabic FROM major m JOIN department d ON m.department_id = d.id JOIN faculty f ON d.faculty_id = f.id WHERE f.name_arabic = 'الصيدلة والتمريض والمهن الصحية' OR f.symbol = 'الصيدلة والتمريض والمهن الصحية';",
+                "Arabic-Query": "هل يمكنك تقديم قائمة بالمساقات في كلية الهندسة والتكنولوجيا؟",
+                "SQL-Query": "SELECT m.name_arabic FROM major m JOIN department d ON m.department_id = d.id JOIN faculty f ON d.faculty_id = f.id WHERE f.name_arabic = 'الهندسة والتكنولوجيا' OR f.symbol = 'الهندسة والتكنولوجيا';",
                 "output": ""
             }
         ]
@@ -180,13 +191,14 @@
         "Arabic-Query": "هل يمكنك تقديم قائمة بالمدرسين في كلية [faculty-name]؟",
         "SQL-Query": "SELECT i.name_arabic FROM instructor i JOIN department d ON i.department_id = d.id JOIN faculty f ON d.faculty_id = f.id WHERE f.name_arabic = '[faculty-name]' OR f.symbol = '[faculty-name]';",
         "importancy": "9",
+        "id": 12,
         "examples": [
             {
                 "labels": {
-                    "faculty-name": "الأعمال والاقتصاد"
+                    "faculty-name": "التربية"
                 },
-                "Arabic-Query": "هل يمكنك تقديم قائمة بالمدرسين في كلية الأعمال والاقتصاد؟",
-                "SQL-Query": "SELECT i.name_arabic FROM instructor i JOIN department d ON i.department_id = d.id JOIN faculty f ON d.faculty_id = f.id WHERE f.name_arabic = 'الأعمال والاقتصاد' OR f.symbol = 'الأعمال والاقتصاد';",
+                "Arabic-Query": "هل يمكنك تقديم قائمة بالمدرسين في كلية التربية؟",
+                "SQL-Query": "SELECT i.name_arabic FROM instructor i JOIN department d ON i.department_id = d.id JOIN faculty f ON d.faculty_id = f.id WHERE f.name_arabic = 'التربية' OR f.symbol = 'التربية';",
                 "output": ""
             }
         ]
@@ -196,13 +208,14 @@
         "Arabic-Query": "هل يمكنك تقديم وصف للدائرة الأكاديمية [department-name]؟",
         "SQL-Query": "SELECT description FROM department WHERE name_arabic = '[department-name]' OR symbol = '[department-name]';",
         "importancy": "7",
+        "id": 13,
         "examples": [
             {
                 "labels": {
-                    "department-name": "اللغة العربية وآدابها"
+                    "department-name": "الإعلام"
                 },
-                "Arabic-Query": "هل يمكنك تقديم وصف للدائرة الأكاديمية اللغة العربية وآدابها؟",
-                "SQL-Query": "SELECT description FROM department WHERE name_arabic = 'اللغة العربية وآدابها' OR symbol = 'اللغة العربية وآدابها';",
+                "Arabic-Query": "هل يمكنك تقديم وصف للدائرة الأكاديمية الإعلام؟",
+                "SQL-Query": "SELECT description FROM department WHERE name_arabic = 'الإعلام' OR symbol = 'الإعلام';",
                 "output": ""
             }
         ]
@@ -212,13 +225,14 @@
         "Arabic-Query": "هل يمكنك تقديم وصف للدائرة التي تدعى (اسمها) [department-name]؟",
         "SQL-Query": "SELECT description FROM department WHERE name_arabic = '[department-name]';",
         "importancy": "7",
+        "id": 14,
         "examples": [
             {
                 "labels": {
-                    "department-name": "العلوم الإجتماعية والسلوكية"
+                    "department-name": "اللغات والترجمة"
                 },
-                "Arabic-Query": "هل يمكنك تقديم وصف للدائرة التي تدعى (اسمها) العلوم الإجتماعية والسلوكية؟",
-                "SQL-Query": "SELECT description FROM department WHERE name_arabic = 'العلوم الإجتماعية والسلوكية';",
+                "Arabic-Query": "هل يمكنك تقديم وصف للدائرة التي تدعى (اسمها) اللغات والترجمة؟",
+                "SQL-Query": "SELECT description FROM department WHERE name_arabic = 'اللغات والترجمة';",
                 "output": ""
             }
         ]
@@ -228,13 +242,14 @@
         "Arabic-Query": "ما هو الرمز المرتبط بالدائرة الأكاديمية [department-name]؟",
         "SQL-Query": "SELECT symbol FROM department WHERE name_arabic = '[department-name]' OR symbol = '[department-name]';",
         "importancy": "5",
+        "id": 15,
         "examples": [
             {
                 "labels": {
-                    "department-name": "الإقتصاد"
+                    "department-name": "اللغة الفرنسية"
                 },
-                "Arabic-Query": "ما هو الرمز المرتبط بالدائرة الأكاديمية الإقتصاد؟",
-                "SQL-Query": "SELECT symbol FROM department WHERE name_arabic = 'الإقتصاد' OR symbol = 'الإقتصاد';",
+                "Arabic-Query": "ما هو الرمز المرتبط بالدائرة الأكاديمية اللغة الفرنسية؟",
+                "SQL-Query": "SELECT symbol FROM department WHERE name_arabic = 'اللغة الفرنسية' OR symbol = 'اللغة الفرنسية';",
                 "output": ""
             }
         ]
@@ -244,13 +259,14 @@
         "Arabic-Query": "هل يمكنك أن تخبرني بإسم رئيس الدائرة الأكاديمية [department-name]؟",
         "SQL-Query": "SELECT i.name_arabic FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = '[department-name]' OR d.symbol = '[department-name]';",
         "importancy": "10",
+        "id": 16,
         "examples": [
             {
                 "labels": {
-                    "department-name": "علم الحاسوب"
+                    "department-name": "الجغرافية"
                 },
-                "Arabic-Query": "هل يمكنك أن تخبرني بإسم رئيس الدائرة الأكاديمية علم الحاسوب؟",
-                "SQL-Query": "SELECT i.name_arabic FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'علم الحاسوب' OR d.symbol = 'علم الحاسوب';",
+                "Arabic-Query": "هل يمكنك أن تخبرني بإسم رئيس الدائرة الأكاديمية الجغرافية؟",
+                "SQL-Query": "SELECT i.name_arabic FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'الجغرافية' OR d.symbol = 'الجغرافية';",
                 "output": ""
             }
         ]
@@ -260,13 +276,14 @@
         "Arabic-Query": "هل يمكنك تقديم البريد الإلكتروني لرئيس الدائرة الأكاديمية [department-name]؟",
         "SQL-Query": "SELECT i.email FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = '[department-name]' OR d.symbol = '[department-name]';",
         "importancy": "10",
+        "id": 17,
         "examples": [
             {
                 "labels": {
-                    "department-name": "الهندسة المعمارية والتخطيط"
+                    "department-name": "الجغرافية"
                 },
-                "Arabic-Query": "هل يمكنك تقديم البريد الإلكتروني لرئيس الدائرة الأكاديمية الهندسة المعمارية والتخطيط؟",
-                "SQL-Query": "SELECT i.email FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'الهندسة المعمارية والتخطيط' OR d.symbol = 'الهندسة المعمارية والتخطيط';",
+                "Arabic-Query": "هل يمكنك تقديم البريد الإلكتروني لرئيس الدائرة الأكاديمية الجغرافية؟",
+                "SQL-Query": "SELECT i.email FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'الجغرافية' OR d.symbol = 'الجغرافية';",
                 "output": ""
             }
         ]
@@ -276,13 +293,14 @@
         "Arabic-Query": "هل يمكنك تقديم رقم الهاتف لرئيس الدائرة الأكاديمية [department-name]؟",
         "SQL-Query": "SELECT i.phone_number FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = '[department-name]' OR d.symbol = '[department-name]';",
         "importancy": "10",
+        "id": 18,
         "examples": [
             {
                 "labels": {
-                    "department-name": "المحاسبة"
+                    "department-name": "الهندسة الكهربائية وهندسة الحاسوب"
                 },
-                "Arabic-Query": "هل يمكنك تقديم رقم الهاتف لرئيس الدائرة الأكاديمية المحاسبة؟",
-                "SQL-Query": "SELECT i.phone_number FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'المحاسبة' OR d.symbol = 'المحاسبة';",
+                "Arabic-Query": "هل يمكنك تقديم رقم الهاتف لرئيس الدائرة الأكاديمية الهندسة الكهربائية وهندسة الحاسوب؟",
+                "SQL-Query": "SELECT i.phone_number FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'الهندسة الكهربائية وهندسة الحاسوب' OR d.symbol = 'الهندسة الكهربائية وهندسة الحاسوب';",
                 "output": ""
             }
         ]
@@ -292,13 +310,14 @@
         "Arabic-Query": "هل يمكنك تقديم الساعات المكتبية لرئيس الدائرة الأكاديمية [department-name]؟",
         "SQL-Query": "SELECT i.office_hours FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = '[department-name]' OR d.symbol = '[department-name]';",
         "importancy": "10",
+        "id": 19,
         "examples": [
             {
                 "labels": {
-                    "department-name": "الكيمياء"
+                    "department-name": "العلوم المالية والمصرفية"
                 },
-                "Arabic-Query": "هل يمكنك تقديم الساعات المكتبية لرئيس الدائرة الأكاديمية الكيمياء؟",
-                "SQL-Query": "SELECT i.office_hours FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'الكيمياء' OR d.symbol = 'الكيمياء';",
+                "Arabic-Query": "هل يمكنك تقديم الساعات المكتبية لرئيس الدائرة الأكاديمية العلوم المالية والمصرفية؟",
+                "SQL-Query": "SELECT i.office_hours FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'العلوم المالية والمصرفية' OR d.symbol = 'العلوم المالية والمصرفية';",
                 "output": ""
             }
         ]
@@ -308,13 +327,14 @@
         "Arabic-Query": "هل يمكنك تقديم ID ريتاج لرئيس الدائرة الأكاديمية [department-name]؟",
         "SQL-Query": "SELECT i.ritaj_id FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = '[department-name]' OR d.symbol = '[department-name]';",
         "importancy": "6",
+        "id": 20,
         "examples": [
             {
                 "labels": {
-                    "department-name": "الإقتصاد"
+                    "department-name": "التغذية والحمية"
                 },
-                "Arabic-Query": "هل يمكنك تقديم ID ريتاج لرئيس الدائرة الأكاديمية الإقتصاد؟",
-                "SQL-Query": "SELECT i.ritaj_id FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'الإقتصاد' OR d.symbol = 'الإقتصاد';",
+                "Arabic-Query": "هل يمكنك تقديم ID ريتاج لرئيس الدائرة الأكاديمية التغذية والحمية؟",
+                "SQL-Query": "SELECT i.ritaj_id FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'التغذية والحمية' OR d.symbol = 'التغذية والحمية';",
                 "output": ""
             }
         ]
@@ -324,13 +344,14 @@
         "Arabic-Query": "هل يمكنك أن تخبرني عن الكلية التي تتبع لها الدائرة الأكاديمية [department-name]؟",
         "SQL-Query": "SELECT f.name_arabic FROM department d JOIN faculty f ON d.faculty_id = f.id WHERE d.name_arabic = '[department-name]' OR d.symbol = '[department-name]';",
         "importancy": "7",
+        "id": 21,
         "examples": [
             {
                 "labels": {
-                    "department-name": "الإدارة العامة"
+                    "department-name": "إدارة الأعمال"
                 },
-                "Arabic-Query": "هل يمكنك أن تخبرني عن الكلية التي تتبع لها الدائرة الأكاديمية الإدارة العامة؟",
-                "SQL-Query": "SELECT f.name_arabic FROM department d JOIN faculty f ON d.faculty_id = f.id WHERE d.name_arabic = 'الإدارة العامة' OR d.symbol = 'الإدارة العامة';",
+                "Arabic-Query": "هل يمكنك أن تخبرني عن الكلية التي تتبع لها الدائرة الأكاديمية إدارة الأعمال؟",
+                "SQL-Query": "SELECT f.name_arabic FROM department d JOIN faculty f ON d.faculty_id = f.id WHERE d.name_arabic = 'إدارة الأعمال' OR d.symbol = 'إدارة الأعمال';",
                 "output": ""
             }
         ]
@@ -340,13 +361,14 @@
         "Arabic-Query": "هل يمكنك تقديم قائمة بالمساقات في الدائرة الأكاديمية [department-name]؟",
         "SQL-Query": "SELECT m.name_arabic FROM major m JOIN department d ON m.department_id = d.id WHERE d.name_arabic = '[department-name]' OR d.symbol = '[department-name]';",
         "importancy": "10",
+        "id": 22,
         "examples": [
             {
                 "labels": {
-                    "department-name": "الهندسة المدنية والبيئية"
+                    "department-name": "المحاسبة"
                 },
-                "Arabic-Query": "هل يمكنك تقديم قائمة بالمساقات في الدائرة الأكاديمية الهندسة المدنية والبيئية؟",
-                "SQL-Query": "SELECT m.name_arabic FROM major m JOIN department d ON m.department_id = d.id WHERE d.name_arabic = 'الهندسة المدنية والبيئية' OR d.symbol = 'الهندسة المدنية والبيئية';",
+                "Arabic-Query": "هل يمكنك تقديم قائمة بالمساقات في الدائرة الأكاديمية المحاسبة؟",
+                "SQL-Query": "SELECT m.name_arabic FROM major m JOIN department d ON m.department_id = d.id WHERE d.name_arabic = 'المحاسبة' OR d.symbol = 'المحاسبة';",
                 "output": ""
             }
         ]
@@ -356,13 +378,14 @@
         "Arabic-Query": "هل يمكنك تقديم قائمة بالمدرسين في الدائرة الأكاديمية [department-name]؟",
         "SQL-Query": "SELECT i.name_arabic FROM instructor i WHERE i.department_id IN (SELECT id FROM department WHERE name_arabic = '[department-name]' OR symbol = '[department-name]');",
         "importancy": "10",
+        "id": 23,
         "examples": [
             {
                 "labels": {
-                    "department-name": "المحاسبة"
+                    "department-name": "الإقتصاد"
                 },
-                "Arabic-Query": "هل يمكنك تقديم قائمة بالمدرسين في الدائرة الأكاديمية المحاسبة؟",
-                "SQL-Query": "SELECT i.name_arabic FROM instructor i WHERE i.department_id IN (SELECT id FROM department WHERE name_arabic = 'المحاسبة' OR symbol = 'المحاسبة');",
+                "Arabic-Query": "هل يمكنك تقديم قائمة بالمدرسين في الدائرة الأكاديمية الإقتصاد؟",
+                "SQL-Query": "SELECT i.name_arabic FROM instructor i WHERE i.department_id IN (SELECT id FROM department WHERE name_arabic = 'الإقتصاد' OR symbol = 'الإقتصاد');",
                 "output": ""
             }
         ]
@@ -372,13 +395,14 @@
         "Arabic-Query": "هل يمكنك تقديم وصف للتخصص الذي يدعى [major-name]؟",
         "SQL-Query": "SELECT description FROM major WHERE name_arabic = '[major-name]' OR symbol = '[major-name]';",
         "importancy": "7",
+        "id": 24,
         "examples": [
             {
                 "labels": {
-                    "major-name": "العلوم المالية والاكتوارية"
+                    "major-name": "القانون"
                 },
-                "Arabic-Query": "هل يمكنك تقديم وصف للتخصص الذي يدعى العلوم المالية والاكتوارية؟",
-                "SQL-Query": "SELECT description FROM major WHERE name_arabic = 'العلوم المالية والاكتوارية' OR symbol = 'العلوم المالية والاكتوارية';",
+                "Arabic-Query": "هل يمكنك تقديم وصف للتخصص الذي يدعى القانون؟",
+                "SQL-Query": "SELECT description FROM major WHERE name_arabic = 'القانون' OR symbol = 'القانون';",
                 "output": ""
             }
         ]
@@ -388,13 +412,14 @@
         "Arabic-Query": "ما هو الرمز المرتبط بالتخصص الذي يدعى [major-name]؟",
         "SQL-Query": "SELECT symbol FROM major WHERE name_arabic = '[major-name]';",
         "importancy": "1",
+        "id": 25,
         "examples": [
             {
                 "labels": {
-                    "major-name": "اقتصاد الأعمال"
+                    "major-name": "الترجمة"
                 },
-                "Arabic-Query": "ما هو الرمز المرتبط بالتخصص الذي يدعى اقتصاد الأعمال؟",
-                "SQL-Query": "SELECT symbol FROM major WHERE name_arabic = 'اقتصاد الأعمال';",
+                "Arabic-Query": "ما هو الرمز المرتبط بالتخصص الذي يدعى الترجمة؟",
+                "SQL-Query": "SELECT symbol FROM major WHERE name_arabic = 'الترجمة';",
                 "output": ""
             }
         ]
@@ -404,13 +429,14 @@
         "Arabic-Query": "ما هو إجمالي عدد الساعات للتخصص [major-name]؟",
         "SQL-Query": "SELECT hours FROM major WHERE name_arabic = '[major-name]' OR symbol = '[major-name]';",
         "importancy": "10",
+        "id": 26,
         "examples": [
             {
                 "labels": {
-                    "major-name": "الجيوانفورماتكس"
+                    "major-name": "تعليم اللغة الإنجليزية كلغة أجنبية"
                 },
-                "Arabic-Query": "ما هو إجمالي عدد الساعات للتخصص الجيوانفورماتكس؟",
-                "SQL-Query": "SELECT hours FROM major WHERE name_arabic = 'الجيوانفورماتكس' OR symbol = 'الجيوانفورماتكس';",
+                "Arabic-Query": "ما هو إجمالي عدد الساعات للتخصص تعليم اللغة الإنجليزية كلغة أجنبية؟",
+                "SQL-Query": "SELECT hours FROM major WHERE name_arabic = 'تعليم اللغة الإنجليزية كلغة أجنبية' OR symbol = 'تعليم اللغة الإنجليزية كلغة أجنبية';",
                 "output": ""
             }
         ]
@@ -420,13 +446,14 @@
         "Arabic-Query": "إلى أي دائرة ينتمي التخصص [major-name]؟",
         "SQL-Query": "SELECT d.name_arabic FROM major m JOIN department d ON m.department_id = d.id WHERE m.name_arabic = '[major-name]' OR m.symbol = '[major-name]';",
         "importancy": "5",
+        "id": 27,
         "examples": [
             {
                 "labels": {
-                    "major-name": "رئيسي علم النفس / فرعي دراسات المرأة"
+                    "major-name": "رئيسي علم النفس / فرعي علم الاجتماع"
                 },
-                "Arabic-Query": "إلى أي دائرة ينتمي التخصص رئيسي علم النفس / فرعي دراسات المرأة؟",
-                "SQL-Query": "SELECT d.name_arabic FROM major m JOIN department d ON m.department_id = d.id WHERE m.name_arabic = 'رئيسي علم النفس / فرعي دراسات المرأة' OR m.symbol = 'رئيسي علم النفس / فرعي دراسات المرأة';",
+                "Arabic-Query": "إلى أي دائرة ينتمي التخصص رئيسي علم النفس / فرعي علم الاجتماع؟",
+                "SQL-Query": "SELECT d.name_arabic FROM major m JOIN department d ON m.department_id = d.id WHERE m.name_arabic = 'رئيسي علم النفس / فرعي علم الاجتماع' OR m.symbol = 'رئيسي علم النفس / فرعي علم الاجتماع';",
                 "output": ""
             }
         ]
@@ -436,13 +463,14 @@
         "Arabic-Query": "هل يمكنك تقديم قائمة بمساقات التخصص [major-name] مرتبة حسب الرمز مع التفاصيل الخاصة بكل مساق",
         "SQL-Query": "SELECT c.name_arabic, c.symbol, c.description, c.credits FROM course c WHERE c.major_id IN (SELECT id FROM major WHERE name_arabic = '[major-name]' OR symbol = '[major-name]') ORDER BY c.symbol;",
         "importancy": "9",
+        "id": 28,
         "examples": [
             {
                 "labels": {
-                    "major-name": "هندسة الحاسوب"
+                    "major-name": "التصميم"
                 },
-                "Arabic-Query": "هل يمكنك تقديم قائمة بمساقات التخصص هندسة الحاسوب مرتبة حسب الرمز مع التفاصيل الخاصة بكل مساق",
-                "SQL-Query": "SELECT c.name_arabic, c.symbol, c.description, c.credits FROM course c WHERE c.major_id IN (SELECT id FROM major WHERE name_arabic = 'هندسة الحاسوب' OR symbol = 'هندسة الحاسوب') ORDER BY c.symbol;",
+                "Arabic-Query": "هل يمكنك تقديم قائمة بمساقات التخصص التصميم مرتبة حسب الرمز مع التفاصيل الخاصة بكل مساق",
+                "SQL-Query": "SELECT c.name_arabic, c.symbol, c.description, c.credits FROM course c WHERE c.major_id IN (SELECT id FROM major WHERE name_arabic = 'التصميم' OR symbol = 'التصميم') ORDER BY c.symbol;",
                 "output": ""
             }
         ]
@@ -452,14 +480,15 @@
         "Arabic-Query": "هل يمكنك تقديم قائمة بالمساقات في التخصص [major-name] التي يدرسها الدكتور [instructor-name]؟",
         "SQL-Query": "SELECT c.name_arabic FROM course c JOIN instructor_course ic ON c.id = ic.course_id JOIN instructor i ON ic.instructor_id = i.id WHERE c.major_id IN (SELECT id FROM major WHERE name_arabic = '[major-name]' OR symbol = '[major-name]') AND (i.name_arabic = '[instructor-name]');",
         "importancy": "8",
+        "id": 29,
         "examples": [
             {
                 "labels": {
-                    "major-name": "الإدارة العامة",
-                    "instructor-name": "نادية العوضي"
+                    "major-name": "الاقتصاد",
+                    "instructor-name": "نجوى الحماد"
                 },
-                "Arabic-Query": "هل يمكنك تقديم قائمة بالمساقات في التخصص الإدارة العامة التي يدرسها الدكتور نادية العوضي؟",
-                "SQL-Query": "SELECT c.name_arabic FROM course c JOIN instructor_course ic ON c.id = ic.course_id JOIN instructor i ON ic.instructor_id = i.id WHERE c.major_id IN (SELECT id FROM major WHERE name_arabic = 'الإدارة العامة' OR symbol = 'الإدارة العامة') AND (i.name_arabic = 'نادية العوضي');",
+                "Arabic-Query": "هل يمكنك تقديم قائمة بالمساقات في التخصص الاقتصاد التي يدرسها الدكتور نجوى الحماد؟",
+                "SQL-Query": "SELECT c.name_arabic FROM course c JOIN instructor_course ic ON c.id = ic.course_id JOIN instructor i ON ic.instructor_id = i.id WHERE c.major_id IN (SELECT id FROM major WHERE name_arabic = 'الاقتصاد' OR symbol = 'الاقتصاد') AND (i.name_arabic = 'نجوى الحماد');",
                 "output": ""
             }
         ]
@@ -469,14 +498,15 @@
         "Arabic-Query": "هل يمكنك تقديم قائمة بالمساقات في التخصص [major-name] التي يدرسها المساعد [assistant-name]؟",
         "SQL-Query": "SELECT c.name_arabic FROM course c JOIN ta_course tac ON c.id = tac.course_id JOIN teaching_assistant ta ON tac.ta_id = ta.id WHERE c.major_id IN (SELECT id FROM major WHERE name_arabic = '[major-name]' OR symbol = '[major-name]') AND (ta.name_arabic = '[assistant-name]');",
         "importancy": "6",
+        "id": 30,
         "examples": [
             {
                 "labels": {
-                    "major-name": "أمن المعلومات",
-                    "assistant-name": "لطيفة الفوزان"
+                    "major-name": "الموسيقى",
+                    "assistant-name": "رناد العربي"
                 },
-                "Arabic-Query": "هل يمكنك تقديم قائمة بالمساقات في التخصص أمن المعلومات التي يدرسها المساعد لطيفة الفوزان؟",
-                "SQL-Query": "SELECT c.name_arabic FROM course c JOIN ta_course tac ON c.id = tac.course_id JOIN teaching_assistant ta ON tac.ta_id = ta.id WHERE c.major_id IN (SELECT id FROM major WHERE name_arabic = 'أمن المعلومات' OR symbol = 'أمن المعلومات') AND (ta.name_arabic = 'لطيفة الفوزان');",
+                "Arabic-Query": "هل يمكنك تقديم قائمة بالمساقات في التخصص الموسيقى التي يدرسها المساعد رناد العربي؟",
+                "SQL-Query": "SELECT c.name_arabic FROM course c JOIN ta_course tac ON c.id = tac.course_id JOIN teaching_assistant ta ON tac.ta_id = ta.id WHERE c.major_id IN (SELECT id FROM major WHERE name_arabic = 'الموسيقى' OR symbol = 'الموسيقى') AND (ta.name_arabic = 'رناد العربي');",
                 "output": ""
             }
         ]
@@ -486,14 +516,15 @@
         "Arabic-Query": "هل يمكنك تقديم قائمة بالمساقات في التخصص [major-name] التي تتطلب المساق [course-name] كشرط مسبق؟",
         "SQL-Query": "SELECT c.name_arabic FROM course c JOIN course_prerequisite cp ON c.id = cp.course_id WHERE c.major_id IN (SELECT id FROM major WHERE name_arabic = '[major-name]' OR symbol = '[major-name]') AND cp.prerequisite_id IN (SELECT id FROM course WHERE name_arabic = '[course-name]' OR symbol = '[course-name]');",
         "importancy": "10",
+        "id": 31,
         "examples": [
             {
                 "labels": {
-                    "major-name": "اللغة العربية وآدابها",
+                    "major-name": "الأحياء / فرعي الكيمياء الحيوية",
                     "course-name": "الرياضيات المتقدمة"
                 },
-                "Arabic-Query": "هل يمكنك تقديم قائمة بالمساقات في التخصص اللغة العربية وآدابها التي تتطلب المساق الرياضيات المتقدمة كشرط مسبق؟",
-                "SQL-Query": "SELECT c.name_arabic FROM course c JOIN course_prerequisite cp ON c.id = cp.course_id WHERE c.major_id IN (SELECT id FROM major WHERE name_arabic = 'اللغة العربية وآدابها' OR symbol = 'اللغة العربية وآدابها') AND cp.prerequisite_id IN (SELECT id FROM course WHERE name_arabic = 'الرياضيات المتقدمة' OR symbol = 'الرياضيات المتقدمة');",
+                "Arabic-Query": "هل يمكنك تقديم قائمة بالمساقات في التخصص الأحياء / فرعي الكيمياء الحيوية التي تتطلب المساق الرياضيات المتقدمة كشرط مسبق؟",
+                "SQL-Query": "SELECT c.name_arabic FROM course c JOIN course_prerequisite cp ON c.id = cp.course_id WHERE c.major_id IN (SELECT id FROM major WHERE name_arabic = 'الأحياء / فرعي الكيمياء الحيوية' OR symbol = 'الأحياء / فرعي الكيمياء الحيوية') AND cp.prerequisite_id IN (SELECT id FROM course WHERE name_arabic = 'الرياضيات المتقدمة' OR symbol = 'الرياضيات المتقدمة');",
                 "output": ""
             }
         ]
@@ -503,14 +534,15 @@
         "Arabic-Query": "هل يمكنك تقديم قائمة بالمساقات في التخصص [major-name] التي تتطلب المساق [course-symbol] كشرط مسبق؟",
         "SQL-Query": "SELECT c.name_arabic FROM course c JOIN course_prerequisite cp ON c.id = cp.course_id WHERE c.major_id IN (SELECT id FROM major WHERE name_arabic = '[major-name]' OR symbol = '[major-name]') AND cp.prerequisite_id IN (SELECT id FROM course WHERE name_arabic = '[course-symbol]' OR symbol = '[course-symbol]');",
         "importancy": "10",
+        "id": 32,
         "examples": [
             {
                 "labels": {
-                    "major-name": "الهندسة الكهربائية",
-                    "course-symbol": "BUS221"
+                    "major-name": "التسويق",
+                    "course-symbol": "ECO222"
                 },
-                "Arabic-Query": "هل يمكنك تقديم قائمة بالمساقات في التخصص الهندسة الكهربائية التي تتطلب المساق BUS221 كشرط مسبق؟",
-                "SQL-Query": "SELECT c.name_arabic FROM course c JOIN course_prerequisite cp ON c.id = cp.course_id WHERE c.major_id IN (SELECT id FROM major WHERE name_arabic = 'الهندسة الكهربائية' OR symbol = 'الهندسة الكهربائية') AND cp.prerequisite_id IN (SELECT id FROM course WHERE name_arabic = 'BUS221' OR symbol = 'BUS221');",
+                "Arabic-Query": "هل يمكنك تقديم قائمة بالمساقات في التخصص التسويق التي تتطلب المساق ECO222 كشرط مسبق؟",
+                "SQL-Query": "SELECT c.name_arabic FROM course c JOIN course_prerequisite cp ON c.id = cp.course_id WHERE c.major_id IN (SELECT id FROM major WHERE name_arabic = 'التسويق' OR symbol = 'التسويق') AND cp.prerequisite_id IN (SELECT id FROM course WHERE name_arabic = 'ECO222' OR symbol = 'ECO222');",
                 "output": ""
             }
         ]
@@ -520,15 +552,16 @@
         "Arabic-Query": "هل يمكنك تقديم قائمة بالمساقات في التخصص [major-name] التي تتطلب المساق [course-name] كشرط مسبق ويدرسها الدكتور [instructor-name]؟",
         "SQL-Query": "SELECT c.name_arabic FROM course c JOIN course_prerequisite cp ON c.id = cp.course_id JOIN instructor_course ic ON c.id = ic.course_id JOIN instructor i ON ic.instructor_id = i.id WHERE c.major_id IN (SELECT id FROM major WHERE name_arabic = '[major-name]' OR symbol = '[major-name]') AND cp.prerequisite_id IN (SELECT id FROM course WHERE name_arabic = '[course-name]' OR symbol = '[course-name]') AND (i.name_arabic = '[instructor-name]');",
         "importancy": "7",
+        "id": 33,
         "examples": [
             {
                 "labels": {
-                    "major-name": "هندسة الحاسوب",
-                    "course-name": "الرعاية الصحية",
-                    "instructor-name": "ليلى السعدي"
+                    "major-name": "رئيسي علم النفس / فرعي دراسات المرأة",
+                    "course-name": "نظرية الأعمال",
+                    "instructor-name": "محمود بني مصطفى"
                 },
-                "Arabic-Query": "هل يمكنك تقديم قائمة بالمساقات في التخصص هندسة الحاسوب التي تتطلب المساق الرعاية الصحية كشرط مسبق ويدرسها الدكتور ليلى السعدي؟",
-                "SQL-Query": "SELECT c.name_arabic FROM course c JOIN course_prerequisite cp ON c.id = cp.course_id JOIN instructor_course ic ON c.id = ic.course_id JOIN instructor i ON ic.instructor_id = i.id WHERE c.major_id IN (SELECT id FROM major WHERE name_arabic = 'هندسة الحاسوب' OR symbol = 'هندسة الحاسوب') AND cp.prerequisite_id IN (SELECT id FROM course WHERE name_arabic = 'الرعاية الصحية' OR symbol = 'الرعاية الصحية') AND (i.name_arabic = 'ليلى السعدي');",
+                "Arabic-Query": "هل يمكنك تقديم قائمة بالمساقات في التخصص رئيسي علم النفس / فرعي دراسات المرأة التي تتطلب المساق نظرية الأعمال كشرط مسبق ويدرسها الدكتور محمود بني مصطفى؟",
+                "SQL-Query": "SELECT c.name_arabic FROM course c JOIN course_prerequisite cp ON c.id = cp.course_id JOIN instructor_course ic ON c.id = ic.course_id JOIN instructor i ON ic.instructor_id = i.id WHERE c.major_id IN (SELECT id FROM major WHERE name_arabic = 'رئيسي علم النفس / فرعي دراسات المرأة' OR symbol = 'رئيسي علم النفس / فرعي دراسات المرأة') AND cp.prerequisite_id IN (SELECT id FROM course WHERE name_arabic = 'نظرية الأعمال' OR symbol = 'نظرية الأعمال') AND (i.name_arabic = 'محمود بني مصطفى');",
                 "output": ""
             }
         ]
@@ -538,15 +571,16 @@
         "Arabic-Query": "هل يمكنك تقديم قائمة بالمساقات في التخصص [major-name] التي تتطلب المساق [course-symbol] كشرط مسبق ويدرسها المساعد [assistant-name]؟",
         "SQL-Query": "SELECT c.name_arabic FROM course c JOIN course_prerequisite cp ON c.id = cp.course_id JOIN ta_course tac ON c.id = tac.course_id JOIN teaching_assistant ta ON tac.ta_id = ta.id WHERE c.major_id IN (SELECT id FROM major WHERE name_arabic = '[major-name]' OR symbol = '[major-name]') AND cp.prerequisite_id IN (SELECT id FROM course WHERE name_arabic = '[course-symbol]' OR symbol = '[course-symbol]') AND (ta.name_arabic = '[assistant-name]');",
         "importancy": "4",
+        "id": 34,
         "examples": [
             {
                 "labels": {
-                    "major-name": "الترجمة",
-                    "course-symbol": "CHE1311",
-                    "assistant-name": "هشام الحسين"
+                    "major-name": "رئيسي علم اجتماع / فرعي علم النفس",
+                    "course-symbol": "CSC121",
+                    "assistant-name": "أمل العليان"
                 },
-                "Arabic-Query": "هل يمكنك تقديم قائمة بالمساقات في التخصص الترجمة التي تتطلب المساق CHE1311 كشرط مسبق ويدرسها المساعد هشام الحسين؟",
-                "SQL-Query": "SELECT c.name_arabic FROM course c JOIN course_prerequisite cp ON c.id = cp.course_id JOIN ta_course tac ON c.id = tac.course_id JOIN teaching_assistant ta ON tac.ta_id = ta.id WHERE c.major_id IN (SELECT id FROM major WHERE name_arabic = 'الترجمة' OR symbol = 'الترجمة') AND cp.prerequisite_id IN (SELECT id FROM course WHERE name_arabic = 'CHE1311' OR symbol = 'CHE1311') AND (ta.name_arabic = 'هشام الحسين');",
+                "Arabic-Query": "هل يمكنك تقديم قائمة بالمساقات في التخصص رئيسي علم اجتماع / فرعي علم النفس التي تتطلب المساق CSC121 كشرط مسبق ويدرسها المساعد أمل العليان؟",
+                "SQL-Query": "SELECT c.name_arabic FROM course c JOIN course_prerequisite cp ON c.id = cp.course_id JOIN ta_course tac ON c.id = tac.course_id JOIN teaching_assistant ta ON tac.ta_id = ta.id WHERE c.major_id IN (SELECT id FROM major WHERE name_arabic = 'رئيسي علم اجتماع / فرعي علم النفس' OR symbol = 'رئيسي علم اجتماع / فرعي علم النفس') AND cp.prerequisite_id IN (SELECT id FROM course WHERE name_arabic = 'CSC121' OR symbol = 'CSC121') AND (ta.name_arabic = 'أمل العليان');",
                 "output": ""
             }
         ]
@@ -556,16 +590,17 @@
         "Arabic-Query": "هل يمكنك تقديم قائمة بالمساقات في التخصص [major-name] التي تتطلب المساق [course-symbol] كشرط مسبق ويدرسها الدكتور [instructor-name] والمساعد [assistant-name]؟",
         "SQL-Query": "SELECT c.name_arabic FROM course c JOIN course_prerequisite cp ON c.id = cp.course_id JOIN instructor_course ic ON c.id = ic.course_id JOIN instructor i ON ic.instructor_id = i.id JOIN ta_course tac ON c.id = tac.course_id JOIN teaching_assistant ta ON tac.ta_id = ta.id WHERE c.major_id IN (SELECT id FROM major WHERE name_arabic = '[major-name]' OR symbol = '[major-name]') AND cp.prerequisite_id IN (SELECT id FROM course WHERE name_arabic = '[course-symbol]' OR symbol = '[course-symbol]') AND (i.name_arabic = '[instructor-name]') AND (ta.name_arabic = '[assistant-name]');",
         "importancy": "10",
+        "id": 35,
         "examples": [
             {
                 "labels": {
-                    "major-name": "رئيسي علم النفس / فرعي دراسات المرأة",
-                    "course-symbol": "CSC121",
-                    "instructor-name": "هلال الدين الحماد",
-                    "assistant-name": "هشام الحسين"
+                    "major-name": "رئيسي علم النفس / فرعي علم الاجتماع",
+                    "course-symbol": "BUS221",
+                    "instructor-name": "رانيا الخالدي",
+                    "assistant-name": "سلمى القرشي"
                 },
-                "Arabic-Query": "هل يمكنك تقديم قائمة بالمساقات في التخصص رئيسي علم النفس / فرعي دراسات المرأة التي تتطلب المساق CSC121 كشرط مسبق ويدرسها الدكتور هلال الدين الحماد والمساعد هشام الحسين؟",
-                "SQL-Query": "SELECT c.name_arabic FROM course c JOIN course_prerequisite cp ON c.id = cp.course_id JOIN instructor_course ic ON c.id = ic.course_id JOIN instructor i ON ic.instructor_id = i.id JOIN ta_course tac ON c.id = tac.course_id JOIN teaching_assistant ta ON tac.ta_id = ta.id WHERE c.major_id IN (SELECT id FROM major WHERE name_arabic = 'رئيسي علم النفس / فرعي دراسات المرأة' OR symbol = 'رئيسي علم النفس / فرعي دراسات المرأة') AND cp.prerequisite_id IN (SELECT id FROM course WHERE name_arabic = 'CSC121' OR symbol = 'CSC121') AND (i.name_arabic = 'هلال الدين الحماد') AND (ta.name_arabic = 'هشام الحسين');",
+                "Arabic-Query": "هل يمكنك تقديم قائمة بالمساقات في التخصص رئيسي علم النفس / فرعي علم الاجتماع التي تتطلب المساق BUS221 كشرط مسبق ويدرسها الدكتور رانيا الخالدي والمساعد سلمى القرشي؟",
+                "SQL-Query": "SELECT c.name_arabic FROM course c JOIN course_prerequisite cp ON c.id = cp.course_id JOIN instructor_course ic ON c.id = ic.course_id JOIN instructor i ON ic.instructor_id = i.id JOIN ta_course tac ON c.id = tac.course_id JOIN teaching_assistant ta ON tac.ta_id = ta.id WHERE c.major_id IN (SELECT id FROM major WHERE name_arabic = 'رئيسي علم النفس / فرعي علم الاجتماع' OR symbol = 'رئيسي علم النفس / فرعي علم الاجتماع') AND cp.prerequisite_id IN (SELECT id FROM course WHERE name_arabic = 'BUS221' OR symbol = 'BUS221') AND (i.name_arabic = 'رانيا الخالدي') AND (ta.name_arabic = 'سلمى القرشي');",
                 "output": ""
             }
         ]
@@ -575,14 +610,15 @@
         "Arabic-Query": "هل يمكنك تقديم قائمة بالمساقات في التخصص [major-name] حيث تكون الساعات المعتمدة لها أكبر من أو تساوي [credits]؟",
         "SQL-Query": "SELECT name_arabic FROM course WHERE major_id IN (SELECT id FROM major WHERE name_arabic = '[major-name]' OR symbol = '[major-name]') AND credits >= [credits];",
         "importancy": "8",
+        "id": 36,
         "examples": [
             {
                 "labels": {
-                    "major-name": "العلوم المالية والمصرفية",
-                    "credits": "1"
+                    "major-name": "الكيمياء",
+                    "credits": "5"
                 },
-                "Arabic-Query": "هل يمكنك تقديم قائمة بالمساقات في التخصص العلوم المالية والمصرفية حيث تكون الساعات المعتمدة لها أكبر من أو تساوي 1؟",
-                "SQL-Query": "SELECT name_arabic FROM course WHERE major_id IN (SELECT id FROM major WHERE name_arabic = 'العلوم المالية والمصرفية' OR symbol = 'العلوم المالية والمصرفية') AND credits >= 1;",
+                "Arabic-Query": "هل يمكنك تقديم قائمة بالمساقات في التخصص الكيمياء حيث تكون الساعات المعتمدة لها أكبر من أو تساوي 5؟",
+                "SQL-Query": "SELECT name_arabic FROM course WHERE major_id IN (SELECT id FROM major WHERE name_arabic = 'الكيمياء' OR symbol = 'الكيمياء') AND credits >= 5;",
                 "output": ""
             }
         ]
@@ -592,14 +628,15 @@
         "Arabic-Query": "هل يمكنك تقديم قائمة بالمساقات في التخصص [major-name] حيث تكون الساعات المعتمدة لها أقل من أو تساوي [credits]؟",
         "SQL-Query": "SELECT name_arabic FROM course WHERE major_id IN (SELECT id FROM major WHERE name_arabic = '[major-name]' OR symbol = '[major-name]') AND credits <= [credits];",
         "importancy": "8",
+        "id": 37,
         "examples": [
             {
                 "labels": {
-                    "major-name": "تعليم اللغة الإنجليزية كلغة أجنبية",
+                    "major-name": "الترجمة",
                     "credits": "2"
                 },
-                "Arabic-Query": "هل يمكنك تقديم قائمة بالمساقات في التخصص تعليم اللغة الإنجليزية كلغة أجنبية حيث تكون الساعات المعتمدة لها أقل من أو تساوي 2؟",
-                "SQL-Query": "SELECT name_arabic FROM course WHERE major_id IN (SELECT id FROM major WHERE name_arabic = 'تعليم اللغة الإنجليزية كلغة أجنبية' OR symbol = 'تعليم اللغة الإنجليزية كلغة أجنبية') AND credits <= 2;",
+                "Arabic-Query": "هل يمكنك تقديم قائمة بالمساقات في التخصص الترجمة حيث تكون الساعات المعتمدة لها أقل من أو تساوي 2؟",
+                "SQL-Query": "SELECT name_arabic FROM course WHERE major_id IN (SELECT id FROM major WHERE name_arabic = 'الترجمة' OR symbol = 'الترجمة') AND credits <= 2;",
                 "output": ""
             }
         ]
@@ -609,15 +646,16 @@
         "Arabic-Query": "هل يمكنك تقديم قائمة بالمساقات في التخصص [major-name] حيث تكون الساعات المعتمدة لها أكبر من أو تساوي [min-credits] وأقل من أو تساوي [max-credits]؟",
         "SQL-Query": "SELECT name_arabic FROM course WHERE major_id IN (SELECT id FROM major WHERE name_arabic = '[major-name]' OR symbol = '[major-name]') AND credits >= [min-credits] AND credits <= [max-credits];",
         "importancy": "8",
+        "id": 38,
         "examples": [
             {
                 "labels": {
-                    "major-name": "هندسة التخطيط والتصميم الحضري",
+                    "major-name": "الهندسة الكهربائية",
                     "min-credits": "1",
-                    "max-credits": "5"
+                    "max-credits": "3"
                 },
-                "Arabic-Query": "هل يمكنك تقديم قائمة بالمساقات في التخصص هندسة التخطيط والتصميم الحضري حيث تكون الساعات المعتمدة لها أكبر من أو تساوي 1 وأقل من أو تساوي 5؟",
-                "SQL-Query": "SELECT name_arabic FROM course WHERE major_id IN (SELECT id FROM major WHERE name_arabic = 'هندسة التخطيط والتصميم الحضري' OR symbol = 'هندسة التخطيط والتصميم الحضري') AND credits >= 1 AND credits <= 5;",
+                "Arabic-Query": "هل يمكنك تقديم قائمة بالمساقات في التخصص الهندسة الكهربائية حيث تكون الساعات المعتمدة لها أكبر من أو تساوي 1 وأقل من أو تساوي 3؟",
+                "SQL-Query": "SELECT name_arabic FROM course WHERE major_id IN (SELECT id FROM major WHERE name_arabic = 'الهندسة الكهربائية' OR symbol = 'الهندسة الكهربائية') AND credits >= 1 AND credits <= 3;",
                 "output": ""
             }
         ]
@@ -627,16 +665,17 @@
         "Arabic-Query": "هل يمكنك تقديم قائمة بالمساقات في التخصص [major-name] حيث تكون الساعات المعتمدة لها أكبر من أو تساوي [min-credits] وأقل من أو تساوي [max-credits]، ويدرسها الدكتور [instructor-name]؟",
         "SQL-Query": "SELECT c.name_arabic FROM course c JOIN instructor_course ic ON c.id = ic.course_id JOIN instructor i ON ic.instructor_id = i.id WHERE c.major_id IN (SELECT id FROM major WHERE name_arabic = '[major-name]' OR symbol = '[major-name]') AND c.credits >= [min-credits] AND c.credits <= [max-credits] AND (i.name_arabic = '[instructor-name]');",
         "importancy": "8",
+        "id": 39,
         "examples": [
             {
                 "labels": {
-                    "major-name": "اقتصاد الأعمال",
-                    "instructor-name": "عبد الله السعدة",
+                    "major-name": "التغذية والحمية",
+                    "instructor-name": "راني الهلال",
                     "min-credits": "2",
                     "max-credits": "4"
                 },
-                "Arabic-Query": "هل يمكنك تقديم قائمة بالمساقات في التخصص اقتصاد الأعمال حيث تكون الساعات المعتمدة لها أكبر من أو تساوي 2 وأقل من أو تساوي 4، ويدرسها الدكتور عبد الله السعدة؟",
-                "SQL-Query": "SELECT c.name_arabic FROM course c JOIN instructor_course ic ON c.id = ic.course_id JOIN instructor i ON ic.instructor_id = i.id WHERE c.major_id IN (SELECT id FROM major WHERE name_arabic = 'اقتصاد الأعمال' OR symbol = 'اقتصاد الأعمال') AND c.credits >= 2 AND c.credits <= 4 AND (i.name_arabic = 'عبد الله السعدة');",
+                "Arabic-Query": "هل يمكنك تقديم قائمة بالمساقات في التخصص التغذية والحمية حيث تكون الساعات المعتمدة لها أكبر من أو تساوي 2 وأقل من أو تساوي 4، ويدرسها الدكتور راني الهلال؟",
+                "SQL-Query": "SELECT c.name_arabic FROM course c JOIN instructor_course ic ON c.id = ic.course_id JOIN instructor i ON ic.instructor_id = i.id WHERE c.major_id IN (SELECT id FROM major WHERE name_arabic = 'التغذية والحمية' OR symbol = 'التغذية والحمية') AND c.credits >= 2 AND c.credits <= 4 AND (i.name_arabic = 'راني الهلال');",
                 "output": ""
             }
         ]
@@ -646,15 +685,16 @@
         "Arabic-Query": "هل يمكنك تقديم قائمة بالمساقات في التخصص [major-name] حيث تكون الساعات المعتمدة لها تساوي [credits]، ويدرسها الدكتور [instructor-name]؟",
         "SQL-Query": "SELECT name_arabic FROM course WHERE major_id IN (SELECT id FROM major WHERE name_arabic = '[major-name]' OR symbol = '[major-name]') AND credits = [credits] AND instructor_id IN (SELECT id FROM instructor WHERE name_arabic = '[instructor-name]');",
         "importancy": "8",
+        "id": 40,
         "examples": [
             {
                 "labels": {
-                    "major-name": "الهندسة الكهربائية",
-                    "instructor-name": "علاء الدين الحماد",
+                    "major-name": "أمن المعلومات",
+                    "instructor-name": "محمد حماد",
                     "credits": "1"
                 },
-                "Arabic-Query": "هل يمكنك تقديم قائمة بالمساقات في التخصص الهندسة الكهربائية حيث تكون الساعات المعتمدة لها تساوي 1، ويدرسها الدكتور علاء الدين الحماد؟",
-                "SQL-Query": "SELECT name_arabic FROM course WHERE major_id IN (SELECT id FROM major WHERE name_arabic = 'الهندسة الكهربائية' OR symbol = 'الهندسة الكهربائية') AND credits = 1 AND instructor_id IN (SELECT id FROM instructor WHERE name_arabic = 'علاء الدين الحماد');",
+                "Arabic-Query": "هل يمكنك تقديم قائمة بالمساقات في التخصص أمن المعلومات حيث تكون الساعات المعتمدة لها تساوي 1، ويدرسها الدكتور محمد حماد؟",
+                "SQL-Query": "SELECT name_arabic FROM course WHERE major_id IN (SELECT id FROM major WHERE name_arabic = 'أمن المعلومات' OR symbol = 'أمن المعلومات') AND credits = 1 AND instructor_id IN (SELECT id FROM instructor WHERE name_arabic = 'محمد حماد');",
                 "output": ""
             }
         ]
@@ -664,13 +704,14 @@
         "Arabic-Query": "هل يمكنك تقديم قائمة بالدكاترة في التخصص [major-name]؟",
         "SQL-Query": "SELECT i.name_arabic FROM instructor i JOIN department d ON i.department_id = d.id WHERE d.id IN (SELECT department_id FROM major WHERE name_arabic = '[major-name]' OR symbol = '[major-name]');",
         "importancy": "10",
+        "id": 41,
         "examples": [
             {
                 "labels": {
-                    "major-name": "التغذية والحمية"
+                    "major-name": "الفيزياء / فرعي الرياضيات"
                 },
-                "Arabic-Query": "هل يمكنك تقديم قائمة بالدكاترة في التخصص التغذية والحمية؟",
-                "SQL-Query": "SELECT i.name_arabic FROM instructor i JOIN department d ON i.department_id = d.id WHERE d.id IN (SELECT department_id FROM major WHERE name_arabic = 'التغذية والحمية' OR symbol = 'التغذية والحمية');",
+                "Arabic-Query": "هل يمكنك تقديم قائمة بالدكاترة في التخصص الفيزياء / فرعي الرياضيات؟",
+                "SQL-Query": "SELECT i.name_arabic FROM instructor i JOIN department d ON i.department_id = d.id WHERE d.id IN (SELECT department_id FROM major WHERE name_arabic = 'الفيزياء / فرعي الرياضيات' OR symbol = 'الفيزياء / فرعي الرياضيات');",
                 "output": ""
             }
         ]
@@ -680,13 +721,14 @@
         "Arabic-Query": "هل يمكنك تقديم قائمة بالمساعدين في التخصص [major-name]؟",
         "SQL-Query": "SELECT ta.name_arabic FROM teaching_assistant ta JOIN department d ON ta.department_id = d.id WHERE d.id IN (SELECT department_id FROM major WHERE name_arabic = '[major-name]' OR symbol = '[major-name]');",
         "importancy": "10",
+        "id": 42,
         "examples": [
             {
                 "labels": {
-                    "major-name": "أمن المعلومات"
+                    "major-name": "التعليم الجامع والتربية الخاصة"
                 },
-                "Arabic-Query": "هل يمكنك تقديم قائمة بالمساعدين في التخصص أمن المعلومات؟",
-                "SQL-Query": "SELECT ta.name_arabic FROM teaching_assistant ta JOIN department d ON ta.department_id = d.id WHERE d.id IN (SELECT department_id FROM major WHERE name_arabic = 'أمن المعلومات' OR symbol = 'أمن المعلومات');",
+                "Arabic-Query": "هل يمكنك تقديم قائمة بالمساعدين في التخصص التعليم الجامع والتربية الخاصة؟",
+                "SQL-Query": "SELECT ta.name_arabic FROM teaching_assistant ta JOIN department d ON ta.department_id = d.id WHERE d.id IN (SELECT department_id FROM major WHERE name_arabic = 'التعليم الجامع والتربية الخاصة' OR symbol = 'التعليم الجامع والتربية الخاصة');",
                 "output": ""
             }
         ]
@@ -696,13 +738,14 @@
         "Arabic-Query": "هل يمكنك تقديم وصف للمساق [course-name]؟",
         "SQL-Query": "SELECT description FROM course WHERE name_arabic = '[course-name]' OR symbol = '[course-name]';",
         "importancy": "10",
+        "id": 43,
         "examples": [
             {
                 "labels": {
-                    "course-name": "الرياضيات المتقدمة"
+                    "course-name": "أساسيات البرمجة"
                 },
-                "Arabic-Query": "هل يمكنك تقديم وصف للمساق الرياضيات المتقدمة؟",
-                "SQL-Query": "SELECT description FROM course WHERE name_arabic = 'الرياضيات المتقدمة' OR symbol = 'الرياضيات المتقدمة';",
+                "Arabic-Query": "هل يمكنك تقديم وصف للمساق أساسيات البرمجة؟",
+                "SQL-Query": "SELECT description FROM course WHERE name_arabic = 'أساسيات البرمجة' OR symbol = 'أساسيات البرمجة';",
                 "output": ""
             }
         ]
@@ -712,13 +755,14 @@
         "Arabic-Query": "هل يمكنك تقديم وصف للمساق [course-symbol]؟",
         "SQL-Query": "SELECT description FROM course WHERE name_arabic = '[course-symbol]' OR symbol = '[course-symbol]';",
         "importancy": "10",
+        "id": 44,
         "examples": [
             {
                 "labels": {
-                    "course-symbol": "PHY1411"
+                    "course-symbol": "LAW331"
                 },
-                "Arabic-Query": "هل يمكنك تقديم وصف للمساق PHY1411؟",
-                "SQL-Query": "SELECT description FROM course WHERE name_arabic = 'PHY1411' OR symbol = 'PHY1411';",
+                "Arabic-Query": "هل يمكنك تقديم وصف للمساق LAW331؟",
+                "SQL-Query": "SELECT description FROM course WHERE name_arabic = 'LAW331' OR symbol = 'LAW331';",
                 "output": ""
             }
         ]
@@ -728,13 +772,14 @@
         "Arabic-Query": "ما هو رمز المساق [course-name]؟",
         "SQL-Query": "SELECT symbol FROM course WHERE name_arabic = '[course-name]';",
         "importancy": "10",
+        "id": 45,
         "examples": [
             {
                 "labels": {
-                    "course-name": "القانون العام"
+                    "course-name": "الرياضيات المتقدمة"
                 },
-                "Arabic-Query": "ما هو رمز المساق القانون العام؟",
-                "SQL-Query": "SELECT symbol FROM course WHERE name_arabic = 'القانون العام';",
+                "Arabic-Query": "ما هو رمز المساق الرياضيات المتقدمة؟",
+                "SQL-Query": "SELECT symbol FROM course WHERE name_arabic = 'الرياضيات المتقدمة';",
                 "output": ""
             }
         ]
@@ -744,6 +789,7 @@
         "Arabic-Query": "ما هو اسم المساق [course-symbol]؟",
         "SQL-Query": "SELECT name_arabic FROM course WHERE symbol = '[course-symbol]';",
         "importancy": "10",
+        "id": 46,
         "examples": [
             {
                 "labels": {
@@ -760,13 +806,14 @@
         "Arabic-Query": "كم عدد الساعات المعتمدة للمساق [course-name]؟",
         "SQL-Query": "SELECT credits FROM course WHERE name_arabic = '[course-name]' OR symbol = '[course-name]';",
         "importancy": "10",
+        "id": 47,
         "examples": [
             {
                 "labels": {
-                    "course-name": "الإقتصاد الكلي"
+                    "course-name": "اللغة العربية"
                 },
-                "Arabic-Query": "كم عدد الساعات المعتمدة للمساق الإقتصاد الكلي؟",
-                "SQL-Query": "SELECT credits FROM course WHERE name_arabic = 'الإقتصاد الكلي' OR symbol = 'الإقتصاد الكلي';",
+                "Arabic-Query": "كم عدد الساعات المعتمدة للمساق اللغة العربية؟",
+                "SQL-Query": "SELECT credits FROM course WHERE name_arabic = 'اللغة العربية' OR symbol = 'اللغة العربية';",
                 "output": ""
             }
         ]
@@ -776,13 +823,14 @@
         "Arabic-Query": "كم عدد الساعات المعتمدة للمساق [course-symbol]؟",
         "SQL-Query": "SELECT credits FROM course WHERE name_arabic = '[course-symbol]' OR symbol = '[course-symbol]';",
         "importancy": "10",
+        "id": 48,
         "examples": [
             {
                 "labels": {
-                    "course-symbol": "MAT231"
+                    "course-symbol": "MED211"
                 },
-                "Arabic-Query": "كم عدد الساعات المعتمدة للمساق MAT231؟",
-                "SQL-Query": "SELECT credits FROM course WHERE name_arabic = 'MAT231' OR symbol = 'MAT231';",
+                "Arabic-Query": "كم عدد الساعات المعتمدة للمساق MED211؟",
+                "SQL-Query": "SELECT credits FROM course WHERE name_arabic = 'MED211' OR symbol = 'MED211';",
                 "output": ""
             }
         ]
@@ -792,13 +840,14 @@
         "Arabic-Query": "ما هي المتطلبات السابقة للمساق [course-symbol]؟",
         "SQL-Query": "SELECT cp.prerequisite_id FROM course_prerequisite cp JOIN course c ON cp.course_id = c.id WHERE c.name_arabic = '[course-symbol]' OR c.symbol = '[course-symbol]';",
         "importancy": "10",
+        "id": 49,
         "examples": [
             {
                 "labels": {
-                    "course-symbol": "BUS221"
+                    "course-symbol": "CSC121"
                 },
-                "Arabic-Query": "ما هي المتطلبات السابقة للمساق BUS221؟",
-                "SQL-Query": "SELECT cp.prerequisite_id FROM course_prerequisite cp JOIN course c ON cp.course_id = c.id WHERE c.name_arabic = 'BUS221' OR c.symbol = 'BUS221';",
+                "Arabic-Query": "ما هي المتطلبات السابقة للمساق CSC121؟",
+                "SQL-Query": "SELECT cp.prerequisite_id FROM course_prerequisite cp JOIN course c ON cp.course_id = c.id WHERE c.name_arabic = 'CSC121' OR c.symbol = 'CSC121';",
                 "output": ""
             }
         ]
@@ -808,13 +857,14 @@
         "Arabic-Query": "ما هي المتطلبات السابقة للمساق [course-name]؟",
         "SQL-Query": "SELECT cp.prerequisite_id FROM course_prerequisite cp JOIN course c ON cp.course_id = c.id WHERE c.name_arabic = '[course-name]' OR c.symbol = '[course-name]';",
         "importancy": "10",
+        "id": 50,
         "examples": [
             {
                 "labels": {
-                    "course-name": "اللغة العربية"
+                    "course-name": "الرعاية الصحية"
                 },
-                "Arabic-Query": "ما هي المتطلبات السابقة للمساق اللغة العربية؟",
-                "SQL-Query": "SELECT cp.prerequisite_id FROM course_prerequisite cp JOIN course c ON cp.course_id = c.id WHERE c.name_arabic = 'اللغة العربية' OR c.symbol = 'اللغة العربية';",
+                "Arabic-Query": "ما هي المتطلبات السابقة للمساق الرعاية الصحية؟",
+                "SQL-Query": "SELECT cp.prerequisite_id FROM course_prerequisite cp JOIN course c ON cp.course_id = c.id WHERE c.name_arabic = 'الرعاية الصحية' OR c.symbol = 'الرعاية الصحية';",
                 "output": ""
             }
         ]
@@ -824,13 +874,14 @@
         "Arabic-Query": "لأي تخصص يتبع المساق [course-symbol]؟",
         "SQL-Query": "SELECT m.name_arabic FROM major m JOIN course c ON m.id = c.major_id WHERE c.name_arabic = '[course-symbol]' OR c.symbol = '[course-symbol]';",
         "importancy": "6",
+        "id": 51,
         "examples": [
             {
                 "labels": {
-                    "course-symbol": "ARC151"
+                    "course-symbol": "MED211"
                 },
-                "Arabic-Query": "لأي تخصص يتبع المساق ARC151؟",
-                "SQL-Query": "SELECT m.name_arabic FROM major m JOIN course c ON m.id = c.major_id WHERE c.name_arabic = 'ARC151' OR c.symbol = 'ARC151';",
+                "Arabic-Query": "لأي تخصص يتبع المساق MED211؟",
+                "SQL-Query": "SELECT m.name_arabic FROM major m JOIN course c ON m.id = c.major_id WHERE c.name_arabic = 'MED211' OR c.symbol = 'MED211';",
                 "output": ""
             }
         ]
@@ -840,13 +891,14 @@
         "Arabic-Query": "إلى أي دائرة ينتمي المساق [course-name]؟",
         "SQL-Query": "SELECT d.name_arabic FROM department d JOIN major m ON d.id = m.department_id JOIN course c ON m.id = c.major_id WHERE c.name_arabic = '[course-name]' OR c.symbol = '[course-name]';",
         "importancy": "6",
+        "id": 52,
         "examples": [
             {
                 "labels": {
-                    "course-name": "الكيمياء العضوية"
+                    "course-name": "نظرية الأعمال"
                 },
-                "Arabic-Query": "إلى أي دائرة ينتمي المساق الكيمياء العضوية؟",
-                "SQL-Query": "SELECT d.name_arabic FROM department d JOIN major m ON d.id = m.department_id JOIN course c ON m.id = c.major_id WHERE c.name_arabic = 'الكيمياء العضوية' OR c.symbol = 'الكيمياء العضوية';",
+                "Arabic-Query": "إلى أي دائرة ينتمي المساق نظرية الأعمال؟",
+                "SQL-Query": "SELECT d.name_arabic FROM department d JOIN major m ON d.id = m.department_id JOIN course c ON m.id = c.major_id WHERE c.name_arabic = 'نظرية الأعمال' OR c.symbol = 'نظرية الأعمال';",
                 "output": ""
             }
         ]
@@ -856,13 +908,14 @@
         "Arabic-Query": "من هم المدرسين للمساق [course-name]؟",
         "SQL-Query": "SELECT i.name_arabic FROM instructor i JOIN instructor_course ic ON i.id = ic.instructor_id JOIN course c ON ic.course_id = c.id WHERE c.name_arabic = '[course-name]' OR c.symbol = '[course-name]';",
         "importancy": "10",
+        "id": 53,
         "examples": [
             {
                 "labels": {
-                    "course-name": "الإقتصاد الكلي"
+                    "course-name": "أساسيات البرمجة"
                 },
-                "Arabic-Query": "من هم المدرسين للمساق الإقتصاد الكلي؟",
-                "SQL-Query": "SELECT i.name_arabic FROM instructor i JOIN instructor_course ic ON i.id = ic.instructor_id JOIN course c ON ic.course_id = c.id WHERE c.name_arabic = 'الإقتصاد الكلي' OR c.symbol = 'الإقتصاد الكلي';",
+                "Arabic-Query": "من هم المدرسين للمساق أساسيات البرمجة؟",
+                "SQL-Query": "SELECT i.name_arabic FROM instructor i JOIN instructor_course ic ON i.id = ic.instructor_id JOIN course c ON ic.course_id = c.id WHERE c.name_arabic = 'أساسيات البرمجة' OR c.symbol = 'أساسيات البرمجة';",
                 "output": ""
             }
         ]
@@ -872,13 +925,14 @@
         "Arabic-Query": "من هم المدرسين لمساق [course-symbol]؟",
         "SQL-Query": "SELECT i.name_arabic FROM instructor i JOIN instructor_course ic ON i.id = ic.instructor_id JOIN course c ON ic.course_id = c.id WHERE c.name_arabic = '[course-symbol]' OR c.symbol = '[course-symbol]';",
         "importancy": "10",
+        "id": 54,
         "examples": [
             {
                 "labels": {
-                    "course-symbol": "MED211"
+                    "course-symbol": "LAW331"
                 },
-                "Arabic-Query": "من هم المدرسين لمساق MED211؟",
-                "SQL-Query": "SELECT i.name_arabic FROM instructor i JOIN instructor_course ic ON i.id = ic.instructor_id JOIN course c ON ic.course_id = c.id WHERE c.name_arabic = 'MED211' OR c.symbol = 'MED211';",
+                "Arabic-Query": "من هم المدرسين لمساق LAW331؟",
+                "SQL-Query": "SELECT i.name_arabic FROM instructor i JOIN instructor_course ic ON i.id = ic.instructor_id JOIN course c ON ic.course_id = c.id WHERE c.name_arabic = 'LAW331' OR c.symbol = 'LAW331';",
                 "output": ""
             }
         ]
@@ -888,13 +942,14 @@
         "Arabic-Query": "من هم المساعدين للمساق [course-name]؟",
         "SQL-Query": "SELECT ta.name_arabic FROM teaching_assistant ta JOIN ta_course tac ON ta.id = tac.ta_id JOIN course c ON tac.course_id = c.id WHERE c.name_arabic = '[course-name]' OR c.symbol = '[course-name]';",
         "importancy": "10",
+        "id": 55,
         "examples": [
             {
                 "labels": {
-                    "course-name": "اللغة العربية"
+                    "course-name": "الفيزياء الكلاسيكية"
                 },
-                "Arabic-Query": "من هم المساعدين للمساق اللغة العربية؟",
-                "SQL-Query": "SELECT ta.name_arabic FROM teaching_assistant ta JOIN ta_course tac ON ta.id = tac.ta_id JOIN course c ON tac.course_id = c.id WHERE c.name_arabic = 'اللغة العربية' OR c.symbol = 'اللغة العربية';",
+                "Arabic-Query": "من هم المساعدين للمساق الفيزياء الكلاسيكية؟",
+                "SQL-Query": "SELECT ta.name_arabic FROM teaching_assistant ta JOIN ta_course tac ON ta.id = tac.ta_id JOIN course c ON tac.course_id = c.id WHERE c.name_arabic = 'الفيزياء الكلاسيكية' OR c.symbol = 'الفيزياء الكلاسيكية';",
                 "output": ""
             }
         ]
@@ -904,13 +959,14 @@
         "Arabic-Query": "ما هي المساقات تتطلب المساق [course-name] كمتطلب سابق؟",
         "SQL-Query": "SELECT c2.name_arabic FROM course c1 JOIN course_prerequisite cp ON c1.id = cp.course_id JOIN course c2 ON cp.prerequisite_id = c2.id WHERE c1.name_arabic = '[course-name]' OR c1.symbol = '[course-name]';",
         "importancy": "10",
+        "id": 56,
         "examples": [
             {
                 "labels": {
-                    "course-name": "اللغة العربية"
+                    "course-name": "القانون العام"
                 },
-                "Arabic-Query": "ما هي المساقات تتطلب المساق اللغة العربية كمتطلب سابق؟",
-                "SQL-Query": "SELECT c2.name_arabic FROM course c1 JOIN course_prerequisite cp ON c1.id = cp.course_id JOIN course c2 ON cp.prerequisite_id = c2.id WHERE c1.name_arabic = 'اللغة العربية' OR c1.symbol = 'اللغة العربية';",
+                "Arabic-Query": "ما هي المساقات تتطلب المساق القانون العام كمتطلب سابق؟",
+                "SQL-Query": "SELECT c2.name_arabic FROM course c1 JOIN course_prerequisite cp ON c1.id = cp.course_id JOIN course c2 ON cp.prerequisite_id = c2.id WHERE c1.name_arabic = 'القانون العام' OR c1.symbol = 'القانون العام';",
                 "output": ""
             }
         ]
@@ -920,13 +976,14 @@
         "Arabic-Query": "هل يمكنك تقديم رقم الهاتف للدكتور [instructor-name]؟",
         "SQL-Query": "SELECT phone_number FROM instructor WHERE name_arabic = '[instructor-name]';",
         "importancy": "10",
+        "id": 57,
         "examples": [
             {
                 "labels": {
-                    "instructor-name": "زياد الشيخ يوسف"
+                    "instructor-name": "محمد العمري"
                 },
-                "Arabic-Query": "هل يمكنك تقديم رقم الهاتف للدكتور زياد الشيخ يوسف؟",
-                "SQL-Query": "SELECT phone_number FROM instructor WHERE name_arabic = 'زياد الشيخ يوسف';",
+                "Arabic-Query": "هل يمكنك تقديم رقم الهاتف للدكتور محمد العمري؟",
+                "SQL-Query": "SELECT phone_number FROM instructor WHERE name_arabic = 'محمد العمري';",
                 "output": ""
             }
         ]
@@ -936,13 +993,14 @@
         "Arabic-Query": "ما هو عنوان البريد الإلكتروني للدكتور [instructor-name]؟",
         "SQL-Query": "SELECT email FROM instructor WHERE name_arabic = '[instructor-name]';",
         "importancy": "10",
+        "id": 58,
         "examples": [
             {
                 "labels": {
-                    "instructor-name": "دانا القيمري"
+                    "instructor-name": "محمود بني مصطفى"
                 },
-                "Arabic-Query": "ما هو عنوان البريد الإلكتروني للدكتور دانا القيمري؟",
-                "SQL-Query": "SELECT email FROM instructor WHERE name_arabic = 'دانا القيمري';",
+                "Arabic-Query": "ما هو عنوان البريد الإلكتروني للدكتور محمود بني مصطفى؟",
+                "SQL-Query": "SELECT email FROM instructor WHERE name_arabic = 'محمود بني مصطفى';",
                 "output": ""
             }
         ]
@@ -952,13 +1010,14 @@
         "Arabic-Query": "ما هو الرقم الخاص بالدكتور [instructor-name] في ريتاج؟",
         "SQL-Query": "SELECT ritaj_id FROM instructor WHERE name_arabic = '[instructor-name]';",
         "importancy": "10",
+        "id": 59,
         "examples": [
             {
                 "labels": {
-                    "instructor-name": "قصي علاونة"
+                    "instructor-name": "محمد العمريس"
                 },
-                "Arabic-Query": "ما هو الرقم الخاص بالدكتور قصي علاونة في ريتاج؟",
-                "SQL-Query": "SELECT ritaj_id FROM instructor WHERE name_arabic = 'قصي علاونة';",
+                "Arabic-Query": "ما هو الرقم الخاص بالدكتور محمد العمريس في ريتاج؟",
+                "SQL-Query": "SELECT ritaj_id FROM instructor WHERE name_arabic = 'محمد العمريس';",
                 "output": ""
             }
         ]
@@ -968,13 +1027,14 @@
         "Arabic-Query": "ما هي الساعات المكتبية للدكتور [instructor-name]؟",
         "SQL-Query": "SELECT office_hours FROM instructor WHERE name_arabic = '[instructor-name]';",
         "importancy": "10",
+        "id": 60,
         "examples": [
             {
                 "labels": {
-                    "instructor-name": "راضي جرار"
+                    "instructor-name": "بشار طحاينه"
                 },
-                "Arabic-Query": "ما هي الساعات المكتبية للدكتور راضي جرار؟",
-                "SQL-Query": "SELECT office_hours FROM instructor WHERE name_arabic = 'راضي جرار';",
+                "Arabic-Query": "ما هي الساعات المكتبية للدكتور بشار طحاينه؟",
+                "SQL-Query": "SELECT office_hours FROM instructor WHERE name_arabic = 'بشار طحاينه';",
                 "output": ""
             }
         ]
@@ -984,13 +1044,14 @@
         "Arabic-Query": "إلى أي دائرة ينتمي الدكتور [instructor-name]؟",
         "SQL-Query": "SELECT d.name_arabic FROM department d JOIN instructor i ON d.id = i.department_id WHERE i.name_arabic = '[instructor-name]';",
         "importancy": "7",
+        "id": 61,
         "examples": [
             {
                 "labels": {
-                    "instructor-name": "مصطفى الخالدي"
+                    "instructor-name": "مراد الشمايلة"
                 },
-                "Arabic-Query": "إلى أي دائرة ينتمي الدكتور مصطفى الخالدي؟",
-                "SQL-Query": "SELECT d.name_arabic FROM department d JOIN instructor i ON d.id = i.department_id WHERE i.name_arabic = 'مصطفى الخالدي';",
+                "Arabic-Query": "إلى أي دائرة ينتمي الدكتور مراد الشمايلة؟",
+                "SQL-Query": "SELECT d.name_arabic FROM department d JOIN instructor i ON d.id = i.department_id WHERE i.name_arabic = 'مراد الشمايلة';",
                 "output": ""
             }
         ]
@@ -1000,13 +1061,14 @@
         "Arabic-Query": "إلى أي كلية ينتمي الدكتور [instructor-name]؟",
         "SQL-Query": "SELECT f.name_arabic FROM faculty f JOIN department d ON f.id = d.faculty_id JOIN instructor i ON d.id = i.department_id WHERE i.name_arabic = '[instructor-name]';",
         "importancy": "5",
+        "id": 62,
         "examples": [
             {
                 "labels": {
-                    "instructor-name": "عبد الله السعدة"
+                    "instructor-name": "صالح الرفاعي"
                 },
-                "Arabic-Query": "إلى أي كلية ينتمي الدكتور عبد الله السعدة؟",
-                "SQL-Query": "SELECT f.name_arabic FROM faculty f JOIN department d ON f.id = d.faculty_id JOIN instructor i ON d.id = i.department_id WHERE i.name_arabic = 'عبد الله السعدة';",
+                "Arabic-Query": "إلى أي كلية ينتمي الدكتور صالح الرفاعي؟",
+                "SQL-Query": "SELECT f.name_arabic FROM faculty f JOIN department d ON f.id = d.faculty_id JOIN instructor i ON d.id = i.department_id WHERE i.name_arabic = 'صالح الرفاعي';",
                 "output": ""
             }
         ]
@@ -1016,6 +1078,7 @@
         "Arabic-Query": "ما هي المساقات التي يدرسها الدكتور [instructor-name]؟",
         "SQL-Query": "SELECT c.name_arabic FROM course c JOIN instructor_course ic ON c.id = ic.course_id JOIN instructor i ON ic.instructor_id = i.id WHERE i.name_arabic = '[instructor-name]';",
         "importancy": "10",
+        "id": 63,
         "examples": [
             {
                 "labels": {
@@ -1032,13 +1095,14 @@
         "Arabic-Query": "ما هي الكلية التي يشغل فيها الدكتور [instructor-name] منصب العميد؟",
         "SQL-Query": "SELECT f.name_arabic FROM faculty f JOIN instructor i ON f.dean_id = i.id WHERE i.name_arabic = '[instructor-name]';",
         "importancy": "10",
+        "id": 64,
         "examples": [
             {
                 "labels": {
-                    "instructor-name": "محمد العمري"
+                    "instructor-name": "محمد علاونة"
                 },
-                "Arabic-Query": "ما هي الكلية التي يشغل فيها الدكتور محمد العمري منصب العميد؟",
-                "SQL-Query": "SELECT f.name_arabic FROM faculty f JOIN instructor i ON f.dean_id = i.id WHERE i.name_arabic = 'محمد العمري';",
+                "Arabic-Query": "ما هي الكلية التي يشغل فيها الدكتور محمد علاونة منصب العميد؟",
+                "SQL-Query": "SELECT f.name_arabic FROM faculty f JOIN instructor i ON f.dean_id = i.id WHERE i.name_arabic = 'محمد علاونة';",
                 "output": ""
             }
         ]
@@ -1048,13 +1112,14 @@
         "Arabic-Query": "ما هي الدائرة التي يشغل فيها الدكتور [instructor-name] منصب رئيس الدائرة",
         "SQL-Query": "SELECT d.name_arabic FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE i.name_arabic = '[instructor-name]';",
         "importancy": "10",
+        "id": 65,
         "examples": [
             {
                 "labels": {
-                    "instructor-name": "بشار طحاينه"
+                    "instructor-name": "محمد العمريس"
                 },
-                "Arabic-Query": "ما هي الدائرة التي يشغل فيها الدكتور بشار طحاينه منصب رئيس الدائرة",
-                "SQL-Query": "SELECT d.name_arabic FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE i.name_arabic = 'بشار طحاينه';",
+                "Arabic-Query": "ما هي الدائرة التي يشغل فيها الدكتور محمد العمريس منصب رئيس الدائرة",
+                "SQL-Query": "SELECT d.name_arabic FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE i.name_arabic = 'محمد العمريس';",
                 "output": ""
             }
         ]
@@ -1064,13 +1129,14 @@
         "Arabic-Query": "ما هو رقم الهاتف للمساعد [assistant-name]؟",
         "SQL-Query": "SELECT phone_number FROM teaching_assistant WHERE name_arabic = '[assistant-name]';",
         "importancy": "8",
+        "id": 66,
         "examples": [
             {
                 "labels": {
-                    "assistant-name": "سارة السهلي"
+                    "assistant-name": "رناد العربي"
                 },
-                "Arabic-Query": "ما هو رقم الهاتف للمساعد سارة السهلي؟",
-                "SQL-Query": "SELECT phone_number FROM teaching_assistant WHERE name_arabic = 'سارة السهلي';",
+                "Arabic-Query": "ما هو رقم الهاتف للمساعد رناد العربي؟",
+                "SQL-Query": "SELECT phone_number FROM teaching_assistant WHERE name_arabic = 'رناد العربي';",
                 "output": ""
             }
         ]
@@ -1080,13 +1146,14 @@
         "Arabic-Query": "ما هو البريد الإلكتروني للمساعد [assistant-name]؟",
         "SQL-Query": "SELECT email FROM teaching_assistant WHERE name_arabic = '[assistant-name]';",
         "importancy": "8",
+        "id": 67,
         "examples": [
             {
                 "labels": {
-                    "assistant-name": "حواء العتيبي"
+                    "assistant-name": "هناء العمران"
                 },
-                "Arabic-Query": "ما هو البريد الإلكتروني للمساعد حواء العتيبي؟",
-                "SQL-Query": "SELECT email FROM teaching_assistant WHERE name_arabic = 'حواء العتيبي';",
+                "Arabic-Query": "ما هو البريد الإلكتروني للمساعد هناء العمران؟",
+                "SQL-Query": "SELECT email FROM teaching_assistant WHERE name_arabic = 'هناء العمران';",
                 "output": ""
             }
         ]
@@ -1096,13 +1163,14 @@
         "Arabic-Query": "ما هو رقم المساعد [assistant-name] في ريتاج؟",
         "SQL-Query": "SELECT ritaj_id FROM teaching_assistant WHERE name_arabic = '[assistant-name]';",
         "importancy": "8",
+        "id": 68,
         "examples": [
             {
                 "labels": {
-                    "assistant-name": "مريم الخالدي"
+                    "assistant-name": "محمود الرفاعي"
                 },
-                "Arabic-Query": "ما هو رقم المساعد مريم الخالدي في ريتاج؟",
-                "SQL-Query": "SELECT ritaj_id FROM teaching_assistant WHERE name_arabic = 'مريم الخالدي';",
+                "Arabic-Query": "ما هو رقم المساعد محمود الرفاعي في ريتاج؟",
+                "SQL-Query": "SELECT ritaj_id FROM teaching_assistant WHERE name_arabic = 'محمود الرفاعي';",
                 "output": ""
             }
         ]
@@ -1112,13 +1180,14 @@
         "Arabic-Query": "إلى أي دائرة ينتمي المساعد [assistant-name]؟",
         "SQL-Query": "SELECT d.name_arabic FROM department d JOIN teaching_assistant ta ON d.id = ta.department_id WHERE ta.name_arabic = '[assistant-name]';",
         "importancy": "8",
+        "id": 69,
         "examples": [
             {
                 "labels": {
-                    "assistant-name": "حسن الدوسري"
+                    "assistant-name": "ريما الشعلان"
                 },
-                "Arabic-Query": "إلى أي دائرة ينتمي المساعد حسن الدوسري؟",
-                "SQL-Query": "SELECT d.name_arabic FROM department d JOIN teaching_assistant ta ON d.id = ta.department_id WHERE ta.name_arabic = 'حسن الدوسري';",
+                "Arabic-Query": "إلى أي دائرة ينتمي المساعد ريما الشعلان؟",
+                "SQL-Query": "SELECT d.name_arabic FROM department d JOIN teaching_assistant ta ON d.id = ta.department_id WHERE ta.name_arabic = 'ريما الشعلان';",
                 "output": ""
             }
         ]
@@ -1128,13 +1197,14 @@
         "Arabic-Query": "ما هي المساقات التي يساعد فيها المساعد [assistant-name]؟",
         "SQL-Query": "SELECT c.name_arabic FROM course c JOIN ta_course tc ON c.id = tc.course_id JOIN teaching_assistant ta ON tc.ta_id = ta.id WHERE ta.name_arabic = '[assistant-name]';",
         "importancy": "8",
+        "id": 70,
         "examples": [
             {
                 "labels": {
-                    "assistant-name": "رحاب العثمان"
+                    "assistant-name": "حسن الدوسري"
                 },
-                "Arabic-Query": "ما هي المساقات التي يساعد فيها المساعد رحاب العثمان؟",
-                "SQL-Query": "SELECT c.name_arabic FROM course c JOIN ta_course tc ON c.id = tc.course_id JOIN teaching_assistant ta ON tc.ta_id = ta.id WHERE ta.name_arabic = 'رحاب العثمان';",
+                "Arabic-Query": "ما هي المساقات التي يساعد فيها المساعد حسن الدوسري؟",
+                "SQL-Query": "SELECT c.name_arabic FROM course c JOIN ta_course tc ON c.id = tc.course_id JOIN teaching_assistant ta ON tc.ta_id = ta.id WHERE ta.name_arabic = 'حسن الدوسري';",
                 "output": ""
             }
         ]

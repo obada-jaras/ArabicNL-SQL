@@ -70,10 +70,11 @@ def add_examples_field(data, dummy_data):
     return data
 
 def main():
-    data = read_json_file('json/complex_data.json')
+    file_name = 'complex_data'
+    data = read_json_file('json/' + file_name + '.json')
     dummy_data = read_json_file('json/dummy.json')
     updated_data = add_examples_field(data, dummy_data)
-    write_json_file('json/complex_data_examples.json', updated_data)
+    write_json_file('json/' + file_name + '_examples.json', updated_data)
 
 if __name__ == "__main__":
     main()
