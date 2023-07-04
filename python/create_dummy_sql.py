@@ -6,7 +6,7 @@ def create_insert_for_faculty(faculty_data, dean_count):
     for i, faculty in enumerate(faculty_data, start=1):
         statements.append(
             f"INSERT INTO faculty(id, name_arabic, name_english, symbol, description, dean_id) "
-            f"VALUES ({i}, '{faculty['faculty-name']}', '{faculty['faculty-symbol']}', '{faculty['faculty-symbol']}', 'Description {i}', {random.randint(1, dean_count)});"
+            f"VALUES ({i}, '{faculty['faculty-name']}', 'name english - faculty - {faculty['faculty-symbol']}', '{faculty['faculty-symbol']}', 'Description {i}', {random.randint(1, dean_count)});"
         )
     return statements
 
@@ -15,7 +15,7 @@ def create_insert_for_department(department_data, faculty_count):
     for i, department in enumerate(department_data, start=1):
         statements.append(
             f"INSERT INTO department(id, faculty_id, name_arabic, name_english, symbol, description, head_instructor_id) "
-            f"VALUES ({i}, {random.randint(1, faculty_count)}, '{department['department-name']}', '{department['department-symbol']}', '{department['department-symbol']}', 'Description {i}', {random.randint(1, 100)});"
+            f"VALUES ({i}, {random.randint(1, faculty_count)}, '{department['department-name']}', 'name english - department - {department['department-symbol']}', '{department['department-symbol']}', 'Description {i}', {random.randint(1, 100)});"
         )
     return statements
 
@@ -24,7 +24,7 @@ def create_insert_for_major(major_data, department_count):
     for i, major in enumerate(major_data, start=1):
         statements.append(
             f"INSERT INTO major(id, department_id, name_arabic, name_english, symbol, description, hours) "
-            f"VALUES ({i}, {random.randint(1, department_count)}, '{major['major-name']}', '{major['major-symbol']}', '{major['major-symbol']}', 'Description {i}', {random.randint(10, 40)});"
+            f"VALUES ({i}, {random.randint(1, department_count)}, '{major['major-name']}', 'name english - major - {major['major-symbol']}', '{major['major-symbol']}', 'Description for major {i}', {random.randint(120, 165)});"
         )
     return statements
 
@@ -33,7 +33,7 @@ def create_insert_for_course(course_data, major_count):
     for i, course in enumerate(course_data, start=1):
         statements.append(
             f"INSERT INTO course(id, major_id, name_arabic, name_english, symbol, description, credits) "
-            f"VALUES ({i}, {random.randint(1, major_count)}, '{course['course-name']['name-ar']}', '{course['course-name']['name_en']}', '{course['course-symbol']}', 'Description {i}', {int(course['credits'])});"
+            f"VALUES ({i}, {random.randint(1, major_count)}, '{course['course-name']['name-ar']}', '{course['course-name']['name_en']}', '{course['course-symbol']}', 'Description for course {i}', {int(course['credits'])});"
         )
     return statements
 
@@ -42,7 +42,7 @@ def create_insert_for_instructor(instructor_data, department_count):
     for i, instructor in enumerate(instructor_data, start=1):
         statements.append(
             f"INSERT INTO instructor(id, name_arabic, name_english, phone_number, email, ritaj_id, office_hours, department_id) "
-            f"VALUES ({i}, '{instructor}', 'Instructor {i}', '123-456-7890', 'email{i}@example.com', 'RITAJ{i}', 'Office Hours {i}', {random.randint(1, department_count)});"
+            f"VALUES ({i}, '{instructor}', 'Instructor {i}', '{i}{i}{i}-{i}', 'instructor_email_{i}@example.com', 'RITAJ_I_{i}', 'Office Hours {i}', {random.randint(1, department_count)});"
         )
     return statements
 
@@ -51,7 +51,7 @@ def create_insert_for_ta(ta_data, department_count):
     for i, ta in enumerate(ta_data, start=1):
         statements.append(
             f"INSERT INTO teaching_assistant(id, name_arabic, name_english, phone_number, email, ritaj_id, department_id) "
-            f"VALUES ({i}, '{ta}', 'TA {i}', '123-456-7890', 'email{i}@example.com', 'RITAJ{i}', {random.randint(1, department_count)});"
+            f"VALUES ({i}, '{ta}', 'TA {i}', '{i}{i}{i}-{i}', 'assistant_email_{i}@example.com', 'RITAJ_A_{i}', {random.randint(1, department_count)});"
         )
     return statements
 
