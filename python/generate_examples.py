@@ -56,14 +56,15 @@ def add_examples_field(data, dummy_data):
         example["labels"] = replacements
         example["Arabic-Query"] = replace_tags_in_query(entry["Arabic-Query"], replacements)
         example["SQL-Query"] = replace_tags_in_query(entry["SQL-Query"], replacements)
+        example["output"] = ""
         entry["examples"].append(example)
     return data
 
 def main():
-    data = read_json_file('json/complex_data.json')
+    data = read_json_file('json/data.json')
     dummy_data = read_json_file('json/dummy.json')
     updated_data = add_examples_field(data, dummy_data)
-    write_json_file('json/complex_data_examples.json', updated_data)
+    write_json_file('json/data_examples.json', updated_data)
 
 if __name__ == "__main__":
     main()
