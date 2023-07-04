@@ -387,7 +387,7 @@
                 "name-ar": "اللغة العربية",
                 "name_en": "Arabic Language"
             },
-            "course-symbol": "ARB131"
+            "course-symbol": "ARB131",
             "credits": "3"
         },
         {
@@ -462,7 +462,7 @@
             "course-symbol": "ARC151",
             "credits": "5"
         }
-    ]
+    ],
     "instructor": [
         "عدنان يحيى",
         "راضي جرار",
