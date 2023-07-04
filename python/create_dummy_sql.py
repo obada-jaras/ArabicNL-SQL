@@ -5,10 +5,17 @@ import random
 def create_insert_for_faculty(faculty_data, instructor_ids):
     statements = []
     for i, faculty in enumerate(faculty_data, start=1):
-        dean_id = instructor_ids.pop()
+        dean_id = instructor_ids.pop() if instructor_ids else 'NULL'
         statements.append(
             f"INSERT INTO faculty(id, name_arabic, name_english, symbol, description, dean_id) "
             f"VALUES ({i}, '{faculty['faculty-name']}', 'name english - faculty - {faculty['faculty-symbol']}', '{faculty['faculty-symbol']}', 'Description for faculty {i}', {dean_id});")
+    return statements
+
+def update_faculty_with_dean(faculty_count, instructor_ids):
+    statements = []
+    for i in range(1, faculty_count + 1):
+        dean_id = instructor_ids.pop()
+        statements.append(f"UPDATE faculty SET dean_id = {dean_id} WHERE id = {i};")
     return statements
 
 
@@ -77,20 +84,27 @@ def generate_sql_inserts(json_filename, sql_filename):
     instructor_ids = set(range(1, instructor_count + 1))
 
     all_statements = []
-    all_statements.extend(create_insert_for_faculty(
-        data['faculty'], instructor_ids))
+
+    # First, create faculties without assigning deans.
+    all_statements.extend(create_insert_for_faculty(data['faculty'], None))
+
+    # Then, create instructors and assign them as deans.
+    all_statements.extend(create_insert_for_instructor(
+        data['instructor'], department_count))
+    all_statements.extend(update_faculty_with_dean(
+        faculty_count, instructor_ids))
+
+    # Now we can create the remaining entities.
     all_statements.extend(create_insert_for_department(
         data['department'], faculty_count, instructor_ids))
     all_statements.extend(create_insert_for_major(
         data['major'], department_count))
     all_statements.extend(create_insert_for_course(
         data['course'], major_count))
-    all_statements.extend(create_insert_for_instructor(
-        data['instructor'], department_count))
     all_statements.extend(create_insert_for_ta(
         data['assistant'], department_count))
 
     write_to_file(all_statements, sql_filename)
 
 
-generate_sql_inserts('json/dummy.json', 'sql/output.sql')
+generate_sql_inserts('json/dummy.json', 'sql/insert-dummy_data.sql')
