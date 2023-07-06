@@ -9,11 +9,15 @@ for item in data:
     if 'examples' in item:
         for example in item['examples']:
             new_data.append({
+                'id': item['id'],
+                'importancy': item['importancy'],
                 'Arabic-Query': example['Arabic-Query'],
                 'SQL-Query': example['SQL-Query']
             })
     else:
         new_data.append({
+            'id': item['id'],
+            'importancy': item['importancy'],
             'Arabic-Query': item['Arabic-Query'],
             'SQL-Query': item['SQL-Query']
         })
