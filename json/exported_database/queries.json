@@ -1,0 +1,422 @@
+{
+  "0GqL9Z01uy7sO70UHnDt": {
+    "importancy": 10,
+    "arabic_nl": "كم عدد الساعات المعتمدة للمساق MED211؟",
+    "variants_count": 55,
+    "real_id": 48
+  },
+  "0hlwjBTmDOXRbKDoy5YI": {
+    "arabic_nl": "هل يمكنك تقديم وصف للدائرة التي تدعى اللغات والترجمة؟",
+    "importancy": 7,
+    "variants_count": 55,
+    "real_id": 14
+  },
+  "2cbX90bZDn6QyeNvlrMa": {
+    "real_id": 55,
+    "variants_count": 55,
+    "importancy": 10,
+    "arabic_nl": "من هم المساعدين للمساق الفيزياء الكلاسيكية؟"
+  },
+  "5MkAjmOtXRMFB11Et7gd": {
+    "importancy": 10,
+    "arabic_nl": "من هم المدرسين للمساق أساسيات البرمجة؟",
+    "variants_count": 55,
+    "real_id": 53
+  },
+  "5ZIIvwSWfCzFezHiehAs": {
+    "real_id": 24,
+    "importancy": 7,
+    "variants_count": 55,
+    "arabic_nl": "هل يمكنك تقديم وصف لتخصص قانون؟"
+  },
+  "5zu8eRQZ7R0GTfudDW5s": {
+    "arabic_nl": "هل يمكنك أن تخبرني بإسم رئيس الدائرة الأكاديمية الجغرافيا؟",
+    "real_id": 16,
+    "variants_count": 55,
+    "importancy": 10
+  },
+  "6Qq8oahlYkFn8pdh0lX5": {
+    "arabic_nl": "ما هو اسم المساق ARC151؟",
+    "importancy": 10,
+    "real_id": 46,
+    "variants_count": 55
+  },
+  "6kHxYWm4CvhRoaaxAw0I": {
+    "importancy": 7,
+    "real_id": 33,
+    "variants_count": 55,
+    "arabic_nl": "هل يمكنك تقديم قائمة بالمساقات في تخصص رئيسي علم النفس / فرعي دراسات المرأة التي تتطلب مساق نظرية الأعمال كشرط مسبق ويدرسها الدكتور محمود بني مصطفى؟"
+  },
+  "7K3kSs30NFkx3pCLlnJe": {
+    "arabic_nl": "ما هو رمز برنامج الترجمة؟",
+    "importancy": 1,
+    "real_id": 25,
+    "variants_count": 55
+  },
+  "8P6eRGpVt9wo5WCidhCP": {
+    "importancy": 10,
+    "arabic_nl": "ما هي المتطلبات السابقة للمساق CSC121؟",
+    "real_id": 49,
+    "variants_count": 58
+  },
+  "8dbDsRNEwTCNARrHOwhj": {
+    "variants_count": 56,
+    "importancy": 10,
+    "real_id": 63,
+    "arabic_nl": "ما هي المساقات التي يدرسها الدكتور رائد العناني؟"
+  },
+  "8li3eNP2vvMEQGsnlyQE": {
+    "variants_count": 57,
+    "real_id": 26,
+    "importancy": 10,
+    "arabic_nl": "ما هو إجمالي عدد الساعات لبرنامج تعليم اللغة الإنجليزية كلغة أجنبية؟"
+  },
+  "8mHMrskFt1A2BQQo9teL": {
+    "real_id": 5,
+    "importancy": 10,
+    "variants_count": 56,
+    "arabic_nl": "هل يمكنك تقديم البريد الإلكتروني لعميد كلية الفنون والموسيقى والتصميم؟"
+  },
+  "B0SsSIH4vuAizXbhtybk": {
+    "real_id": 68,
+    "variants_count": 56,
+    "arabic_nl": "ما هو رقم المساعد محمود الرفاعي في ريتاج؟",
+    "importancy": 8
+  },
+  "BHW7nBEFqcKoYX8JZthz": {
+    "real_id": 60,
+    "arabic_nl": "ما هي الساعات المكتبية للدكتور بشار طحاينه؟",
+    "importancy": 10,
+    "variants_count": 56
+  },
+  "CNBS8AIrN90oifRL50kR": {
+    "variants_count": 56,
+    "real_id": 34,
+    "arabic_nl": "هل يمكنك تقديم قائمة بالمساقات في التخصص رئيسي علم اجتماع / فرعي علم النفس التي تتطلب المساق CSC121 كشرط مسبق ويدرسها المساعد أمل العليان؟",
+    "importancy": 4
+  },
+  "DBBPOv3UtqzYEr2YilD8": {
+    "arabic_nl": "هل يمكنك تقديم قائمة الدوائر الأكاديمية في كلية الأعمال والاقتصاد؟",
+    "variants_count": 56,
+    "real_id": 10,
+    "importancy": 7
+  },
+  "DDVor4XePzBHyaYYMAAZ": {
+    "real_id": 69,
+    "variants_count": 56,
+    "importancy": 8,
+    "arabic_nl": "إلى أي دائرة ينتمي المساعد ريما الشعلان؟"
+  },
+  "DNNl107FfRZqGiNNCaqn": {
+    "variants_count": 56,
+    "real_id": 8,
+    "arabic_nl": "هل يمكنك تقديم ID ريتاج لعميد كلية الصيدلة والتمريض والمهن الصحية؟",
+    "importancy": 3
+  },
+  "EXqLFVWwG4PwKJWrRD4I": {
+    "real_id": 36,
+    "importancy": 8,
+    "arabic_nl": "هل يمكنك تقديم قائمة بالمساقات في التخصص الكيمياء حيث تكون الساعات المعتمدة لها أكبر من أو تساوي 5؟",
+    "variants_count": 56
+  },
+  "FrVzPdCyxOPvlVm70cLZ": {
+    "arabic_nl": "ما هو رمز المساق الرياضيات المتقدمة؟",
+    "importancy": 10,
+    "real_id": 45,
+    "variants_count": 55
+  },
+  "GSwqwq3qGBGQOHOGLCX5": {
+    "variants_count": 56,
+    "importancy": 8,
+    "real_id": 29,
+    "arabic_nl": "هل يمكنك تقديم قائمة بالمساقات في تخصص الاقتصاد التي تدرسها الدكتورة نجوى الحماد؟"
+  },
+  "GsyPWPxfZ3UWWTvP5rcO": {
+    "real_id": 13,
+    "variants_count": 55,
+    "importancy": 7,
+    "arabic_nl": "هل يمكنك تقديم وصف للدائرة الأكاديمية الإعلام؟"
+  },
+  "IP0yCv1bdkuPV4G94aKO": {
+    "variants_count": 55,
+    "importancy": 10,
+    "arabic_nl": "ما هي المساقات تتطلب المساق القانون العام كمتطلب سابق؟",
+    "real_id": 56
+  },
+  "Ivffp0JTqVL6LxnH1afc": {
+    "variants_count": 55,
+    "importancy": 8,
+    "arabic_nl": "ما هي المساقات التي يساعد فيها المساعد حسن الدوسري؟",
+    "real_id": 70
+  },
+  "LPW6sykgu0Rv4HRH1l59": {
+    "variants_count": 56,
+    "real_id": 57,
+    "importancy": 10,
+    "arabic_nl": "هل يمكنك تقديم رقم الهاتف للدكتور محمد العمري؟"
+  },
+  "MSyr5RFOzxOy0ls8EtoS": {
+    "real_id": 61,
+    "arabic_nl": "إلى أي دائرة ينتمي الدكتور مراد الشمايلة؟",
+    "importancy": 7,
+    "variants_count": 55
+  },
+  "NcKcDqgBtfEVCiqp9lgv": {
+    "arabic_nl": "هل يمكنك تقديم وصف للمساق LAW331؟",
+    "variants_count": 55,
+    "importancy": 10,
+    "real_id": 44
+  },
+  "Niyi4n550pzlfg1K7o1C": {
+    "importancy": 8,
+    "arabic_nl": "ما هو البريد الإلكتروني للمساعد هناء العمران؟",
+    "real_id": 67,
+    "variants_count": 55
+  },
+  "O7wIwogoFzYCsOWaQwfU": {
+    "arabic_nl": "هل يمكنك تقديم ID ريتاج لرئيس الدائرة الأكاديمية التغذية والحمية؟",
+    "variants_count": 55,
+    "importancy": 6,
+    "real_id": 20
+  },
+  "OoRhBf3v3H9LAkyfh2uI": {
+    "importancy": 10,
+    "arabic_nl": "هل يمكنك تقديم البريد الإلكتروني لرئيس الدائرة الأكاديمية الجغرافية؟",
+    "variants_count": 56,
+    "real_id": 17
+  },
+  "P6esqYuQPUtzwy2SrTEH": {
+    "importancy": 10,
+    "variants_count": 56,
+    "arabic_nl": "هل يمكنك تقديم قائمة بمساقات تخصص الأحياء / فرعي الكيمياء الحيوية التي تتطلب مساق الرياضيات المتقدمة كشرط مسبق؟",
+    "real_id": 31
+  },
+  "P9ZJWmsE8CbWbw0hcpDf": {
+    "arabic_nl": "من هم المدرسين لمساق LAW331؟",
+    "real_id": 54,
+    "importancy": 10,
+    "variants_count": 56
+  },
+  "QEc31kTdVooxiZs63O5c": {
+    "importancy": 8,
+    "arabic_nl": "هل يمكنك تقديم قائمة بالمساقات في التخصص التغذية والحمية حيث تكون الساعات المعتمدة لها أكبر من أو تساوي 2 وأقل من أو تساوي 4، ويدرسها الدكتور راني الهلال؟",
+    "real_id": 39,
+    "variants_count": 55
+  },
+  "QupT2FhJbdF7gWW3vzge": {
+    "variants_count": 58,
+    "real_id": 42,
+    "importancy": 10,
+    "arabic_nl": "هل يمكنك تقديم قائمة بالمساعدين في التخصص التعليم الجامع والتربية الخاصة؟"
+  },
+  "R17ZUimQRQVi0UObvbUQ": {
+    "real_id": 15,
+    "variants_count": 55,
+    "arabic_nl": "ما هو الرمز المرتبط بالدائرة الأكاديمية اللغة الفرنسية؟",
+    "importancy": 5
+  },
+  "T8gxlrILQdJ11bVUo5UV": {
+    "real_id": 7,
+    "importancy": 10,
+    "variants_count": 55,
+    "arabic_nl": "هل يمكنك تقديم الساعات المكتبية لعميد كلية الهندسة والتكنولوجيا؟"
+  },
+  "TBV7mpF5r3WpZjU3MtQq": {
+    "real_id": 3,
+    "arabic_nl": "ما هو الرمز المرتبط بالكلية التي تدعى التربية؟",
+    "importancy": 1,
+    "variants_count": 55
+  },
+  "U1TzF3280t8rqGuql3IJ": {
+    "variants_count": 55,
+    "real_id": 21,
+    "importancy": 7,
+    "arabic_nl": "هل يمكنك أن تخبرني عن الكلية التي تتبع لها الدائرة الأكاديمية إدارة الأعمال؟"
+  },
+  "U3iObJ0SplkHDQegexSr": {
+    "arabic_nl": "إلى أي كلية ينتمي الدكتور صالح الرفاعي؟",
+    "variants_count": 56,
+    "importancy": 5,
+    "real_id": 62
+  },
+  "V1Du95j9AAK4LouIrWb5": {
+    "real_id": 58,
+    "importancy": 10,
+    "variants_count": 55,
+    "arabic_nl": "ما هو عنوان البريد الإلكتروني للدكتور محمود بني مصطفى؟"
+  },
+  "VGfO6MM6fydWdkdzJ8MK": {
+    "variants_count": 55,
+    "real_id": 66,
+    "importancy": 8,
+    "arabic_nl": "ما هو رقم الهاتف للمساعد رناد العربي؟"
+  },
+  "VbAh7WvIHSCpd9uicKOo": {
+    "importancy": 6,
+    "real_id": 51,
+    "arabic_nl": "لأي تخصص يتبع المساق MED211؟",
+    "variants_count": 57
+  },
+  "XndtNkSnfmxySxBNukam": {
+    "variants_count": 55,
+    "real_id": 22,
+    "arabic_nl": "هل يمكنك تقديم قائمة برامج دائرة المحاسبة؟",
+    "importancy": 10
+  },
+  "ZuaWkVjm8Etrgg9Rkuxj": {
+    "importancy": 10,
+    "variants_count": 55,
+    "arabic_nl": "هل يمكنك تقديم وصف للكلية التي تدعى الهندسة والتكنولوجيا؟",
+    "real_id": 1
+  },
+  "a3hkU8riu4tbG2HE5f21": {
+    "importancy": 10,
+    "arabic_nl": "هل يمكنك تقديم وصف للمساق أساسيات البرمجة؟",
+    "real_id": 43,
+    "variants_count": 55
+  },
+  "amRTGX6bv6o8W2uMlgKK": {
+    "real_id": 18,
+    "importancy": 10,
+    "variants_count": 55,
+    "arabic_nl": "هل يمكنك تقديم رقم الهاتف لرئيس الدائرة الأكاديمية الهندسة الكهربائية وهندسة الحاسوب؟"
+  },
+  "aotihbcfDkwDSOWEA42X": {
+    "importancy": 8,
+    "arabic_nl": "هل يمكنك تقديم قائمة بالمساقات في التخصص الترجمة حيث تكون الساعات المعتمدة لها أقل من أو تساوي 2؟",
+    "variants_count": 54,
+    "real_id": 37
+  },
+  "b0RFc5tPYsS1BpuOlP5H": {
+    "real_id": 28,
+    "importancy": 9,
+    "arabic_nl": "هل يمكنك تقديم قائمة بمساقات برنامج التصميم مرتبة حسب الرمز مع التفاصيل الخاصة بكل مساق",
+    "variants_count": 55
+  },
+  "bWOR2lLeSqdDvFHSWQJE": {
+    "importancy": 10,
+    "variants_count": 55,
+    "real_id": 32,
+    "arabic_nl": "هل يمكنك تقديم قائمة بالمساقات في تخصص التسويق التي تتطلب المساق ECO222 كشرط مسبق؟"
+  },
+  "ba6ZvITGTNPXtRt90Il3": {
+    "importancy": 6,
+    "real_id": 30,
+    "variants_count": 55,
+    "arabic_nl": "هل يمكنك تقديم قائمة بالمساقات في تخصص الموسيقى التي يدرسها المساعد رناد العربي؟"
+  },
+  "dwDZnH1wCySv44ZJsFdu": {
+    "variants_count": 55,
+    "importancy": 10,
+    "real_id": 47,
+    "arabic_nl": "كم عدد الساعات المعتمدة للمساق اللغة العربية؟"
+  },
+  "gVSmd3ckFGpjWKDYGHGU": {
+    "importancy": 6,
+    "arabic_nl": "إلى أي دائرة ينتمي المساق نظرية الأعمال؟",
+    "real_id": 52,
+    "variants_count": 55
+  },
+  "j3kzJtg25URg6WsM01hC": {
+    "real_id": 50,
+    "importancy": 10,
+    "variants_count": 55,
+    "arabic_nl": "ما هي المتطلبات السابقة للمساق الرعاية الصحية؟"
+  },
+  "j42LhG5yKhmdzIRPLvKm": {
+    "real_id": 35,
+    "variants_count": 54,
+    "arabic_nl": "هل يمكنك تقديم قائمة بالمساقات في التخصص رئيسي علم النفس / فرعي علم الاجتماع التي تتطلب المساق BUS221 كشرط مسبق ويدرسها الدكتور رانيا الخالدي والمساعد سلمى القرشي؟",
+    "importancy": 10
+  },
+  "k7Bse5OkKd5hTyo3mIO8": {
+    "arabic_nl": "هل يمكنك تقديم وصف للكلية التي لها الرمز SCI؟",
+    "variants_count": 54,
+    "importancy": 5,
+    "real_id": 2
+  },
+  "kMq5e8yzICPsBwzoQzX7": {
+    "real_id": 64,
+    "variants_count": 54,
+    "importancy": 10,
+    "arabic_nl": "ما هي الكلية التي يشغل فيها الدكتور محمد علاونة منصب العميد؟"
+  },
+  "mAD1Azn8jmLnMgckYWen": {
+    "real_id": 27,
+    "importancy": 5,
+    "variants_count": 54,
+    "arabic_nl": "إلى أي دائرة ينتمي البرنامج رئيسي علم النفس / فرعي علم الاجتماع؟"
+  },
+  "mLmzWNEKSsnOwTe3xYlA": {
+    "arabic_nl": "هل يمكنك أن تخبرني ما هي الدائرة التي يتبع لها عميد كلية الحقوق والإدارة العامة؟",
+    "variants_count": 54,
+    "real_id": 9,
+    "importancy": 9
+  },
+  "mrE6UYiHyClFF0VxXRYQ": {
+    "real_id": 40,
+    "variants_count": 54,
+    "arabic_nl": "هل يمكنك تقديم قائمة بالمساقات في التخصص أمن المعلومات حيث تكون الساعات المعتمدة لها تساوي 1، ويدرسها الدكتور محمد حماد؟",
+    "importancy": 8
+  },
+  "n5S3l3fUWJRpwUPnEaYe": {
+    "real_id": 4,
+    "variants_count": 55,
+    "arabic_nl": "هل يمكنك أن تخبرني بإسم عميد كلية الحقوق والإدارة العامة؟",
+    "importancy": 10
+  },
+  "na9FKUkBljeQiSGaSvfU": {
+    "variants_count": 54,
+    "importancy": 10,
+    "arabic_nl": "هل يمكنك تقديم رقم الهاتف لعميد كلية العلوم؟",
+    "real_id": 6
+  },
+  "q59XVj6CG78jcsIpboUO": {
+    "real_id": 12,
+    "importancy": 9,
+    "variants_count": 54,
+    "arabic_nl": "هل يمكنك تقديم قائمة بالمدرسين في كلية التربية؟"
+  },
+  "r10gWotc9jBMpGlM4MRP": {
+    "arabic_nl": "ما هو الرقم الخاص بالدكتور محمد العمريس في ريتاج؟",
+    "variants_count": 54,
+    "real_id": 59,
+    "importancy": 10
+  },
+  "u4VYxJNfRcu6A9JlJEqS": {
+    "importancy": 10,
+    "real_id": 41,
+    "variants_count": 54,
+    "arabic_nl": "هل يمكنك تقديم قائمة بالدكاترة في التخصص الفيزياء / فرعي الرياضيات؟"
+  },
+  "vdhx7hyIry8okDSr8MHr": {
+    "real_id": 19,
+    "variants_count": 57,
+    "arabic_nl": "هل يمكنك تقديم الساعات المكتبية لرئيس دائرة العلوم المالية والمصرفية؟",
+    "importancy": 10
+  },
+  "w2eolJkDZKoQbXHOMfuF": {
+    "importancy": 10,
+    "real_id": 65,
+    "variants_count": 54,
+    "arabic_nl": "ما هي الدائرة التي يشغل فيها الدكتور محمد العمريس منصب رئيس الدائرة"
+  },
+  "wcK9eKniuEuQ6qmLQKXa": {
+    "real_id": 23,
+    "variants_count": 56,
+    "importancy": 10,
+    "arabic_nl": "هل يمكنك تقديم قائمة بدكاترة دائرة الإقتصاد؟"
+  },
+  "xKqx2kM8hvnrFrROhPau": {
+    "arabic_nl": "هل يمكنك تقديم قائمة بالمساقات في التخصص الهندسة الكهربائية حيث تكون الساعات المعتمدة لها أكبر من أو تساوي 1 وأقل من أو تساوي 3؟",
+    "real_id": 38,
+    "importancy": 8,
+    "variants_count": 54
+  },
+  "yBIzxx3c1A6xP4iRmFtz": {
+    "arabic_nl": "هل يمكنك تقديم قائمة بالمساقات في كلية الهندسة والتكنولوجيا؟",
+    "real_id": 11,
+    "importancy": 9,
+    "variants_count": 54
+  }
+}
